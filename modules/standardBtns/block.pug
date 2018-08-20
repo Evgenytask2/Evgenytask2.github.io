@@ -1,0 +1,28 @@
+mixin createElement(elementText, elementName, ...modifiers)
+    -var classes = elementName
+    each mod in modifiers
+        - classes += (" " + elementName + "-" + mod)
+    div(class= classes) #{elementText}
+
+.content__title Standard Buttons
+.standardButtons
+    .standardButtons__container
+        +createElement("Button","standardButtons__button", "small", "full1", "success")
+        +createElement("Button","standardButtons__button", "small", "full", "success")
+        +createElement("Button","standardButtons__button", "small", "empty", "success")
+
+    .standardButtons__container
+        +createElement("Button","standardButtons__button", "big", "full2", "success")
+        +createElement("Button","standardButtons__button", "big", "full", "success")
+        +createElement("Button","standardButtons__button", "big", "empty", "success")
+
+
+    .standardButtons__container
+        +createElement("Button","standardButtons__button", "big", "full3", "warning")
+        +createElement("Button","standardButtons__button", "big", "full", "warning")
+        +createElement("Button","standardButtons__button", "big", "empty", "warning")
+
+    .standardButtons__container
+        +createElement("Button","standardButtons__button", "small", "full4small", "warning")
+        +createElement("Button","standardButtons__button", "small", "full", "warning")
+        +createElement("Button","standardButtons__button", "small", "empty", "warning")

@@ -90,10 +90,11 @@
 /*!*************************!*\
   !*** ./modules/main.js ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("let req;\r\ntry {\r\n    req = __webpack_require__(\"./modules/projectShare/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\n\r\n\r\n\r\nlet pugTemplate = __webpack_require__(/*! ./root/index.pug */ \"./modules/root/index.pug\");\r\ndocument.querySelector(\"#pugTemplate\").innerHTML = pugTemplate;\r\n\r\nconsole.log(\"Javascript entry point log\");\n\n//# sourceURL=webpack:///./modules/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./root/script.js */ \"./modules/root/script.js\");\n/* harmony import */ var _root_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_root_script_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _standardBtns_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./standardBtns/script.js */ \"./modules/standardBtns/script.js\");\n/* harmony import */ var _standardBtns_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_standardBtns_script_js__WEBPACK_IMPORTED_MODULE_1__);\nlet req;\r\ntry {\r\n    req = __webpack_require__(\"./modules/projectShare/fonts sync recursive \\\\.(?:eot|svg|ttf|woff)$/i\");\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} \r\n\r\n\r\n\r\n\r\n\r\nlet pugTemplate = __webpack_require__(/*! ./root/index.pug */ \"./modules/root/index.pug\");\r\ndocument.querySelector(\"#pugTemplate\").innerHTML = pugTemplate;\r\n\r\nconsole.log(\"Javascript entry point log\");\n\n//# sourceURL=webpack:///./modules/main.js?");
 
 /***/ }),
 
@@ -108,6 +109,17 @@ eval("function webpackEmptyContext(req) {\n\tvar e = new Error(\"Cannot find mod
 
 /***/ }),
 
+/***/ "./modules/root sync recursive \\.less$/i":
+/*!*************************************!*\
+  !*** ./modules/root sync \.less$/i ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./modules/root/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./modules/root sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./modules/root_sync_\\.less$/i?");
+
+/***/ }),
+
 /***/ "./modules/root/index.pug":
 /*!********************************!*\
   !*** ./modules/root/index.pug ***!
@@ -115,7 +127,62 @@ eval("function webpackEmptyContext(req) {\n\tvar e = new Error(\"Cannot find mod
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"\"\n\n//# sourceURL=webpack:///./modules/root/index.pug?");
+eval("module.exports = \"<div class=\\\"content\\\"><div class=\\\"content__section\\\"><div class=\\\"content__title\\\">Standard Buttons</div><div class=\\\"standardButtons\\\"><div class=\\\"standardButtons__container\\\"><div class=\\\"standardButtons__button standardButtons__button-small standardButtons__button-full1 standardButtons__button-success\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-small standardButtons__button-full standardButtons__button-success\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-small standardButtons__button-empty standardButtons__button-success\\\">Button</div></div><div class=\\\"standardButtons__container\\\"><div class=\\\"standardButtons__button standardButtons__button-big standardButtons__button-full2 standardButtons__button-success\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-big standardButtons__button-full standardButtons__button-success\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-big standardButtons__button-empty standardButtons__button-success\\\">Button</div></div><div class=\\\"standardButtons__container\\\"><div class=\\\"standardButtons__button standardButtons__button-big standardButtons__button-full3 standardButtons__button-warning\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-big standardButtons__button-full standardButtons__button-warning\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-big standardButtons__button-empty standardButtons__button-warning\\\">Button</div></div><div class=\\\"standardButtons__container\\\"><div class=\\\"standardButtons__button standardButtons__button-small standardButtons__button-full4small standardButtons__button-warning\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-small standardButtons__button-full standardButtons__button-warning\\\">Button</div><div class=\\\"standardButtons__button standardButtons__button-small standardButtons__button-empty standardButtons__button-warning\\\">Button</div></div></div></div><div class=\\\"content__section\\\"></div><div class=\\\"content__section\\\"></div><div class=\\\"content__section\\\"></div><div class=\\\"content__section\\\"></div><div class=\\\"content__twoSections\\\"><div class=\\\"content__leftSection\\\"></div><div class=\\\"content__rightSection\\\"></div></div><div class=\\\"content__twoSections\\\"><div class=\\\"content__leftSection\\\"></div><div class=\\\"content__rightSection\\\"></div></div><div class=\\\"content__twoSections\\\"><div class=\\\"content__leftSection\\\"></div><div class=\\\"content__rightSection\\\"></div></div><div class=\\\"content__section\\\"></div><div class=\\\"content__twoSections\\\"><div class=\\\"content__leftSection\\\"></div><div class=\\\"content__rightSection\\\"></div></div><div class=\\\"content__section\\\"></div></div>\"\n\n//# sourceURL=webpack:///./modules/root/index.pug?");
+
+/***/ }),
+
+/***/ "./modules/root/script.js":
+/*!********************************!*\
+  !*** ./modules/root/script.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("let req;\r\ntry {\r\n    req = !(function webpackMissingModule() { var e = new Error(\"Cannot find module 'undefined'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} // no img in this module\r\n\r\nreq = __webpack_require__(\"./modules/root sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./modules/root/script.js?");
+
+/***/ }),
+
+/***/ "./modules/root/style.less":
+/*!*********************************!*\
+  !*** ./modules/root/style.less ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./modules/root/style.less?");
+
+/***/ }),
+
+/***/ "./modules/standardBtns sync recursive \\.less$/i":
+/*!*********************************************!*\
+  !*** ./modules/standardBtns sync \.less$/i ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var map = {\n\t\"./style.less\": \"./modules/standardBtns/style.less\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./modules/standardBtns sync recursive \\\\.less$/i\";\n\n//# sourceURL=webpack:///./modules/standardBtns_sync_\\.less$/i?");
+
+/***/ }),
+
+/***/ "./modules/standardBtns/script.js":
+/*!****************************************!*\
+  !*** ./modules/standardBtns/script.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("let req;\r\ntry {\r\n    req = !(function webpackMissingModule() { var e = new Error(\"Cannot find module 'undefined'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\r\n    req.keys().forEach((key) => req(key)); \r\n} catch(ex) {} // no img in this module\r\n\r\nreq = __webpack_require__(\"./modules/standardBtns sync recursive \\\\.less$/i\");\r\nreq.keys().forEach((key) => req(key));\n\n//# sourceURL=webpack:///./modules/standardBtns/script.js?");
+
+/***/ }),
+
+/***/ "./modules/standardBtns/style.less":
+/*!*****************************************!*\
+  !*** ./modules/standardBtns/style.less ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./modules/standardBtns/style.less?");
 
 /***/ })
 
