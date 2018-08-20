@@ -1,11 +1,98 @@
+@import "../projectShare/common.less";
+@darkGreenShadow: rgb(40,162,144);
+@darkRedShadow: rgb(191,62,31);
+@greenGradientStart: rgb(130, 203, 193);
+@redGradientStart: rgb(237, 136, 112);
+
+@shadow: 2px;
+@bigShadow: 3px;
+@border: 1px;
+@bigBorder: 1px;
+
+@deltahHeight: 10px;
+@marginTop: 20px;
+@smallHeight: 22px;
+
 .standardButtons {
+    margin: 0 11%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-direction: column;
 
     &__container {
         display: flex;
-        flex-direction: column;
-        justify-content: stretch;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__button {
+        margin: 0 auto;
+        @btn: ~".standardButtons__button";
+        text-align: center;
+        font-family: "LatoBlack", Arial, sans-serif;
+        border-radius: 3px;
+        box-sizing: border-box;
+        color: @mainColor;
+        .fontSize3();
+        &-small{
+            margin-top: @marginTop + @deltahHeight;
+            width: 78px;
+            height: @smallHeight;
+            line-height: @smallHeight;
+            @{btn}-success@{btn}-shadow& {
+                box-shadow: 0 (@shadow+1) 0 0 @darkGreenShadow;
+            }
+            @{btn}-warning@{btn}-shadow& {
+                box-shadow: 0 (@shadow+1) 0 0 @darkRedShadow;
+            }
+        }
+        &-big {
+            margin-top: @marginTop;
+            width: 116px;
+            height: @smallHeight + @deltahHeight;
+            line-height: @smallHeight + @deltahHeight;
+            @{btn}-success@{btn}-shadow& {
+                box-shadow: 0 (@bigShadow+1) 0 0 @darkGreenShadow;
+            }
+            @{btn}-warning@{btn}-shadow& {
+                box-shadow: 0 (@bigShadow+1) 0 0 @darkRedShadow;
+            }
+        }
+
+        &-success {
+           background-color: @lightGreen;
+           @{btn}-empty& {
+               color: @lightGreen;
+           }
+       }
+        &-warning {
+            background-color: @red;
+            @{btn}-empty& {
+                color: @red;
+            }
+        }
+        &-empty {
+            background-color: @mainColor;
+            @{btn}-small& {
+                border: @border solid;
+                box-shadow: 0 @shadow 0 0;
+            }
+            @{btn}-big& {
+                border: @bigBorder solid;
+                box-shadow: 0 @bigShadow 0 0;
+            }
+        }
+        &-gradient {
+            &1 {
+                background: radial-gradient(circle 24px at 38% 23%, @greenGradientStart 100%, @lightGreen); 
+            }
+            &2 {
+                background: radial-gradient(circle 27px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
+            }
+            &3 {
+                background: radial-gradient(circle 27px at 74% 50%, @redGradientStart 100%, @red); 
+            }
+            &4 {
+                background: radial-gradient(circle 27px at 92% 23%, @redGradientStart 100%, @red); 
+            }
+        }
     }
 }

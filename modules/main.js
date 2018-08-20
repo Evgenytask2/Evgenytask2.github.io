@@ -5,7 +5,9 @@ try {
 } catch(ex) {} 
 
 import root from "./root/script.js";
-import standardBtns from "./standardBtns/script.js"
+import standardBtns from "./standardBtns/script.js";
+
+import media from "./projectShare/media.less";
 
 
 let pugTemplate = require("./root/index.pug");

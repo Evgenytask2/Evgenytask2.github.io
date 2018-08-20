@@ -1,22 +1,76 @@
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
 .content {
+  font-family: "LatoLight", Arial, sans-serif;
+  text-transform: uppercase;
   max-width: 700px;
   margin: 0 auto;
+  margin-top: 82px;
+}
+.content__box {
   padding-left: 7.57%;
   padding-right: 7.57%;
 }
-.standardButtons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.content__title {
+  text-align: center;
+  font-size: 18px;
+  color: #4f4f4f;
+  font-family: "LatoBlack";
+  letter-spacing: 1.2px;
+  word-spacing: 3px;
 }
-.standardButtons__container {
+@font-face {
+  font-family: 'LatoLight';
+  src: url('fonts/LatoLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LatoBlack';
+  src: url('fonts/LatoBlack.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.standardButtons {
+  margin: 0 11%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +78,109 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+}
+.standardButtons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.standardButtons__button {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "LatoBlack", Arial, sans-serif;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  font-size: 12px;
+}
+.standardButtons__button-small {
+  margin-top: 30px;
+  width: 78px;
+  height: 22px;
+  line-height: 22px;
+}
+.standardButtons__button-success.standardButtons__button-shadow.standardButtons__button-small {
+  -webkit-box-shadow: 0 3px 0 0 #28a290;
+          box-shadow: 0 3px 0 0 #28a290;
+}
+.standardButtons__button-warning.standardButtons__button-shadow.standardButtons__button-small {
+  -webkit-box-shadow: 0 3px 0 0 #bf3e1f;
+          box-shadow: 0 3px 0 0 #bf3e1f;
+}
+.standardButtons__button-big {
+  margin-top: 20px;
+  width: 116px;
+  height: 32px;
+  line-height: 32px;
+}
+.standardButtons__button-success.standardButtons__button-shadow.standardButtons__button-big {
+  -webkit-box-shadow: 0 4px 0 0 #28a290;
+          box-shadow: 0 4px 0 0 #28a290;
+}
+.standardButtons__button-warning.standardButtons__button-shadow.standardButtons__button-big {
+  -webkit-box-shadow: 0 4px 0 0 #bf3e1f;
+          box-shadow: 0 4px 0 0 #bf3e1f;
+}
+.standardButtons__button-success {
+  background-color: #4eb7a8;
+}
+.standardButtons__button-empty.standardButtons__button-success {
+  color: #4eb7a8;
+}
+.standardButtons__button-warning {
+  background-color: #e75735;
+}
+.standardButtons__button-empty.standardButtons__button-warning {
+  color: #e75735;
+}
+.standardButtons__button-empty {
+  background-color: #ffffff;
+}
+.standardButtons__button-small.standardButtons__button-empty {
+  border: 1px solid;
+  -webkit-box-shadow: 0 2px 0 0;
+          box-shadow: 0 2px 0 0;
+}
+.standardButtons__button-big.standardButtons__button-empty {
+  border: 1px solid;
+  -webkit-box-shadow: 0 3px 0 0;
+          box-shadow: 0 3px 0 0;
+}
+.standardButtons__button-gradient1 {
+  background: radial-gradient(circle 24px at 38% 23%, #82cbc1 100%, #4eb7a8);
+}
+.standardButtons__button-gradient2 {
+  background: radial-gradient(circle 27px at 50% 50%, #82cbc1 100%, #4eb7a8);
+}
+.standardButtons__button-gradient3 {
+  background: radial-gradient(circle 27px at 74% 50%, #ed8870 100%, #e75735);
+}
+.standardButtons__button-gradient4 {
+  background: radial-gradient(circle 27px at 92% 23%, #ed8870 100%, #e75735);
+}
+@media (max-width: 900px) {
+  .standardButtons {
+    margin: 0;
+  }
+  .standardButtons__elem {
+    width: 50%;
+  }
+  .standardButtons__elem:first-child {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+  .standardButtons__elem:last-child {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
