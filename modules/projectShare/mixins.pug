@@ -3,3 +3,12 @@ mixin createElement(elementText, elementName, ...modifiers)
     each mod in modifiers
         - classes += (" " + elementName + "-" + mod)
     div(class= classes) #{elementText}
+
+mixin createCircleProgress(percent)
+    - var str = "transform: rotate(" + percent*1.8 + "deg)"
+    .radialProgress(data-percent= percent)
+        .radialProgress__mask.radialProgress__mask-full(style= str)
+            .radialProgress__fill(style= str)
+        .radialProgress__mask
+            .radialProgress__fill(style= str)
+        .radialProgress__inset

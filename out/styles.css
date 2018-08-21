@@ -16,6 +16,9 @@
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize10 {
+  font-size: 40px;
+}
 * {
   padding: 0;
   margin: 0;
@@ -68,6 +71,9 @@
 }
 .fontSize6 {
   font-size: 18px;
+}
+.fontSize10 {
+  font-size: 40px;
 }
 .standardButtons {
   margin: 0 11%;
@@ -184,6 +190,9 @@
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize10 {
+  font-size: 40px;
+}
 .arrowButtons {
   margin: 0 12.6%;
 }
@@ -265,6 +274,87 @@
   height: 3.5px;
   top: 50%;
 }
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.circleDiagrams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.circleDiagrams__diagram {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.radialProgress {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+}
+.radialProgress::after {
+  content: attr(data-percent);
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 96px;
+  font-size: 40px;
+  color: #888888;
+}
+.radialProgress__mask,
+.radialProgress__fill {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  border-radius: 50%;
+}
+.radialProgress__mask {
+  clip: rect(0px, 96px, 96px, 48px);
+}
+.radialProgress__fill {
+  clip: rect(0px, 48px, 96px, 0px);
+  background-color: #e75735;
+}
+.radialProgress__inset {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  margin-left: 5.5px;
+  margin-top: 5.5px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
 @media (max-width: 900px) {
   .standardButtons {
     margin: 0;
@@ -291,5 +381,13 @@
   }
   .arrowButtons__button:first-child {
     margin-right: 25px;
+  }
+  .circleDiagrams {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .circleDiagrams__diagram {
+    width: 100%;
+    margin-bottom: 25px;
   }
 }

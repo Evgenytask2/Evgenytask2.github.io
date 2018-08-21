@@ -1,0 +1,57 @@
+@import "../projectShare/common.less";
+
+.circleDiagrams {
+    display: flex;
+    flex-flow: row wrap;
+    &__diagram {
+        box-sizing: border-box;
+		width: 20%;
+		display: flex;
+		justify-content: center;
+    }
+}
+
+.radialProgress {
+	@circle-size: 96px;
+	@inset-size: 85px;
+	width:  @circle-size;
+	height: @circle-size;
+    border-radius: 50%;
+	background-color: @mainColor;
+	position: relative;
+	&::after {
+		content: attr(data-percent);
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		line-height: @circle-size;
+		.fontSize10();
+		color: @mediumGrey;
+	}
+
+	&__mask, &__fill {
+		width:    @circle-size;
+		height:   @circle-size;
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	&__mask {
+		clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+	}
+	&__fill {
+			clip: rect(0px, @circle-size/2, @circle-size, 0px);
+			background-color: @red;
+	}
+        
+	&__inset {
+		width:       @inset-size;
+		height:      @inset-size;
+		position:    absolute;
+		margin-left: (@circle-size - @inset-size)/2;
+		margin-top:  (@circle-size - @inset-size)/2;
+		background-color: @mainColor;
+		border-radius: 50%;
+	}
+}

@@ -7,6 +7,7 @@ try {
 import root from "./root/script.js";
 import standardBtns from "./standardBtns/script.js";
 import arrowBtns from "./arrowBtns/script.js";
+import circleDiagrams from "./percentages/script.js";
 
 import media from "./projectShare/media.less"; // must be included as the last file
 
