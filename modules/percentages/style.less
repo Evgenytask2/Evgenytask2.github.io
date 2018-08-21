@@ -1,5 +1,8 @@
 @import "../projectShare/common.less";
 
+@circle-size: 96px;
+@centerPieRatio: 0.67;
+
 .circleDiagrams {
     display: flex;
     flex-flow: row wrap;
@@ -8,11 +11,22 @@
 		width: 20%;
 		display: flex;
 		justify-content: center;
+		&-pie { 
+			position: relative;
+			&::after {
+				width: @centerPieRatio*@circle-size;
+				height: @centerPieRatio*@circle-size;
+				background-color: @mainColor;
+				border-radius: 50%;
+				content: "";
+				position: absolute;
+				margin-top: (1-@centerPieRatio)*@circle-size/2;
+			}
+		}
     }
 }
 
 .radialProgress {
-	@circle-size: 96px;
 	@inset-size: 85px;
 	width:  @circle-size;
 	height: @circle-size;
@@ -53,5 +67,27 @@
 		margin-top:  (@circle-size - @inset-size)/2;
 		background-color: @mainColor;
 		border-radius: 50%;
+	}
+}
+
+@pieSize: @circle-size/2;
+
+.pieChart {
+	position: relative;
+	&__part {
+		position: absolute;
+   	 	width: @pieSize;
+   	 	height: 2*@pieSize;
+    	overflow: hidden;
+    	left: 0;
+		transform-origin:left center;
+		&-before {
+			position: absolute;
+			width: @pieSize;
+			height: 2*@pieSize;
+			left: -@pieSize;
+			border-radius: @pieSize 0 0 @pieSize;
+			transform-origin:right center;
+		}
 	}
 }

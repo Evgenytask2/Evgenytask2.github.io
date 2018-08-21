@@ -315,6 +315,18 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.circleDiagrams__diagram-pie {
+  position: relative;
+}
+.circleDiagrams__diagram-pie::after {
+  width: 64.32px;
+  height: 64.32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  margin-top: 15.84px;
+}
 .radialProgress {
   width: 96px;
   height: 96px;
@@ -355,6 +367,29 @@
   background-color: #ffffff;
   border-radius: 50%;
 }
+.pieChart {
+  position: relative;
+}
+.pieChart__part {
+  position: absolute;
+  width: 48px;
+  height: 96px;
+  overflow: hidden;
+  left: 0;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.pieChart__part-before {
+  position: absolute;
+  width: 48px;
+  height: 96px;
+  left: -48px;
+  border-radius: 48px 0 0 48px;
+  -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+          transform-origin: right center;
+}
 @media (max-width: 900px) {
   .standardButtons {
     margin: 0;
@@ -383,11 +418,13 @@
     margin-right: 25px;
   }
   .circleDiagrams {
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
+    margin: 0 7%;
   }
   .circleDiagrams__diagram {
-    width: 100%;
+    width: 50%;
     margin-bottom: 25px;
+  }
+  .circleDiagrams__diagram-pie {
+    width: 100%;
   }
 }

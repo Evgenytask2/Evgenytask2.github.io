@@ -12,3 +12,21 @@ mixin createCircleProgress(percent)
         .radialProgress__mask
             .radialProgress__fill(style= str)
         .radialProgress__inset
+
+mixin createPieChart(partsNumber, ...details)
+    - var progress = 0
+    .pieChart
+        - for(var i = 0; i < partsNumber; i++)
+            - var iterations = 1
+            - var current = details[i]*3.6    
+            - if (current > 180)
+                - iterations = 2
+                - current/=2
+
+            - var beforeStyle = "transform: rotate(" + (current +1) + "deg); background-color: " + details[i+partsNumber]
+
+            - for(var j = 0; j < iterations; j++)
+                - var style = "transform: rotate(" + progress +"deg)"
+                div.pieChart__part(style= style)
+                    div.pieChart__part-before(style= beforeStyle)
+                - progress += current
