@@ -1,0 +1,5 @@
+mixin createElement(elementText, elementName, ...modifiers) 
+    -var classes = elementName
+    each mod in modifiers
+        - classes += (" " + elementName + "-" + mod)
+    div(class= classes) #{elementText}

@@ -166,6 +166,105 @@
 .standardButtons__button-gradient4 {
   background: radial-gradient(circle 27px at 92% 23%, #ed8870 100%, #e75735);
 }
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.arrowButtons {
+  margin: 0 12.6%;
+}
+.arrowButtons__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.arrowButtons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33.3%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.arrowButtons__button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.arrowButtons__button-borderOnly {
+  border: 2px solid #4eb7a8;
+}
+.arrowButtons__button-borderOnly::before,
+.arrowButtons__button-borderOnly::after {
+  background-color: #4eb7a8;
+}
+.arrowButtons__button-disabled {
+  background-color: #e5e5e5;
+}
+.arrowButtons__button-disabled::before,
+.arrowButtons__button-disabled::after {
+  background-color: #ffffff;
+}
+.arrowButtons__button-enabled {
+  background-color: #4eb7a8;
+}
+.arrowButtons__button-enabled::before,
+.arrowButtons__button-enabled::after {
+  background-color: #ffffff;
+}
+.arrowButtons__button-toLeft::before {
+  left: 25%;
+  -webkit-transform: translateY(6px) rotate(45deg);
+      -ms-transform: translateY(6px) rotate(45deg);
+          transform: translateY(6px) rotate(45deg);
+}
+.arrowButtons__button-toLeft::after {
+  left: 25%;
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+      -ms-transform: translateY(-6px) rotate(-45deg);
+          transform: translateY(-6px) rotate(-45deg);
+}
+.arrowButtons__button-toRight::before {
+  right: 25%;
+  -webkit-transform: translateY(-6px) rotate(45deg);
+      -ms-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+}
+.arrowButtons__button-toRight::after {
+  right: 25%;
+  -webkit-transform: translateY(6px) rotate(-45deg);
+      -ms-transform: translateY(6px) rotate(-45deg);
+          transform: translateY(6px) rotate(-45deg);
+}
+.arrowButtons__button::before,
+.arrowButtons__button::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 3.5px;
+  top: 50%;
+}
 @media (max-width: 900px) {
   .standardButtons {
     margin: 0;
@@ -182,5 +281,15 @@
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+  .arrowButtons__container {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+  .arrowButtons__button:first-child {
+    margin-right: 25px;
   }
 }

@@ -6,8 +6,9 @@ try {
 
 import root from "./root/script.js";
 import standardBtns from "./standardBtns/script.js";
+import arrowBtns from "./arrowBtns/script.js";
 
-import media from "./projectShare/media.less";
+import media from "./projectShare/media.less"; // must be included as the last file
 
 
 let pugTemplate = require("./root/index.pug");

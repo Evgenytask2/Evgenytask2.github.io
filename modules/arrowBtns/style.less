@@ -1,0 +1,69 @@
+@import "../projectShare/common.less";
+
+@arrowCenter: 25%;
+@fixY: 6px;
+
+.arrowButtons {
+    margin: 0 12.6%;
+    &__box {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__container {
+        display: flex;
+        width: 33.3%;
+        justify-content: space-around;
+    }
+    &__button {
+        box-sizing: border-box;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &-borderOnly {
+            border: 2px solid @lightGreen;
+            &::before, &::after {
+                background-color: @lightGreen;
+            }
+        }
+        &-disabled {
+            background-color: @lightGrey;
+            &::before, &::after {
+                background-color: @mainColor;
+            }
+        }
+        &-enabled {
+            background-color: @lightGreen;
+            &::before, &::after {
+                background-color: @mainColor;
+            }
+        }
+        &-toLeft {
+            &::before {
+                left: @arrowCenter;
+                transform: translateY(@fixY) rotate(45deg);
+            }
+            &::after {
+                left: @arrowCenter;
+                transform: translateY(-@fixY) rotate(-45deg);
+            }
+        }
+        &-toRight {
+            &::before {
+                right: @arrowCenter;
+                transform: translateY(-@fixY) rotate(45deg);
+            }
+            &::after {
+                right: @arrowCenter;
+                transform: translateY(@fixY) rotate(-45deg);
+            }
+        }
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 3.5px;
+            top: 50%;
+        }
+    }
+}

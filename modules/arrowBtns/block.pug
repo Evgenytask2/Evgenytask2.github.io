@@ -1,0 +1,14 @@
+include ../projectShare/mixins.pug
+
+.content__title Arrow Buttons
+.arrowButtons
+    .arrowButtons__box
+        .arrowButtons__container
+            +createElement("","arrowButtons__button","toLeft","borderOnly")
+            +createElement("","arrowButtons__button","toRight","borderOnly")
+        .arrowButtons__container
+            +createElement("","arrowButtons__button","toLeft","disabled")
+            +createElement("","arrowButtons__button","toRight","disabled")
+        .arrowButtons__container
+            +createElement("","arrowButtons__button","toLeft","enabled")
+            +createElement("","arrowButtons__button","toRight","enabled")
