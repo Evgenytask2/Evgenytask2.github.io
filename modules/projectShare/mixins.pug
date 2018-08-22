@@ -23,10 +23,11 @@ mixin createPieChart(partsNumber, ...details)
                 - iterations = 2
                 - current/=2
 
-            - var beforeStyle = "transform: rotate(" + (current +1) + "deg); background-color: " + details[i+partsNumber]
+            - var beforeStyle = "transform: rotate(" + (current +1) + "deg)"
+            - var classes = "pieChart__part-before " + details[i+partsNumber]
 
             - for(var j = 0; j < iterations; j++)
                 - var style = "transform: rotate(" + progress +"deg)"
                 div.pieChart__part(style= style)
-                    div.pieChart__part-before(style= beforeStyle)
+                    div(class= classes, style= beforeStyle)
                 - progress += current

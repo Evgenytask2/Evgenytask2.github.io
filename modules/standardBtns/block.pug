@@ -4,13 +4,21 @@ include ../projectShare/mixins.pug
 .standardButtons
     .standardButtons__container
         .standardButtons__elem
-            +createElement("Button","standardButtons__button", "small", "gradient1","success")
+            input.standardButtons__clickBox#btn1(type="checkbox" checked)
+            label(for="btn1")
+                +createElement("Button","standardButtons__button", "grad1","small","success")
         .standardButtons__elem
-            +createElement("Button","standardButtons__button", "big", "gradient2", "success")
+            input.standardButtons__clickBox#btn2(type="checkbox" checked)
+            label(for="btn2")
+                +createElement("Button","standardButtons__button", "grad2","big", "success")
         .standardButtons__elem
-            +createElement("Button","standardButtons__button", "big", "gradient3", "warning")
+            input.standardButtons__clickBox#btn3(type="checkbox" checked)
+            label(for="btn3")
+                +createElement("Button","standardButtons__button", "grad3", "big", "warning")
         .standardButtons__elem
-            +createElement("Button","standardButtons__button", "small", "gradient4", "warning")
+            input.standardButtons__clickBox#btn4(type="checkbox" checked)
+            label(for="btn4")
+                +createElement("Button","standardButtons__button", "grad4", "small", "warning")
 
     .standardButtons__container    
         .standardButtons__elem
