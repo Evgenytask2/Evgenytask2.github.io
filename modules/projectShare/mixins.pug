@@ -31,3 +31,17 @@ mixin createPieChart(partsNumber, ...details)
                 div.pieChart__part(style= style)
                     div(class= classes, style= beforeStyle)
                 - progress += current
+
+
+mixin createWarningSlider(percent)
+    - var style = "left: " + percent + "%";
+    .sliders__slider
+        .sliders__drag.sliders__drag-warning(style= style)
+            .sliders__warningValue(data-percent= percent)
+
+mixin createSuccessSlider(percent)
+    - var style = "left: " + percent + "%";
+    - var styleWidth = "width: " + percent + "%"
+    .sliders__slider
+        .sliders__drag.sliders__drag-success(style= style)
+        .sliders__fillSuccess(style= styleWidth)
