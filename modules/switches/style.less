@@ -1,0 +1,48 @@
+@import "../projectShare/common.less";
+@transitionTime: 0.6s;
+
+.switch {
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__input {
+        display: none;
+    }
+    &__toggle {
+        width: 58px;
+        @toggleHeight: 23px;
+        height: @toggleHeight;
+        border-radius: @toggleHeight/2;
+        background-color: @lightGrey;
+        transition: background-color ease-in-out @transitionTime;
+        &-spaced {
+            margin-right: 14px;
+        }
+        &:before {
+            content: "off";
+        }
+        &:after {
+            content: "on";
+            opacity: 0;
+        }
+        &:before,&:after {
+            transition: opacity ease-in-out @transitionTime;
+            color: @mainColor;
+            line-height: @toggleHeight;
+            top: 0;
+            bottom: 0;
+            font-family: "LatoBlack";
+            .fontSize3();
+        }
+    }
+    input&__input:checked + label &__toggle {
+        background-color: @lightGreen;
+        &:before {
+            opacity: 0;
+        }
+        &:after {
+            opacity: 1;
+        }
+    }
+}

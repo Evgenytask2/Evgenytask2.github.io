@@ -1,0 +1,12 @@
+include ../projectShare/mixins
+
+.content__title Toggles
+.switch__container
+    +createRadioGroup(2,2,1)
+
+.content__title Tick boxes
+
+.switch__container 
+    .switch__check.switch__input(checked, type= "checkbox")
+    .switch__space
+    .switch__check.switch__input(type= "checkbox")

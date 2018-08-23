@@ -776,7 +776,7 @@ input:checked + label .standardButtons__button:before {
   height: 5px;
   margin-top: -5px;
   margin-bottom: 20px;
-  width: 50%;
+  width: 0%;
   -webkit-transition: width ease-in-out 0.7s;
   transition: width ease-in-out 0.7s;
 }
@@ -934,6 +934,97 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .form__button-triangle.form__button-warning:after {
   border-right-color: #e75735;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.switch__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.switch__input {
+  display: none;
+}
+.switch__toggle {
+  width: 58px;
+  height: 23px;
+  border-radius: 11.5px;
+  background-color: #e5e5e5;
+  -webkit-transition: background-color ease-in-out 0.6s;
+  transition: background-color ease-in-out 0.6s;
+}
+.switch__toggle-spaced {
+  margin-right: 14px;
+}
+.switch__toggle:before {
+  content: "off";
+}
+.switch__toggle:after {
+  content: "on";
+  opacity: 0;
+}
+.switch__toggle:before,
+.switch__toggle:after {
+  -webkit-transition: opacity ease-in-out 0.6s;
+  transition: opacity ease-in-out 0.6s;
+  color: #ffffff;
+  line-height: 23px;
+  top: 0;
+  bottom: 0;
+  font-family: "LatoBlack";
+  font-size: 12px;
+}
+input.switch__input:checked + label .switch__toggle {
+  background-color: #4eb7a8;
+}
+input.switch__input:checked + label .switch__toggle:before {
+  opacity: 0;
+}
+input.switch__input:checked + label .switch__toggle:after {
+  opacity: 1;
 }
 .lightGreen {
   background-color: #4eb7a8;

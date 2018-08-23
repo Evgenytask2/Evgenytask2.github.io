@@ -62,14 +62,18 @@ mixin createStageChart(progress, idStart = 1, elemClass = "warning", maximum = 5
     - var possibleClass = "couldBe_" + elemClass;
     - var notAchieved = "notAchieved";
     - var currentId
+    - var groupName = "group_" + idStart;
     - for(var j = 0; j < maximum; j++)
         - var classes = "stageChart__clickBox " + "stageChart__clickBox-" + (j+1) +"of" + maximum
-        - currentId = idStart + j
-        input(class= classes, id= currentId, type= "checkbox")
+        - currentId = "SC_" + startId + "_" + j
+        - if(progress == (j+1))
+            input(class= classes, id= currentId, type= "radio", name= groupName, checked)
+        - else
+            input(class= classes, id= currentId, type= "radio", name= groupName)
 
     .stageChart
         - for(var i = 0; i < maximum; i++)
-            - currentId = idStart + i
+            - currentId = "SC_" + startId + "_" + i
             if(i < progress)
                 label(for= currentId)
                     +createElement(i+1,"stageChart__value",elemClass, possibleClass)
@@ -80,3 +84,16 @@ mixin createStageChart(progress, idStart = 1, elemClass = "warning", maximum = 5
     .stageChart__scale
     .stageChart__progress.stageChart__progress-warning
 
+mixin createRadioGroup(quantity, activeNumber, startId, spaced = true)
+    - var groupName = "RG#" + startId
+    - for(var i = 0; i < quantity; i++)
+        - var currentId = "CRG_" + startId + "_" + i
+        - if( (i+1) == activeNumber)
+            input.switch__input(type= "radio", checked, id= currentId, name= groupName)
+        - else
+            input.switch__input(type= "radio", id= currentId, name= groupName)
+        label(for= currentId)
+            - if(spaced && (i!=(quantity - 1)))
+                .switch__toggle.switch__toggle-spaced
+            - else 
+                .switch__toggle
