@@ -1,9 +1,23 @@
 @import "../projectShare/common.less";
+
+@transitionTime: 0.7s;
+@progressHeight: 5px;
+@maxProgressWidth: 95%;
+
 .stageChart {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    @valueHeight: 29px;
+    .notAchieved() {
+        background-color: @lightGrey;
+        color: @mediumGrey;
+    }
+    .achievedWarning() {
+        color: @mainColor;
+        background-color: @red;
+    }
     &__value {
-        @valueHeight: 29px;
+        cursor: pointer;
         width: @valueHeight;
         height: @valueHeight;
         border-radius: 50%;
@@ -11,23 +25,86 @@
         .fontSize4();
         font-family: "LatoBlack";
         text-align: center;
+        transition: background-color ease-in-out @transitionTime, color ease-in-out @transitionTime;
         &-warning {
-            color: @mainColor;
-            background-color: @red;
+           .achievedWarning();
         }
         &-notAchieved {
-            background-color: @lightGrey;
-            color: @mediumGrey;
+            .notAchieved();
         }
     }
-    &__vertex {
-        height: 5px;
-        flex-grow: 1;
+    &__progress {
+        height: @progressHeight;
+        margin-top: -@progressHeight;
+        margin-bottom: 20px;
+        width: 50%;
+        transition: width ease-in-out @transitionTime;
         &-warning {
             background-color: @red;
         }
-        &-notAchieved {
-            background-color: @lightGrey;
+    }
+    &__scale {
+        height: @progressHeight;
+        margin-top: -(@valueHeight + @progressHeight)/2;
+        background-color: @lightGrey;
+        width: @maxProgressWidth;
+    }
+    &__clickBox {
+        display: none;
+    }
+    input&__clickBox{
+        @sc: ~".stageChart__progress";
+        @makeWarning: ~".stageChart label .stageChart__value-couldBe_warning";
+        @child: ~".stageChart label";
+        @value: ~" .stageChart__value";
+        &-1of5:checked {
+            & ~ @{sc} {
+            width: 0%; 
+            }
+            & ~ @{child}:nth-child(n+2)@{value} {
+                .notAchieved();
+            }
+        }
+        &-2of5:checked {
+            & ~ @{sc} {
+            width: 25%; 
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+            & ~ @{child}:nth-child(n+3)@{value} {
+                .notAchieved();
+            }
+        }
+        &-3of5:checked {
+            & ~ @{sc} {
+            width: 50%; 
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+            & ~ @{child}:nth-child(n+4)@{value} {
+                .notAchieved();
+            }
+        }
+        &-4of5:checked {
+            & ~ @{sc} {
+            width: 75%; 
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
+            & ~ @{child}:nth-child(n+5)@{value} {
+                .notAchieved();
+            }
+        }
+        &-5of5:checked {
+            & ~ @{sc} {
+            width: @maxProgressWidth;
+            }
+            & ~ @{makeWarning} {
+                .achievedWarning();
+            }
         }
     }
 }

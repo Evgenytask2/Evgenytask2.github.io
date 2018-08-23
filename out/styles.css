@@ -748,11 +748,12 @@ input:checked + label .standardButtons__button:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .stageChart__value {
+  cursor: pointer;
   width: 29px;
   height: 29px;
   border-radius: 50%;
@@ -760,6 +761,8 @@ input:checked + label .standardButtons__button:before {
   font-size: 14px;
   font-family: "LatoBlack";
   text-align: center;
+  -webkit-transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
+  transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
 }
 .stageChart__value-warning {
   color: #ffffff;
@@ -769,17 +772,72 @@ input:checked + label .standardButtons__button:before {
   background-color: #e5e5e5;
   color: #888888;
 }
-.stageChart__vertex {
+.stageChart__progress {
   height: 5px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  width: 50%;
+  -webkit-transition: width ease-in-out 0.7s;
+  transition: width ease-in-out 0.7s;
 }
-.stageChart__vertex-warning {
+.stageChart__progress-warning {
   background-color: #e75735;
 }
-.stageChart__vertex-notAchieved {
+.stageChart__scale {
+  height: 5px;
+  margin-top: -17px;
   background-color: #e5e5e5;
+  width: 95%;
+}
+.stageChart__clickBox {
+  display: none;
+}
+input.stageChart__clickBox-1of5:checked ~ .stageChart__progress {
+  width: 0%;
+}
+input.stageChart__clickBox-1of5:checked ~ .stageChart label:nth-child(n+2) .stageChart__value {
+  background-color: #e5e5e5;
+  color: #888888;
+}
+input.stageChart__clickBox-2of5:checked ~ .stageChart__progress {
+  width: 25%;
+}
+input.stageChart__clickBox-2of5:checked ~ .stageChart label .stageChart__value-couldBe_warning {
+  color: #ffffff;
+  background-color: #e75735;
+}
+input.stageChart__clickBox-2of5:checked ~ .stageChart label:nth-child(n+3) .stageChart__value {
+  background-color: #e5e5e5;
+  color: #888888;
+}
+input.stageChart__clickBox-3of5:checked ~ .stageChart__progress {
+  width: 50%;
+}
+input.stageChart__clickBox-3of5:checked ~ .stageChart label .stageChart__value-couldBe_warning {
+  color: #ffffff;
+  background-color: #e75735;
+}
+input.stageChart__clickBox-3of5:checked ~ .stageChart label:nth-child(n+4) .stageChart__value {
+  background-color: #e5e5e5;
+  color: #888888;
+}
+input.stageChart__clickBox-4of5:checked ~ .stageChart__progress {
+  width: 75%;
+}
+input.stageChart__clickBox-4of5:checked ~ .stageChart label .stageChart__value-couldBe_warning {
+  color: #ffffff;
+  background-color: #e75735;
+}
+input.stageChart__clickBox-4of5:checked ~ .stageChart label:nth-child(n+5) .stageChart__value {
+  background-color: #e5e5e5;
+  color: #888888;
+}
+input.stageChart__clickBox-5of5:checked ~ .stageChart__progress {
+  width: 95%;
+}
+input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-couldBe_warning {
+  color: #ffffff;
+  background-color: #e75735;
 }
 .lightGreen {
   background-color: #4eb7a8;

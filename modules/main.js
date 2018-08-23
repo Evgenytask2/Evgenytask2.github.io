@@ -18,4 +18,10 @@ import media from "./projectShare/media.less"; // must be included as the last f
 let pugTemplate = require("./root/index.pug");
 document.querySelector("#pugTemplate").innerHTML = pugTemplate;
 
-console.log("Javascript entry point log");
+let elems = document.querySelectorAll(".stageChart__clickBox");
+for(let elem of elems) 
+    elem.onclick = function() {
+        for(let e of elems)
+             if(this != e)
+                e.checked = false;
+        }

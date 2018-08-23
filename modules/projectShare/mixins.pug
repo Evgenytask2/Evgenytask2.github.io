@@ -58,17 +58,25 @@ mixin createSuccessSlider(percent)
 
 
 
-mixin createStageChart(progress, maximum = 5, elemClass = "warning")
+mixin createStageChart(progress, idStart = 1, elemClass = "warning", maximum = 5)
+    - var possibleClass = "couldBe_" + elemClass;
     - var notAchieved = "notAchieved";
+    - var currentId
+    - for(var j = 0; j < maximum; j++)
+        - var classes = "stageChart__clickBox " + "stageChart__clickBox-" + (j+1) +"of" + maximum
+        - currentId = idStart + j
+        input(class= classes, id= currentId, type= "checkbox")
+
     .stageChart
         - for(var i = 0; i < maximum; i++)
-
-            if((i > 0) && (i < progress))
-                +createElement("","stageChart__vertex",elemClass)
-
+            - currentId = idStart + i
             if(i < progress)
-                +createElement(i+1,"stageChart__value",elemClass)
+                label(for= currentId)
+                    +createElement(i+1,"stageChart__value",elemClass, possibleClass)
             else
-                +createElement("","stageChart__vertex",notAchieved)
-                +createElement(i+1,"stageChart__value",notAchieved)
+                label(for= currentId)
+                    +createElement(i+1,"stageChart__value",notAchieved, possibleClass)
+                    
+    .stageChart__scale
+    .stageChart__progress.stageChart__progress-warning
 
