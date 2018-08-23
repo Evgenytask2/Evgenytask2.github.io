@@ -10,6 +10,7 @@ import arrowBtns from "./arrowBtns/script.js";
 import circleDiagrams from "./percentages/script.js";
 import sliders from "./sliders/script.js";
 import stages from "./stages/script.js";
+import formElements from "./formElements/script.js";
 
 import media from "./projectShare/media.less"; // must be included as the last file
 

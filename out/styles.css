@@ -63,6 +63,18 @@
   letter-spacing: 1.2px;
   word-spacing: 3px;
 }
+.content__twoSections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.content__halfSection {
+  width: 50%;
+}
 @font-face {
   font-family: 'LatoLight';
   src: url('fonts/LatoLight.ttf') format('truetype');
@@ -671,14 +683,11 @@ input:checked + label .standardButtons__button:before {
 }
 .sliders__axisValue:not(:first-child) {
   margin-left: 20%;
-  -webkit-transform: translateX(-7px);
-      -ms-transform: translateX(-7px);
-          transform: translateX(-7px);
 }
 .sliders__axisValue:last-child {
-  -webkit-transform: translateX(-16px);
-      -ms-transform: translateX(-16px);
-          transform: translateX(-16px);
+  -webkit-transform: translateX(-9px);
+      -ms-transform: translateX(-9px);
+          transform: translateX(-9px);
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -726,6 +735,9 @@ input:checked + label .standardButtons__button:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .stageChart__value {
   width: 29px;
@@ -743,6 +755,70 @@ input:checked + label .standardButtons__button:before {
 .stageChart__value-notAchieved {
   background-color: #e5e5e5;
   color: #888888;
+}
+.stageChart__vertex {
+  height: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.stageChart__vertex-warning {
+  background-color: #e75735;
+}
+.stageChart__vertex-notAchieved {
+  background-color: #e5e5e5;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form__row input {
+  text-transform: capitalize;
+  background-color: #e5e5e5;
+  border-radius: 3px;
 }
 .lightGreen {
   background-color: #4eb7a8;

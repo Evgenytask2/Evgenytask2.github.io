@@ -65,6 +65,6 @@ mixin createStageChart(progress, maximum = 5, elemClass = "warning")
             if(i < progress)
                 +createElement(i+1,"stageChart__value",elemClass)
             else
-                +createElement("","stageChart__vertex",elemClass)
+                +createElement("","stageChart__vertex",notAchieved)
                 +createElement(i+1,"stageChart__value",notAchieved)
 

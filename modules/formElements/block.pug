@@ -1,0 +1,11 @@
+.form
+    .form__row
+        input.form__name(placeholder= "Your name")
+        +createElement("Error","standardButtons__button", "small", "warning")
+    .form__row
+        input.form__email(placeholder= "Your Email")
+        +createElement("Thanks","standardButtons__button", "small", "success")
+    .form__row
+        input.form__message(placeholder= "Your message")
+    .form__row
+        +createElement("Submit","standardButtons__button", "small", "success")

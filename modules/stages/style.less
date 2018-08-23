@@ -1,6 +1,7 @@
 @import "../projectShare/common.less";
 .stageChart {
     display: flex;
+    align-items: center;
     &__value {
         @valueHeight: 29px;
         width: @valueHeight;
@@ -17,6 +18,16 @@
         &-notAchieved {
             background-color: @lightGrey;
             color: @mediumGrey;
+        }
+    }
+    &__vertex {
+        height: 5px;
+        flex-grow: 1;
+        &-warning {
+            background-color: @red;
+        }
+        &-notAchieved {
+            background-color: @lightGrey;
         }
     }
 }
