@@ -17,7 +17,7 @@
     margin: 0 11%;
     display: flex;
     flex-direction: column;
-
+ 
     &__clickBox {
         display: none;
     }
@@ -28,17 +28,16 @@
         justify-content: space-between;
     }
     &__button {
+        @radiusSize: 3px;
         cursor: pointer;
-        margin: 0 auto;
-        @btn: ~".standardButtons__button";
         text-align: center;
         font-family: "LatoBlack", Arial, sans-serif;
-        border-radius: 3px;
-        box-sizing: border-box;
+        border-radius: @radiusSize;
         color: @mainColor;
+        @btn: ~".standardButtons__button";
+        box-sizing: border-box;
         .fontSize3();
         &-small{
-            margin-top: @marginTop + @deltahHeight;
             width: 78px;
             height: @smallHeight;
             line-height: @smallHeight;
@@ -48,9 +47,11 @@
             @{btn}-warning@{btn}-shadow& {
                 box-shadow: 0 (@shadow+1) 0 0 @darkRedShadow;
             }
+            @{btn}-inContainer& {
+                margin-top: @marginTop + @deltahHeight;
+            }
         }
         &-big {
-            margin-top: @marginTop;
             width: 116px;
             height: @smallHeight + @deltahHeight;
             line-height: @smallHeight + @deltahHeight;
@@ -59,6 +60,9 @@
             }
             @{btn}-warning@{btn}-shadow& {
                 box-shadow: 0 (@bigShadow+1) 0 0 @darkRedShadow;
+            }
+            @{btn}-inContainer& {
+                margin-top: @marginTop;
             }
         }
 
@@ -95,6 +99,7 @@
             bottom: 0;
             opacity: 0;
             transition: opacity ease-in-out 0.6s;
+            border-radius: @radiusSize;
         }
 
         &-grad {

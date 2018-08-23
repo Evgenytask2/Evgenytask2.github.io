@@ -1,7 +1,11 @@
 mixin createElement(elementText, elementName, ...modifiers) 
     -var classes = elementName
     each mod in modifiers
-        - classes += (" " + elementName + "-" + mod)
+        - if (mod[0] == '!')
+            - elementName = mod.substring(1) 
+            - classes += (" " + elementName)
+        - else 
+            - classes += (" " + elementName + "-" + mod)
     div(class= classes) #{elementText}
 
 mixin createCircleProgress(percent)

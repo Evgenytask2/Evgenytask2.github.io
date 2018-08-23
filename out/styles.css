@@ -59,7 +59,7 @@
   text-align: center;
   font-size: 18px;
   color: #4f4f4f;
-  font-family: "LatoBlack";
+  font-family: "LatoBlack", Arial, sans-serif;
   letter-spacing: 1.2px;
   word-spacing: 3px;
 }
@@ -84,6 +84,12 @@
 @font-face {
   font-family: 'LatoBlack';
   src: url('fonts/LatoBlack.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceRegular';
+  src: url('fonts/SourceRegular.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -156,17 +162,15 @@
 }
 .standardButtons__button {
   cursor: pointer;
-  margin: 0 auto;
   text-align: center;
   font-family: "LatoBlack", Arial, sans-serif;
   border-radius: 3px;
+  color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #ffffff;
   font-size: 12px;
 }
 .standardButtons__button-small {
-  margin-top: 30px;
   width: 78px;
   height: 22px;
   line-height: 22px;
@@ -179,8 +183,10 @@
   -webkit-box-shadow: 0 3px 0 0 #bf3e1f;
           box-shadow: 0 3px 0 0 #bf3e1f;
 }
+.standardButtons__button-inContainer.standardButtons__button-small {
+  margin-top: 30px;
+}
 .standardButtons__button-big {
-  margin-top: 20px;
   width: 116px;
   height: 32px;
   line-height: 32px;
@@ -192,6 +198,9 @@
 .standardButtons__button-warning.standardButtons__button-shadow.standardButtons__button-big {
   -webkit-box-shadow: 0 4px 0 0 #bf3e1f;
           box-shadow: 0 4px 0 0 #bf3e1f;
+}
+.standardButtons__button-inContainer.standardButtons__button-big {
+  margin-top: 20px;
 }
 .standardButtons__button-success {
   background-color: #4eb7a8;
@@ -231,6 +240,7 @@
   opacity: 0;
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
+  border-radius: 3px;
   background: radial-gradient(circle 24px at 38% 23%, #82cbc1 100%, #4eb7a8);
 }
 .standardButtons__button-grad2 {
@@ -246,6 +256,7 @@
   opacity: 0;
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
+  border-radius: 3px;
   background: radial-gradient(circle 27px at 50% 50%, #82cbc1 100%, #4eb7a8);
 }
 .standardButtons__button-grad3 {
@@ -261,6 +272,7 @@
   opacity: 0;
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
+  border-radius: 3px;
   background: radial-gradient(circle 27px at 74% 50%, #ed8870 100%, #e75735);
 }
 .standardButtons__button-grad4 {
@@ -276,6 +288,7 @@
   opacity: 0;
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
+  border-radius: 3px;
   background: radial-gradient(circle 27px at 92% 23%, #ed8870 100%, #e75735);
 }
 input:checked + label .standardButtons__button:before {
@@ -814,11 +827,55 @@ input:checked + label .standardButtons__button:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.form__row input {
+.form__row-submission {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.form__input {
   text-transform: capitalize;
   background-color: #e5e5e5;
   border-radius: 3px;
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 13px;
+  font-family: "SourceRegular", Arial, sans-serif;
+  font-size: 14px;
+}
+.form__message {
+  resize: none;
+}
+.form__button {
+  font-size: 10px;
+  margin-left: 7px;
+  width: 72px;
+  height: 28px;
+  line-height: 28px;
+}
+.form__button-triangle {
+  position: relative;
+}
+.form__button-triangle:after {
+  border: 5px transparent solid;
+  border-left: none;
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -4px;
+}
+.form__button-triangle.form__button-success:after {
+  border-right-color: #4eb7a8;
+}
+.form__button-triangle.form__button-warning:after {
+  border-right-color: #e75735;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -868,6 +925,7 @@ input:checked + label .standardButtons__button:before {
   }
   .standardButtons__elem {
     width: 50%;
+    text-align: center;
   }
   .standardButtons__elem:first-child {
     -webkit-box-ordinal-group: -1;
@@ -878,6 +936,9 @@ input:checked + label .standardButtons__button:before {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+  .standardButtons__button {
+    display: inline-block;
   }
   .arrowButtons__container {
     width: 100%;
@@ -906,5 +967,8 @@ input:checked + label .standardButtons__button:before {
   .sliders__sliderBox {
     width: 100%;
     margin-bottom: 30px;
+  }
+  .content__halfSection {
+    width: 100%;
   }
 }

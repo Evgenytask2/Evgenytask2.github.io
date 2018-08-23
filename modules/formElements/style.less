@@ -1,11 +1,57 @@
 @import "../projectShare/common.less";
+
+@roundBorder: 3px;
 .form {
     &__row {
        display: flex;
-       input {
-            text-transform: capitalize;
-            background-color: @lightGrey;
-            border-radius: 3px;
+       margin-right: 10px;
+       margin-bottom: 12px;
+       justify-content: space-between;
+       &-submission {
+           justify-content: flex-end;
        }
+    }
+    &__input {
+        text-transform: capitalize;
+        background-color: @lightGrey;
+        border-radius: @roundBorder;
+        border: none;
+        flex-grow: 1;
+        padding-left: 13px;
+        font-family: "SourceRegular", Arial, sans-serif;
+        .fontSize4();
+    }
+    &__message {
+        resize: none;
+    }
+    &__button {
+        @buttonHeight: 28px;
+        .fontSize1();
+        margin-left: 7px;
+        width: 72px;
+        height: @buttonHeight;
+        line-height: @buttonHeight;
+        &-triangle {
+            position: relative;
+            &:after {
+                @borderSize: 5px;
+                border: @borderSize transparent solid;
+                border-left: none;
+                content: "";
+                position: absolute;
+                top: (@buttonHeight - 2*@borderSize)/2;
+                left: -4px;
+            }
+        }
+        &-triangle&-success {
+            &:after {
+                border-right-color: @lightGreen;
+            }
+        }
+        &-triangle&-warning {
+            &:after {
+                border-right-color: @red;
+            }
+        }
     }
 }
