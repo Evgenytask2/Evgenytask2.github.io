@@ -1,0 +1,22 @@
+@import "../projectShare/common.less";
+.stageChart {
+    display: flex;
+    &__value {
+        @valueHeight: 29px;
+        width: @valueHeight;
+        height: @valueHeight;
+        border-radius: 50%;
+        line-height: @valueHeight;
+        .fontSize4();
+        font-family: "LatoBlack";
+        text-align: center;
+        &-warning {
+            color: @mainColor;
+            background-color: @red;
+        }
+        &-notAchieved {
+            background-color: @lightGrey;
+            color: @mediumGrey;
+        }
+    }
+}

@@ -1,17 +1,24 @@
 @import "../projectShare/common.less";
 @sliderHeight: 5px;
 @dragHeight: 21px;
+@successMargin: 5px;
+
 .sliders {
+    font-family: "LatoBlack";
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 40px;
+    margin-bottom: 25px;
     &__slider {
         width: 260px;
         height: @sliderHeight;
         background-color: @lightGrey;
-        border-radius: 2px;
+        border-radius: @sliderHeight;
         position: relative;
+        &-success {
+            margin-right: @successMargin;
+        }
     }
     &__drag {
         position: absolute;
@@ -32,6 +39,7 @@
         top: 0;
         bottom: 0;
         left: 0;
+        border-radius: @sliderHeight;
         background-color: @lightGreen;
     }
     &__warningValue {
@@ -42,7 +50,7 @@
         background-color: @red;
         position: absolute;
         left: -(@warningValueWidth - @dragHeight)/2;
-        border-radius: 7px;
+        border-radius: 5px;
         top: -32px;
         &:before {
             position: absolute;
@@ -52,6 +60,7 @@
             content: attr(data-percent);
             color: @mainColor;
             .fontSize3Half();
+            text-align: center;
         }
         &:after {
             position: absolute;
@@ -64,6 +73,25 @@
             border: 5px transparent solid;
             border-top-color: @red;
             border-bottom: none;
+        }
+    }
+    &__axis {
+        display: flex;
+        width: 100%;;
+        &Value {
+            margin-top: 14px;
+            .fontSize2();
+            color: @lightGrey;
+            &:first-child {
+                transform: translateX(-2px);
+            }
+            &:not(:first-child) {
+                margin-left: 20%;
+                transform: translateX(-7px);
+            }
+            &:last-child {
+                transform: translateX(-16px);
+            }
         }
     }
 }

@@ -42,6 +42,29 @@ mixin createWarningSlider(percent)
 mixin createSuccessSlider(percent)
     - var style = "left: " + percent + "%";
     - var styleWidth = "width: " + percent + "%"
-    .sliders__slider
+    .sliders__slider.sliders__slider-success
         .sliders__drag.sliders__drag-success(style= style)
         .sliders__fillSuccess(style= styleWidth)
+        .sliders__axis
+            .sliders__axisValue 0
+            .sliders__axisValue 25
+            .sliders__axisValue 50
+            .sliders__axisValue 75
+            .sliders__axisValue 100
+
+
+
+mixin createStageChart(progress, maximum = 5, elemClass = "warning")
+    - var notAchieved = "notAchieved";
+    .stageChart
+        - for(var i = 0; i < maximum; i++)
+
+            if((i > 0) && (i < progress))
+                +createElement("","stageChart__vertex",elemClass)
+
+            if(i < progress)
+                +createElement(i+1,"stageChart__value",elemClass)
+            else
+                +createElement("","stageChart__vertex",elemClass)
+                +createElement(i+1,"stageChart__value",notAchieved)
+
