@@ -13,6 +13,9 @@
 .mediumGrey {
   background-color: #888888;
 }
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
 .darkGrey {
   background-color: #4f4f4f;
 }
@@ -107,6 +110,9 @@
 }
 .mediumGrey {
   background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
 }
 .darkGrey {
   background-color: #4f4f4f;
@@ -309,6 +315,9 @@ input:checked + label .standardButtons__button:before {
 .mediumGrey {
   background-color: #888888;
 }
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
 .darkGrey {
   background-color: #4f4f4f;
 }
@@ -357,6 +366,7 @@ input:checked + label .standardButtons__button:before {
       justify-content: space-around;
 }
 .arrowButtons__button {
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -431,6 +441,9 @@ input:checked + label .standardButtons__button:before {
 }
 .mediumGrey {
   background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
 }
 .darkGrey {
   background-color: #4f4f4f;
@@ -568,6 +581,9 @@ input:checked + label .standardButtons__button:before {
 }
 .mediumGrey {
   background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
 }
 .darkGrey {
   background-color: #4f4f4f;
@@ -717,6 +733,9 @@ input:checked + label .standardButtons__button:before {
 .mediumGrey {
   background-color: #888888;
 }
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
 .darkGrey {
   background-color: #4f4f4f;
 }
@@ -854,6 +873,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .mediumGrey {
   background-color: #888888;
 }
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
 .darkGrey {
   background-color: #4f4f4f;
 }
@@ -935,6 +957,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .form__button-triangle.form__button-warning:after {
   border-right-color: #e75735;
 }
+.form__button-noPointer {
+  cursor: default;
+}
 .lightGreen {
   background-color: #4eb7a8;
 }
@@ -949,6 +974,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .mediumGrey {
   background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
 }
 .darkGrey {
   background-color: #4f4f4f;
@@ -988,43 +1016,119 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .switch__input {
   display: none;
 }
+.switch__space {
+  margin-right: 14px;
+}
+.switch__label {
+  cursor: pointer;
+}
 .switch__toggle {
+  position: relative;
   width: 58px;
-  height: 23px;
-  border-radius: 11.5px;
+  height: 24px;
+  border-radius: 12px;
   background-color: #e5e5e5;
   -webkit-transition: background-color ease-in-out 0.6s;
   transition: background-color ease-in-out 0.6s;
 }
-.switch__toggle-spaced {
-  margin-right: 14px;
-}
 .switch__toggle:before {
   content: "off";
+  -webkit-transform: translateX(26.1px);
+      -ms-transform: translateX(26.1px);
+          transform: translateX(26.1px);
 }
 .switch__toggle:after {
   content: "on";
   opacity: 0;
+  -webkit-transform: translateX(12px);
+      -ms-transform: translateX(12px);
+          transform: translateX(12px);
 }
 .switch__toggle:before,
 .switch__toggle:after {
-  -webkit-transition: opacity ease-in-out 0.6s;
-  transition: opacity ease-in-out 0.6s;
+  -webkit-transition: opacity ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
+  transition: opacity ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
+  transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
+  transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
   color: #ffffff;
-  line-height: 23px;
+  line-height: 24px;
   top: 0;
   bottom: 0;
+  position: absolute;
   font-family: "LatoBlack";
   font-size: 12px;
 }
-input.switch__input:checked + label .switch__toggle {
+.switch__indicator {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  -webkit-transform: translateX(4px);
+      -ms-transform: translateX(4px);
+          transform: translateX(4px);
+  -webkit-transition: -webkit-transform ease-in-out 0.6s;
+  transition: -webkit-transform ease-in-out 0.6s;
+  transition: transform ease-in-out 0.6s;
+  transition: transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
+}
+input.switch__input:checked + .switch__label .switch__toggle {
   background-color: #4eb7a8;
 }
-input.switch__input:checked + label .switch__toggle:before {
+input.switch__input:checked + .switch__label .switch__toggle:before {
   opacity: 0;
+  -webkit-transform: translateX(12px);
+      -ms-transform: translateX(12px);
+          transform: translateX(12px);
 }
-input.switch__input:checked + label .switch__toggle:after {
+input.switch__input:checked + .switch__label .switch__toggle:after {
   opacity: 1;
+}
+input.switch__input:checked + .switch__label .switch__toggle .switch__indicator {
+  -webkit-transform: translateX(36px);
+      -ms-transform: translateX(36px);
+          transform: translateX(36px);
+}
+.switch__tickBox {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  -webkit-transition: background-color ease-in-out 0.6s;
+  transition: background-color ease-in-out 0.6s;
+}
+.switch__tickBox:before,
+.switch__tickBox:after {
+  position: absolute;
+  content: "";
+  height: 2.5px;
+  background-color: #c0c0c0;
+  -webkit-transition: background-color ease-in-out 0.6s;
+  transition: background-color ease-in-out 0.6s;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.switch__tickBox:before {
+  width: 6px;
+  -webkit-transform: translateY(16.8px) translateX(7.2px) rotate(225deg);
+      -ms-transform: translateY(16.8px) translateX(7.2px) rotate(225deg);
+          transform: translateY(16.8px) translateX(7.2px) rotate(225deg);
+}
+.switch__tickBox:after {
+  width: 16px;
+  -webkit-transform: translateY(16.8px) translateX(7.2px) rotate(-45deg);
+      -ms-transform: translateY(16.8px) translateX(7.2px) rotate(-45deg);
+          transform: translateY(16.8px) translateX(7.2px) rotate(-45deg);
+}
+input.switch__input:checked + .switch__label .switch__tickBox {
+  background-color: #4eb7a8;
+}
+input.switch__input:checked + .switch__label .switch__tickBox:before,
+input.switch__input:checked + .switch__label .switch__tickBox:after {
+  background-color: #ffffff;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -1040,6 +1144,9 @@ input.switch__input:checked + label .switch__toggle:after {
 }
 .mediumGrey {
   background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
 }
 .darkGrey {
   background-color: #4f4f4f;

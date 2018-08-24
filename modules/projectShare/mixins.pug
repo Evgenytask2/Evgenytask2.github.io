@@ -92,8 +92,23 @@ mixin createRadioGroup(quantity, activeNumber, startId, spaced = true)
             input.switch__input(type= "radio", checked, id= currentId, name= groupName)
         - else
             input.switch__input(type= "radio", id= currentId, name= groupName)
-        label(for= currentId)
+        label.switch__label(for= currentId)
             - if(spaced && (i!=(quantity - 1)))
-                .switch__toggle.switch__toggle-spaced
+                .switch__toggle.switch__space
+                    .switch__indicator
             - else 
                 .switch__toggle
+                    .switch__indicator
+
+mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )
+    - for(var i = 0; i < quantity; i++)
+        - var currentId = "CG_" + startId + "_" + i
+        - if( activeNumbers.includes(i+1) )
+            input.switch__input(type= "checkbox", checked, id= currentId)
+        - else
+            input.switch__input(type= "checkbox", id= currentId)
+        label.switch__label(for= currentId)
+            - if(spaced && (i!=(quantity - 1)))
+                .switch__tickBox.switch__space
+            - else 
+                .switch__tickBox

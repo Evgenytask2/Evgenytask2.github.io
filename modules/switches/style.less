@@ -1,5 +1,10 @@
 @import "../projectShare/common.less";
+
 @transitionTime: 0.6s;
+@toggleHeight: 24px;
+@toggleWidth: 58px;
+@indicatorRatio: 0.75;
+@indicatorMargin: 4px;
 
 .switch {
     &__container {
@@ -9,40 +14,95 @@
     &__input {
         display: none;
     }
+    &__space {
+        margin-right: 14px;
+    }
+    &__label {
+        cursor: pointer;
+    }
     &__toggle {
-        width: 58px;
-        @toggleHeight: 23px;
+        position: relative;
+        width: @toggleWidth;
         height: @toggleHeight;
         border-radius: @toggleHeight/2;
         background-color: @lightGrey;
         transition: background-color ease-in-out @transitionTime;
-        &-spaced {
-            margin-right: 14px;
-        }
         &:before {
             content: "off";
+            transform: translateX(0.45*@toggleWidth);
         }
         &:after {
             content: "on";
             opacity: 0;
+            transform: translateX(@toggleHeight/2);
+           
         }
         &:before,&:after {
-            transition: opacity ease-in-out @transitionTime;
+            transition: opacity ease-in-out @transitionTime, transform ease-in-out @transitionTime ;
             color: @mainColor;
             line-height: @toggleHeight;
             top: 0;
             bottom: 0;
+            position: absolute;
             font-family: "LatoBlack";
             .fontSize3();
         }
     }
-    input&__input:checked + label &__toggle {
+    &__indicator {
+        width:  @toggleHeight*@indicatorRatio;
+        height:  @toggleHeight*@indicatorRatio;
+        background-color: @mainColor;
+        border-radius: 50%;
+        position: absolute;
+        top: (1-@indicatorRatio)*@toggleHeight/2;
+        transform: translateX(@indicatorMargin);
+        transition: transform ease-in-out @transitionTime;
+    }
+    input&__input:checked + &__label &__toggle {
         background-color: @lightGreen;
         &:before {
             opacity: 0;
+            transform: translateX(@toggleHeight/2);
         }
         &:after {
             opacity: 1;
+        }
+    }
+    input&__input:checked + &__label &__toggle  &__indicator{
+        transform: translateX(@toggleWidth - @toggleHeight*@indicatorRatio - @indicatorMargin);
+    }
+
+    &__tickBox {
+        @yShift: @toggleHeight*0.7;
+        @xShift: @toggleHeight*0.3;
+
+        position: relative;
+        height: @toggleHeight;
+        width: @toggleHeight;
+        border-radius: 50%;
+        background-color: @lightGrey;
+        transition: background-color ease-in-out @transitionTime;
+        &:before, &:after {
+            position: absolute;
+            content: "";
+            height: 2.5px;
+            background-color: @mediumLighterGrey;
+            transition: background-color ease-in-out @transitionTime;
+            transform-origin: 0 0;
+        }
+        &:before {
+            width: 6px;
+            transform: translateY(@yShift) translateX(@xShift) rotate(225deg);
+        }
+        &:after {
+            width: 16px;
+            transform: translateY(@yShift) translateX(@xShift)  rotate(-45deg);
+        }
+    }
+    input&__input:checked + &__label &__tickBox {
+        background-color: @lightGreen;
+        &:before, &:after {
+            background-color: @mainColor;
         }
     }
 }
