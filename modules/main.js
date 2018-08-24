@@ -16,6 +16,7 @@ import stages from "./stages/script.js";
 import formElements from "./formElements/script.js";
 import switches from "./switches/script.js";
 import search from "./searchTools/script.js";
+import userProfile from "./userProfile/script.js";
 
 import media from "./projectShare/media.less"; // must be included as the last file
 

@@ -53,6 +53,7 @@
   max-width: 700px;
   margin: 0 auto;
   margin-top: 82px;
+  margin-bottom: 60px;
 }
 .content__box {
   padding-left: 7.57%;
@@ -1293,9 +1294,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   position: absolute;
   width: 33px;
   height: 100%;
-  background-color: #e75735;
   right: 0;
   border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  background-color: #e75735;
 }
 .search__lensIcon:before,
 .search__lensIcon:after {
@@ -1313,8 +1315,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   left: 11px;
 }
 .search__lensIcon::after {
-  height: 2px;
-  width: 6px;
+  height: 2.5px;
+  width: 7px;
   background-color: #ffffff;
   -webkit-transform-origin: 70% 0;
       -ms-transform-origin: 70% 0;
@@ -1324,6 +1326,51 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           transform: rotate(45deg);
   bottom: 25%;
   right: 20%;
+}
+.search__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.search__background {
+  margin-right: 43px;
+  margin-top: -40px;
+  border-radius: 3px 0 0 3px;
+}
+.search__selectIcon {
+  position: absolute;
+  width: 33px;
+  height: 100%;
+  right: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: #4eb7a8;
+  z-index: -1;
+}
+.search__selectIcon:before,
+.search__selectIcon:after {
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  background-color: #ffffff;
+  width: 11px;
+}
+.search__selectIcon:before {
+  -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: translateX(6.5px) translateY(16.8px) rotate(45deg);
+      -ms-transform: translateX(6.5px) translateY(16.8px) rotate(45deg);
+          transform: translateX(6.5px) translateY(16.8px) rotate(45deg);
+}
+.search__selectIcon:after {
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: translateX(16.5px) translateY(15.8px) rotate(-45deg);
+      -ms-transform: translateX(16.5px) translateY(15.8px) rotate(-45deg);
+          transform: translateX(16.5px) translateY(15.8px) rotate(-45deg);
 }
 .search__help {
   text-transform: none;
@@ -1341,6 +1388,105 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .search__help::placeholder {
   color: #ffffff;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.userProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 27px;
+}
+.userProfile__photo {
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid #e5e5e5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.userProfile__photo-notCentered {
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
+}
+.userProfile__info {
+  border-radius: 6px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 13px;
+  padding-bottom: 16px;
+  margin-left: 12px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #4eb7a8;
+}
+.userProfile__info-notActive {
+  background-color: #e5e5e5;
+}
+.userProfile__fullName {
+  text-transform: capitalize;
+  margin-bottom: 7px;
+}
+.userProfile__fullName-notActive {
+  color: #e75735;
+}
+.userProfile__title {
+  font-family: "LatoBlack", Arial, sans-serif;
+}
+.userProfile__title-notActive {
+  color: #4f4f4f;
 }
 .lightGreen {
   background-color: #4eb7a8;

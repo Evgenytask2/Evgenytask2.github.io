@@ -1,0 +1,46 @@
+@import "../projectShare/common.less";
+
+.userProfile {
+    display: flex;
+    margin-left: 28px;
+    align-items: center;
+    margin-top: 27px;
+    &__photo {
+        border-radius: 50%;
+        width: 92px;
+        height: 92px;
+        box-sizing: border-box;
+        border: 5px solid @lightGrey;
+        object-fit: cover;
+        &-notCentered {
+            object-fit: none;
+            object-position: 50% 40%;
+        }
+    }
+    &__info {
+        border-radius: 2*@roundBorder;
+        flex-grow: 1;
+        padding-top: 13px;
+        padding-bottom: 16px;
+        margin-left: 12px;
+        color: @mainColor;
+        text-align: center;
+        background-color: @lightGreen;
+        &-notActive {
+            background-color: @lightGrey;
+        }
+    }
+    &__fullName {
+        text-transform: capitalize;
+        margin-bottom: 7px;
+        &-notActive {
+            color: @red;
+        }
+    }
+    &__title {
+        font-family: "LatoBlack",Arial, sans-serif;
+        &-notActive {
+            color: @darkGrey;
+        }
+    }
+}

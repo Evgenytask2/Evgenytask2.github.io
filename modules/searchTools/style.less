@@ -2,42 +2,82 @@
 @import "../projectShare/common.less";
 
 .search {
+    @iconWidth: 33px;
+    @thickness: 2px;
+    @iconHeight: 28px;
+
+
+    .createIcon() {
+        position: absolute;
+        width: @iconWidth;
+        height: 100%;
+        right: 0;
+        border-radius: 0 @roundBorder @roundBorder 0;
+    }
     &__row {
         position: relative;
     }
     &__input {
-        height: 28px;
+        height: @iconHeight;
     }
     &__lensIcon {
-        @lensWidth: 33px;
-        position: absolute;
-        width: @lensWidth;
-        height: 100%;
+        .createIcon();
+        cursor: pointer;
         background-color: @red;
-        right: 0;
-        border-radius: 0 @roundBorder @roundBorder 0;
-        @thickness: 2px;
         &:before, &:after {
             content: "";
             position: absolute;
         }
         &:before {
             box-sizing: border-box;
-            width: @lensWidth/3;
-            height: @lensWidth/3;
+            width: @iconWidth/3;
+            height: @iconWidth/3;
             border-radius: 50%;
             border: @thickness solid @mainColor;
             top: 25%;
-            left: @lensWidth/3;
+            left: @iconWidth/3;
         }
         &::after {
-            height: @thickness;
-            width: 6px;
+            height: (@thickness + 0.5px);
+            width: 7px;
             background-color: @mainColor;
             transform-origin: 70% 0;
             transform: rotate(45deg);
             bottom: 25%;
             right: 20%;
+        }
+    }
+    &__select {
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    &__background {
+        margin-right: @rowMarginRight + @iconWidth;
+        margin-top: -(@rowMarginBottom + @iconHeight);
+        border-radius: @roundBorder 0 0 @roundBorder;
+    }
+
+    &__selectIcon {
+        .createIcon();
+        background-color: @lightGreen;
+        z-index: -1;
+        @lineWidth: 11px;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            height: @thickness + 0.5px;
+            background-color: @mainColor;
+            width: @lineWidth;
+        }
+        &:before {
+            transform-origin: 100% 0;
+            transform: translateX((@iconWidth - 2*@lineWidth)/2 + 1px) translateY(0.6*@iconHeight) rotate(45deg);
+        }
+        &:after {
+            transform-origin: 0 100%;
+            transform: translateX((@iconWidth - 2*@lineWidth)/2 + @lineWidth ) translateY(0.6*@iconHeight - 1px) rotate(-45deg);
         }
     }
 
