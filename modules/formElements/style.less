@@ -1,6 +1,4 @@
 @import "../projectShare/common.less";
-
-@roundBorder: 3px;
 .form {
     &__row {
        display: flex;
@@ -19,7 +17,11 @@
         flex-grow: 1;
         padding-left: 13px;
         font-family: "SourceRegular", Arial, sans-serif;
+        color: @mediumGrey;
         .fontSize4();
+        &::placeholder {
+            color: @mediumGrey;
+        }
     }
     &__message {
         resize: none;

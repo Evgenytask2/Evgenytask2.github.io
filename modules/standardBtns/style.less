@@ -28,11 +28,10 @@
         justify-content: space-between;
     }
     &__button {
-        @radiusSize: 3px;
         cursor: pointer;
         text-align: center;
         font-family: "LatoBlack", Arial, sans-serif;
-        border-radius: @radiusSize;
+        border-radius: @roundBorder;
         color: @mainColor;
         @btn: ~".standardButtons__button";
         box-sizing: border-box;
@@ -99,7 +98,7 @@
             bottom: 0;
             opacity: 0;
             transition: opacity ease-in-out 0.6s;
-            border-radius: @radiusSize;
+            border-radius: @roundBorder;
         }
 
         &-grad {

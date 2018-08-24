@@ -1,0 +1,27 @@
+@import "../stages/style.less";
+@import "../projectShare/common.less";
+
+.search {
+    &__row {
+        position: relative;
+    }
+    &__input {
+        height: 28px;
+    }
+    &__lensIcon {
+        position: absolute;
+        width: 33px;
+        height: 100%;
+        background-color: @red;
+        right: 0;
+        border-radius: 0 @roundBorder @roundBorder 0;
+    }
+
+    &__help {
+        text-transform: none;
+        .achievedWarning();
+        &::placeholder {
+            color: @mainColor;
+        }
+    }
+}

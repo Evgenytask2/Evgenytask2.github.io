@@ -4,6 +4,11 @@
 @progressHeight: 5px;
 @maxProgressWidth: 95%;
 
+.achievedWarning() {
+    color: @mainColor;
+    background-color: @red;
+}
+
 .stageChart {
     display: flex;
     justify-content: space-between;
@@ -11,10 +16,6 @@
     .notAchieved() {
         background-color: @lightGrey;
         color: @mediumGrey;
-    }
-    .achievedWarning() {
-        color: @mainColor;
-        background-color: @red;
     }
     &__value {
         cursor: pointer;
