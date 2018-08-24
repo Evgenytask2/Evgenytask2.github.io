@@ -1,0 +1,29 @@
+@import "../projectShare/common.less";
+.news {
+    background-color: @red;
+    margin-right: @rowMarginRight;
+    border-radius: 2*@roundBorder;
+    display: flex;
+    &__content {
+        padding-top: 25px;
+        padding-left: 22px;
+        padding-bottom: 35px;
+        padding-right: 22px;
+        color: @mainColor;
+        text-transform: none;
+        .fontSize2();
+    }
+    &__img {
+        width: 95px;
+        object-fit: cover;
+    }
+    &__header {
+        .fontSize7();
+    }
+    &__date {
+        font-family: "LatoBlack", Arial, sans-serif;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 18px;
+    }
+}

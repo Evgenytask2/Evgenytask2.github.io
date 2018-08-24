@@ -112,3 +112,11 @@ mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )
                 .switch__tickBox.switch__space
             - else 
                 .switch__tickBox
+
+mixin createNews(imgSrc, header, date, details)
+    .news 
+        img.news__img(src= imgSrc)
+        .news__content
+            .news__header #{header}
+            .news__date #{date}
+            .news__details #{details}

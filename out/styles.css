@@ -40,6 +40,9 @@
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -138,6 +141,9 @@
 }
 .fontSize6 {
   font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -343,6 +349,9 @@ input:checked + label .standardButtons__button:before {
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -469,6 +478,9 @@ input:checked + label .standardButtons__button:before {
 }
 .fontSize6 {
   font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -609,6 +621,9 @@ input:checked + label .standardButtons__button:before {
 }
 .fontSize6 {
   font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -761,6 +776,9 @@ input:checked + label .standardButtons__button:before {
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -901,6 +919,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1015,6 +1036,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .fontSize6 {
   font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -1281,6 +1305,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1431,6 +1458,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1493,6 +1523,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .userProfile__fullName {
   text-transform: capitalize;
+  margin-bottom: 3px;
   font-size: 18px;
 }
 .userProfile__fullName-alternative {
@@ -1582,6 +1613,88 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize6 {
   font-size: 18px;
 }
+.fontSize7 {
+  font-size: 28px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.news {
+  background-color: #e75735;
+  margin-right: 10px;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.news__content {
+  padding-top: 25px;
+  padding-left: 22px;
+  padding-bottom: 35px;
+  padding-right: 22px;
+  color: #ffffff;
+  text-transform: none;
+  font-size: 11px;
+}
+.news__img {
+  width: 95px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news__header {
+  font-size: 28px;
+}
+.news__date {
+  font-family: "LatoBlack", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 18px;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1636,5 +1749,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   }
   .content__halfSection {
     width: 100%;
+  }
+  .userProfile {
+    margin-left: 0;
   }
 }
