@@ -1297,6 +1297,34 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   right: 0;
   border-radius: 0 3px 3px 0;
 }
+.search__lensIcon:before,
+.search__lensIcon:after {
+  content: "";
+  position: absolute;
+}
+.search__lensIcon:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  top: 25%;
+  left: 11px;
+}
+.search__lensIcon::after {
+  height: 2px;
+  width: 6px;
+  background-color: #ffffff;
+  -webkit-transform-origin: 70% 0;
+      -ms-transform-origin: 70% 0;
+          transform-origin: 70% 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 25%;
+  right: 20%;
+}
 .search__help {
   text-transform: none;
   color: #ffffff;

@@ -9,12 +9,36 @@
         height: 28px;
     }
     &__lensIcon {
+        @lensWidth: 33px;
         position: absolute;
-        width: 33px;
+        width: @lensWidth;
         height: 100%;
         background-color: @red;
         right: 0;
         border-radius: 0 @roundBorder @roundBorder 0;
+        @thickness: 2px;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+        }
+        &:before {
+            box-sizing: border-box;
+            width: @lensWidth/3;
+            height: @lensWidth/3;
+            border-radius: 50%;
+            border: @thickness solid @mainColor;
+            top: 25%;
+            left: @lensWidth/3;
+        }
+        &::after {
+            height: @thickness;
+            width: 6px;
+            background-color: @mainColor;
+            transform-origin: 70% 0;
+            transform: rotate(45deg);
+            bottom: 25%;
+            right: 20%;
+        }
     }
 
     &__help {
