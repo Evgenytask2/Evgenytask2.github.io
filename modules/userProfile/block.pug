@@ -3,13 +3,16 @@
 
 .userProfile
     img.userProfile__photo(src= "out/userProfile/img/ManDemo.png", alt="Demo man")
-    .userProfile__info.userProfile__info-notActive
-        .userProfile__fullName.userProfile__fullName-notActive John Smith
-        .userProfile__title.userProfile__title-notActive Ux Designer
+    .userProfile__info.userProfile__info-alternative
+        .userProfile__fullName.userProfile__fullName-alternative John Smith
+        .userProfile__title.userProfile__title-alternative Ux Designer
         .userProfile__social
-            a.userProfile__socialBtn.userProfile__socialBtn-fb(href="#")
-            a.userProfile__socialBtn.userProfile__socialBtn-tw.userProfile__socialBtn-notActive(href="#")
-            a.userProfile__socialBtn.userProfile__socialBtn-linkedIn(href="#")
+            a.userProfile__ref(href="#")
+                .userProfile__socialBtn.userProfile__socialBtn-fb.userProfile__socialBtn-alernative
+            a.userProfile__ref(href="#")
+                .userProfile__socialBtn.userProfile__socialBtn-tw.userProfile__socialBtn-alernative
+            a.userProfile__ref(href="#")
+                .userProfile__socialBtn.userProfile__socialBtn-dribbble.userProfile__socialBtn-alernative
 
 .userProfile
     img.userProfile__photo.userProfile__photo-notCentered(src= "out/userProfile/img/WomanDemo.png", alt="Demo woman")
@@ -17,6 +20,9 @@
         .userProfile__fullName Sarah Brown
         .userProfile__title Developer
         .userProfile__social
-            a.userProfile__socialBtn.userProfile__socialBtn-fb(href="#")
-            a.userProfile__socialBtn.userProfile__socialBtn-tw(href="#")
-            a.userProfile__socialBtn.userProfile__socialBtn-linkedIn(href="#")
+            a.userProfile__ref(href="#")
+                .userProfile__socialBtn.userProfile__socialBtn-fb
+            a.userProfile__ref(href="#")
+                .userProfile__socialBtn.userProfile__socialBtn-tw
+            a.userProfile__ref(href="#")
+                .userProfile__socialBtn.userProfile__socialBtn-dribbble

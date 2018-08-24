@@ -1471,22 +1471,74 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   color: #ffffff;
   text-align: center;
   background-color: #4eb7a8;
+  position: relative;
 }
-.userProfile__info-notActive {
+.userProfile__info:after {
+  content: "";
+  position: absolute;
+  border: 7px transparent solid;
+  border-left: none;
+  border-right-color: #4eb7a8;
+  left: -5px;
+  bottom: 50%;
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px);
+}
+.userProfile__info-alternative {
   background-color: #e5e5e5;
+}
+.userProfile__info-alternative:after {
+  border-right-color: #e5e5e5;
 }
 .userProfile__fullName {
   text-transform: capitalize;
-  margin-bottom: 7px;
+  font-size: 18px;
 }
-.userProfile__fullName-notActive {
+.userProfile__fullName-alternative {
   color: #e75735;
 }
 .userProfile__title {
   font-family: "LatoBlack", Arial, sans-serif;
+  font-size: 11px;
 }
-.userProfile__title-notActive {
+.userProfile__title-alternative {
   color: #4f4f4f;
+}
+.userProfile__social {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.userProfile__socialBtn {
+  height: 22px;
+  width: 25px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.userProfile__socialBtn-fb {
+  background: url(userProfile/img/iconSet.png) -119px -4px;
+}
+.userProfile__socialBtn-alernative.userProfile__socialBtn-fb {
+  background: url(userProfile/img/iconSet.png) -4px -4px;
+}
+.userProfile__socialBtn-tw {
+  background: url(userProfile/img/iconSet.png) -162px -3px;
+}
+.userProfile__socialBtn-alernative.userProfile__socialBtn-tw {
+  background: url(userProfile/img/iconSet.png) -40px -4px;
+}
+.userProfile__socialBtn-dribbble {
+  background: url(userProfile/img/iconSet.png) -208px -3px;
+}
+.userProfile__socialBtn-alernative.userProfile__socialBtn-dribbble {
+  background: url(userProfile/img/iconSet.png) -81px -5px;
 }
 .lightGreen {
   background-color: #4eb7a8;

@@ -1,5 +1,7 @@
 @import "../projectShare/common.less";
 
+@socialMargin: 6px;
+
 .userProfile {
     display: flex;
     margin-left: 28px;
@@ -26,21 +28,69 @@
         color: @mainColor;
         text-align: center;
         background-color: @lightGreen;
-        &-notActive {
+        position: relative;
+        &:after {
+            @borderSize: 7px;
+            content: "";
+            position: absolute;
+            border: @borderSize transparent solid;
+            border-left: none;
+            border-right-color: @lightGreen;
+            left: -5px;
+            bottom: 50%;
+            transform: translateY(@borderSize);
+        }
+        &-alternative {
             background-color: @lightGrey;
+           &:after {
+            border-right-color: @lightGrey;
+           }
         }
     }
     &__fullName {
         text-transform: capitalize;
-        margin-bottom: 7px;
-        &-notActive {
+        .fontSize6();
+        &-alternative {
             color: @red;
         }
     }
     &__title {
         font-family: "LatoBlack",Arial, sans-serif;
-        &-notActive {
+        .fontSize2();
+        &-alternative {
             color: @darkGrey;
+        }
+    }
+    &__social {
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        margin-left: -@socialMargin;
+        margin-right: -@socialMargin;
+    }
+    &__socialBtn {
+        height: 22px;
+        width: 25px;
+        margin-left: @socialMargin;
+        margin-right: @socialMargin;
+        @p: ~".userProfile__socialBtn-";
+        &-fb {
+            background: url(userProfile/img/iconSet.png) -119px -4px ;
+            @{p}alernative& {
+                background: url(userProfile/img/iconSet.png) -4px -4px;
+            }
+        }
+        &-tw {
+            background: url(userProfile/img/iconSet.png) -162px -3px ;
+            @{p}alernative& {
+                background: url(userProfile/img/iconSet.png) -40px -4px;
+            }
+        }
+        &-dribbble {
+            background: url(userProfile/img/iconSet.png) -208px -3px ;
+            @{p}alernative& {
+                background: url(userProfile/img/iconSet.png) -81px -5px ;
+            }
         }
     }
 }
