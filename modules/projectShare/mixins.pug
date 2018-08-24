@@ -120,3 +120,16 @@ mixin createNews(imgSrc, header, date, details)
             .news__header #{header}
             .news__date #{date}
             .news__details #{details}
+
+
+mixin createEvent(imgSrc, day, month, title, details)
+    .event
+        img.news__img.event__img(src= imgSrc)
+        .news__content.event__content
+            .event__date
+                .event__day #{day}
+                .event__month #{month}
+            .event__title #{title}
+            .event__details #{details}
+            +createElement("Add to calendar","standardButtons__button", "small", "empty", "success",
+            "!event__button")

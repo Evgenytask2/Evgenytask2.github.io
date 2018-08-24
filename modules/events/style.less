@@ -1,0 +1,33 @@
+@import "../projectShare/common.less";
+
+.event {
+    margin-left: @rowMarginRight;
+    display: flex;
+    background-color: @lightGreen;
+    border-radius: 1.5*@roundBorder;
+    &__date {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__day {
+        .fontSize11();
+        line-height: 100%;
+    }
+    &__month {
+        .fontSize8();
+        text-transform: capitalize;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-family: "LatoBlack", Arial, sans-serif;
+        .fontSize3Half();
+        margin-top: 5px;
+        margin-bottom: 8px;
+    }
+    &__button {
+        width: 80%;
+        margin: 15px auto;
+        text-transform: uppercase;
+    }
+}
