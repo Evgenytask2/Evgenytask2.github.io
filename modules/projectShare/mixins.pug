@@ -133,3 +133,18 @@ mixin createEvent(imgSrc, day, month, title, details)
             .event__details #{details}
             +createElement("Add to calendar","standardButtons__button", "small", "empty", "success",
             "!event__button")
+
+
+mixin createLocation(imgSrc, slogan, building, countryPos)
+    .location
+        .location__map
+            img.location__img(src= imgSrc)
+            .location__marker
+            .location__shadow
+            .location__triangleBox
+                .location__triangle
+        .location__content
+            .location__slogan #{slogan}
+            .location__address
+                .location__building #{building}
+                .location__countryPos #{countryPos}

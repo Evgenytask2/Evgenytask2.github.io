@@ -1,0 +1,89 @@
+@import "../projectShare/common.less";
+
+.location {
+    @markerWidth: 40px;
+    &__map {
+        position: relative;
+        &:after {
+            width: @markerWidth*0.45;
+            height: @markerWidth*0.45;
+            background-color: @mainColor;
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%);
+            top: 50%;
+            left: 50%;
+        }
+    }
+    &__img {
+        max-height: 205px;
+        width: 100%;
+        object-fit: none;
+        object-position: 50% 15%;
+    }
+    &__marker {
+        position: absolute;
+        width: @markerWidth;
+        height: @markerWidth/2;
+        background-color: @red;
+        transform: translate(-50%, -60%);
+        top: 50%;
+        left: 50%;
+        border-radius: @markerWidth/2 @markerWidth/2 0 0;
+    }
+
+
+    &__shadow {
+        @shadowWidth: @markerWidth*0.45;
+        @shadowHeight: @markerWidth;
+        width:  @shadowWidth;
+        height: @shadowHeight;
+        background-color: rgba(70,70,70,0.3); 
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        border-radius: 50%;
+        border-top-left-radius: @shadowWidth 0.65*@shadowHeight;
+        border-top-right-radius:  @shadowWidth 0.65*@shadowHeight;
+
+        transform-origin: 100% 0;
+        transform: translate(100%, 62%) rotate(60deg); 
+    }
+    
+    &__triangle,
+    &__triangle:before,
+    &__triangle:after {
+        width: @markerWidth*0.675;
+        height: @markerWidth*0.675;
+        border-top-right-radius: 70%;
+    }
+
+    &__triangle {
+        &Box {
+            position: absolute;
+            transform: translate(-50%, 40%) rotate(180deg);
+            top: 50%;
+            left: 50%;
+        }   
+        position: relative;
+        background-color: @red;
+        border-top-right-radius: 35%;
+        transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+        &:before,&:after {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+        }
+        &:before {
+            transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+        }
+        &:after {
+            transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+        }
+    }
+    &__content {
+
+    }
+}

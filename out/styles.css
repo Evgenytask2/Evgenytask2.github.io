@@ -1866,6 +1866,152 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize11 {
   font-size: 73px;
 }
+.location__map {
+  position: relative;
+}
+.location__map:after {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+}
+.location__img {
+  max-height: 205px;
+  width: 100%;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: 50% 15%;
+     object-position: 50% 15%;
+}
+.location__marker {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: #e75735;
+  -webkit-transform: translate(-50%, -60%);
+      -ms-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  top: 50%;
+  left: 50%;
+  border-radius: 20px 20px 0 0;
+}
+.location__shadow {
+  width: 18px;
+  height: 40px;
+  background-color: rgba(70, 70, 70, 0.3);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border-top-left-radius: 18px 26px;
+  border-top-right-radius: 18px 26px;
+  -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: translate(100%, 62%) rotate(60deg);
+      -ms-transform: translate(100%, 62%) rotate(60deg);
+          transform: translate(100%, 62%) rotate(60deg);
+}
+.location__triangle,
+.location__triangle:before,
+.location__triangle:after {
+  width: 27px;
+  height: 27px;
+  border-top-right-radius: 70%;
+}
+.location__triangle {
+  position: relative;
+  background-color: #e75735;
+  border-top-right-radius: 35%;
+  -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+      -ms-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+          transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+}
+.location__triangleBox {
+  position: absolute;
+  -webkit-transform: translate(-50%, 40%) rotate(180deg);
+      -ms-transform: translate(-50%, 40%) rotate(180deg);
+          transform: translate(-50%, 40%) rotate(180deg);
+  top: 50%;
+  left: 50%;
+}
+.location__triangle:before,
+.location__triangle:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+.location__triangle:before {
+  -webkit-transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+      -ms-transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+          transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+}
+.location__triangle:after {
+  -webkit-transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+      -ms-transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+          transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
+}
+.fontSize8 {
+  font-size: 30px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.fontSize11 {
+  font-size: 73px;
+}
 @media (max-width: 900px) {
   .standardButtons {
     margin: 0;

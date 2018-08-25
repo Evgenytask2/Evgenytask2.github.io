@@ -19,6 +19,7 @@ import search from "./searchTools/script.js";
 import userProfile from "./userProfile/script.js";
 import news from "./news/script.js";
 import events from "./events/script.js";
+import location from "./location/script.js";
 
 import media from "./projectShare/media.less"; // must be included as the last file
 
