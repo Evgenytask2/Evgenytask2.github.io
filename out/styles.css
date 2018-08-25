@@ -1882,7 +1882,13 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   top: 50%;
   left: 50%;
 }
+.location__map-icon:after {
+  background-color: #e75735;
+  width: 7.2px;
+  height: 7.2px;
+}
 .location__img {
+  border-radius: 4.5px 4.5px 0 0;
   max-height: 205px;
   width: 100%;
   -o-object-fit: none;
@@ -1902,10 +1908,17 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   left: 50%;
   border-radius: 20px 20px 0 0;
 }
+.location__marker-icon {
+  background-color: #ffffff;
+  width: 16px;
+  height: 8px;
+  border-radius: 8px 8px 0 0;
+}
 .location__shadow {
   width: 18px;
   height: 40px;
-  background-color: rgba(70, 70, 70, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(40, 40, 40, 0.25)), to(rgba(160, 160, 160, 0.35)));
+  background: linear-gradient(rgba(40, 40, 40, 0.25), rgba(160, 160, 160, 0.35));
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1926,10 +1939,16 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   height: 27px;
   border-top-right-radius: 70%;
 }
+.location__triangle-icon,
+.location__triangle-icon:before,
+.location__triangle-icon:after {
+  width: 10.8px;
+  height: 10.8px;
+}
 .location__triangle {
   position: relative;
   background-color: #e75735;
-  border-top-right-radius: 35%;
+  border-top-right-radius: 30%;
   -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
       -ms-transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
           transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
@@ -1957,6 +1976,95 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
       -ms-transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
           transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+.location__triangle-icon {
+  background-color: #ffffff;
+}
+.location__content {
+  background-color: #e75735;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -3px;
+  border-radius: 0 0 4.5px 4.5px;
+  padding: 21px 0;
+  position: relative;
+}
+.location__slogan {
+  text-transform: none;
+  font-size: 30px;
+  margin: 0 28px;
+}
+.location__address {
+  font-family: "LatoBlack", Arial, sans-serif;
+  font-size: 13px;
+}
+.location__building {
+  margin-bottom: 3px;
+}
+.location__icons {
+  margin-left: 33%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: calc(26px + 16px/2);
+}
+.location__targetIcon {
+  width: 19px;
+  height: 19px;
+  border: 2px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  position: relative;
+}
+.location__targetIcon:before,
+.location__targetIcon:after {
+  background-color: #ffffff;
+  width: 10px;
+  height: 2.5px;
+  position: absolute;
+  content: "";
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  right: calc(50% - 10px/2);
+}
+.location__targetIcon:before {
+  top: -2px;
+}
+.location__targetIcon:after {
+  bottom: -2px;
+}
+.location__horTargetLine {
+  background-color: #ffffff;
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  content: "";
+  top: calc(50% - 2px/2);
+}
+.location__horTargetLine-left {
+  left: calc(-10px/2 - 2px);
+}
+.location__horTargetLine-right {
+  right: calc(-10px/2 - 2px);
+}
+.location__markerIcon {
+  margin-top: 2px;
 }
 .lightGreen {
   background-color: #4eb7a8;

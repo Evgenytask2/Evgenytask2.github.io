@@ -2,6 +2,8 @@
 
 .location {
     @markerWidth: 40px;
+    @iconMarkerWidth: 16px;
+
     &__map {
         position: relative;
         &:after {
@@ -15,8 +17,14 @@
             top: 50%;
             left: 50%;
         }
+        &-icon:after {
+            background-color: @red;
+            width: @iconMarkerWidth*0.45;
+            height: @iconMarkerWidth*0.45;
+        }
     }
     &__img {
+        border-radius: 1.5*@roundBorder 1.5*@roundBorder 0 0;
         max-height: 205px;
         width: 100%;
         object-fit: none;
@@ -31,6 +39,12 @@
         top: 50%;
         left: 50%;
         border-radius: @markerWidth/2 @markerWidth/2 0 0;
+        &-icon {
+            background-color: @mainColor;
+            width: @iconMarkerWidth;
+            height: @iconMarkerWidth/2;
+            border-radius: @iconMarkerWidth/2 @iconMarkerWidth/2 0 0;
+        }
     }
 
 
@@ -39,7 +53,7 @@
         @shadowHeight: @markerWidth;
         width:  @shadowWidth;
         height: @shadowHeight;
-        background-color: rgba(70,70,70,0.3); 
+        background: linear-gradient(rgba(40,40,40,0.25), rgba(160,160,160,0.35));
         position: absolute;
         left: 50%;
         top: 50%;
@@ -59,6 +73,10 @@
         height: @markerWidth*0.675;
         border-top-right-radius: 70%;
     }
+    &__triangle-icon, &__triangle-icon:before, &__triangle-icon:after {
+        width: @iconMarkerWidth*0.675;
+        height: @iconMarkerWidth*0.675;
+    }
 
     &__triangle {
         &Box {
@@ -69,7 +87,7 @@
         }   
         position: relative;
         background-color: @red;
-        border-top-right-radius: 35%;
+        border-top-right-radius: 30%;
         transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
         &:before,&:after {
             content: '';
@@ -82,8 +100,86 @@
         &:after {
             transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
         }
+        &-icon {
+            background-color: @mainColor;
+        }
     }
     &__content {
+        background-color: @red;
+        color: @mainColor;
+        display: flex;
+        align-items: center;
+        margin-top: -3px;
+        border-radius: 0 0 1.5*@roundBorder 1.5*@roundBorder;
+        padding: 21px 0;
+        position: relative;
+    }
+    &__slogan {
+        text-transform: none;
+        .fontSize8();
+        margin: 0 28px;
+    }
+    &__address {
+        font-family: "LatoBlack", Arial, sans-serif;
+        .fontSize3Half();
+    }
+    &__building {
+        margin-bottom: 3px;
+    }
 
+    &__icons {
+        margin-left: 33%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-right: calc(26px + @iconMarkerWidth/2);
+    }
+
+    @aimWidth: 10px;
+    @targetSize: 19px;
+    @thickness: 2px;
+
+    .targetLine (@aimHeight) {
+        background-color: @mainColor;
+        width: @aimWidth;
+        height: @aimHeight;
+        position: absolute;
+        content: "";
+    }
+
+    &__targetIcon {
+        width: @targetSize;
+        height: @targetSize;
+        border: @thickness solid @mainColor;
+        box-sizing: border-box;
+        border-radius: 50%;
+        position: relative;
+        &:before, &:after {
+            @verticalHeight: 2.5px;
+            .targetLine(@verticalHeight);
+            transform: rotate(90deg);
+            right: calc(50% - @aimWidth/2);
+        }
+        &:before {
+            top: -@thickness;
+        }
+        &:after {
+            bottom: -@thickness;
+        }
+    }
+    &__horTargetLine {
+        @horHeight: 2px;
+        .targetLine(@horHeight);
+        top: calc(50% - @horHeight/2);
+        &-left {
+            left: calc(-@aimWidth/2 - @thickness);
+        }
+        &-right {
+            right: calc(-@aimWidth/2 - @thickness);
+        }
+    }
+    &__markerIcon {
+        margin-top: @thickness;
     }
 }
