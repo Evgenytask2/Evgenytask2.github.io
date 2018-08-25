@@ -1986,18 +1986,24 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -3px;
+  margin-top: -4px;
   border-radius: 0 0 4.5px 4.5px;
-  padding: 21px 0;
-  position: relative;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 28px;
+  padding-right: 36px;
 }
 .location__slogan {
   text-transform: none;
   font-size: 30px;
-  margin: 0 28px;
+  margin-right: 28px;
 }
 .location__address {
   font-family: "LatoBlack", Arial, sans-serif;
@@ -2006,11 +2012,19 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .location__building {
   margin-bottom: 3px;
 }
-.location__icons {
-  margin-left: 33%;
+.location__space {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  max-width: 33%;
+}
+.location__icons {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2020,7 +2034,6 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-right: calc(26px + 16px/2);
 }
 .location__targetIcon {
   width: 19px;
@@ -2180,5 +2193,14 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   }
   .event {
     margin-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .location__slogan {
+    -webkit-box-ordinal-group: 10000;
+        -ms-flex-order: 9999;
+            order: 9999;
+    width: 100%;
+    text-align: center;
   }
 }

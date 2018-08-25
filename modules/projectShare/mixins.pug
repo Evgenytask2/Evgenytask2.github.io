@@ -143,17 +143,20 @@ mixin createLocation(imgSrc, slogan, building, countryPos)
             .location__shadow
             .location__triangleBox
                 .location__triangle
+
         .location__content
             .location__slogan #{slogan}
             .location__address
                 .location__building #{building}
                 .location__countryPos #{countryPos}
 
+            .location__space
+
             .location__icons
                 .location__targetIcon
                     .location__horTargetLine.location__horTargetLine-left
                     .location__horTargetLine.location__horTargetLine-right
-                    
+
                 .location__markerIcon.location__map.location__map-icon
                     .location__marker.location__marker-icon
                     .location__triangleBox

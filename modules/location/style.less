@@ -108,16 +108,19 @@
         background-color: @red;
         color: @mainColor;
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
-        margin-top: -3px;
+        margin-top: -4px;
         border-radius: 0 0 1.5*@roundBorder 1.5*@roundBorder;
-        padding: 21px 0;
-        position: relative;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        padding-left: 28px;
+        padding-right: 28px + @iconMarkerWidth/2;
     }
     &__slogan {
         text-transform: none;
         .fontSize8();
-        margin: 0 28px;
+        margin-right: 28px;
     }
     &__address {
         font-family: "LatoBlack", Arial, sans-serif;
@@ -127,13 +130,19 @@
         margin-bottom: 3px;
     }
 
-    &__icons {
-        margin-left: 33%;
+
+    &__space {
         flex-grow: 1;
+        max-width: 33%;
+    }
+    
+    &__icons {
+        flex-grow: 1;
+        flex-shrink: 0;
+        max-width: 54px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: calc(26px + @iconMarkerWidth/2);
     }
 
     @aimWidth: 10px;
