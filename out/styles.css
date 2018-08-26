@@ -1870,6 +1870,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   position: relative;
 }
 .location__map:after {
+  cursor: pointer;
   width: 18px;
   height: 18px;
   background-color: #ffffff;
@@ -1897,6 +1898,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
      object-position: 50% 15%;
 }
 .location__marker {
+  cursor: pointer;
   position: absolute;
   width: 40px;
   height: 20px;
@@ -1938,6 +1940,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   width: 27px;
   height: 27px;
   border-top-right-radius: 70%;
+  cursor: pointer;
 }
 .location__triangle-icon,
 .location__triangle-icon:before,
@@ -2036,6 +2039,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           align-items: flex-start;
 }
 .location__targetIcon {
+  cursor: pointer;
   width: 19px;
   height: 19px;
   border: 2px solid #ffffff;
@@ -2078,6 +2082,80 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .location__markerIcon {
   margin-top: 2px;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize7 {
+  font-size: 28px;
+}
+.fontSize8 {
+  font-size: 30px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.fontSize11 {
+  font-size: 73px;
+}
+.calendar__header {
+  background-color: #e75735;
+  color: #ffffff;
+  text-align: center;
+}
+.calendar__week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.calendar__weekRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -2197,6 +2275,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 @media (max-width: 500px) {
   .location__slogan {
+    margin-right: 0;
     -webkit-box-ordinal-group: 10000;
         -ms-flex-order: 9999;
             order: 9999;

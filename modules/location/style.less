@@ -7,6 +7,7 @@
     &__map {
         position: relative;
         &:after {
+            cursor: pointer;
             width: @markerWidth*0.45;
             height: @markerWidth*0.45;
             background-color: @mainColor;
@@ -31,6 +32,7 @@
         object-position: 50% 15%;
     }
     &__marker {
+        cursor: pointer;
         position: absolute;
         width: @markerWidth;
         height: @markerWidth/2;
@@ -72,6 +74,7 @@
         width: @markerWidth*0.675;
         height: @markerWidth*0.675;
         border-top-right-radius: 70%;
+        cursor: pointer;
     }
     &__triangle-icon, &__triangle-icon:before, &__triangle-icon:after {
         width: @iconMarkerWidth*0.675;
@@ -158,6 +161,7 @@
     }
 
     &__targetIcon {
+        cursor: pointer;
         width: @targetSize;
         height: @targetSize;
         border: @thickness solid @mainColor;
