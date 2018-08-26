@@ -19,14 +19,75 @@
        background-color: rgb(70,171,157);
     }
     &__icons {
+        margin: 0 auto;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: relative;
-        height: 50px;
+        height: 62px;
+        width: 81%;
     }
+
     &__avatar {
         position: absolute;
         left: 50%;
+        top: 0;
         transform: translate(-50%,-50%);
+    }
+
+    &__icon {
+        cursor: pointer;
+        background-color: @mediumGrey;
+        @photoIconHeight: 4px;
+        &-msg {
+            width: 20px;
+            height: 18px;
+            border-radius: 4.5px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                border: 5px solid transparent;
+                border-top: none;
+                border-right: none;
+                border-bottom-color: @mediumGrey;
+                bottom: 0;
+                left: 50%;
+                transform: translateY(100%) rotate(-90deg);
+            }
+        }
+        &-photo {
+            @photoBigHeight: 16px;
+            width: 24px;
+            height: @photoBigHeight;
+            border-radius: 1.5px;
+            transform: translateY(@photoIconHeight/2);
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                background-color: inherit;
+                border-radius: 1px;
+                width: 14px;
+                height: @photoIconHeight;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-100%);
+            }
+            &:after {
+                width: @photoBigHeight*0.66;
+                height: @photoBigHeight*0.66;
+                border-radius: 50%;
+                background-color: inherit;
+                box-sizing: border-box;
+                border: 1.5px solid @mainColor;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                content: "";
+                position: absolute;
+            }
+        }
     }
     &__mainArea {
         margin: 0 7.7%;
@@ -40,6 +101,7 @@
         padding-right: 20px;
         padding-top: 20px;
         box-sizing: border-box;
+        text-align: left;
         &-income {
             background-color: @mainColor;
             padding-bottom: 25px;
@@ -51,11 +113,27 @@
             border: 3px solid @mainColor;
             padding-bottom: 40px;
             margin-top: 17px;
+            &:after {
+                content: " |";
+                animation: editSign 0.8s ease-in-out infinite ;
+            }
         }
     }
+
+    @keyframes editSign {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
     &__replyBtn {
         width: 100%;
         margin-top: 15px;
-        margin-bottom: 29px;
     }
 }

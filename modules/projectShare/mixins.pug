@@ -234,9 +234,9 @@ mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg)
         .messaging__fullName #{fullName}
         .messaging__line
         .messaging__icons
-            .messaging__msgIcon
+            .messaging__icon.messaging__icon-msg
             img.messaging__avatar.userProfile__photo.userProfile__photo-notCentered(src = avatar, alt)
-            .messaging__photoIcon
+            .messaging__icon.messaging__icon-photo
         .messaging__mainArea
             .messaging__msg.messaging__msg-income #{incomeMsg}
             .messaging__msg.messaging__msg-outcome #{outcomeMsg}
