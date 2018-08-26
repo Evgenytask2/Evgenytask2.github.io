@@ -22,6 +22,7 @@ import events from "./events/script.js";
 import location from "./location/script.js";
 import calendar from "./calendar/script.js";
 import messaging from "./messaging/script.js";
+import video from "./video/script.js";
 
 import media from "./projectShare/media.less"; // must be included as the last file
 
