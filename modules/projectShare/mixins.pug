@@ -192,4 +192,18 @@ mixin createCalendar(currentDay, month, lastDayCurrent, weekDayStart = 1, lastDa
             - for(var i = 0; i < rowsToShow; i++)
                 .calendar__weekRow
                     - for(var j = 0; j < 7; j++)
-                        .calendar__dayRow #{startDay + j + i*7}
+
+                        - var classes = "calendar__dayRow";
+                        - if(showState != 1)
+                            - classes += " calendar__dayRow-notActive"
+
+                        - var showDay = startDay + j + i*7;
+                        div(class= classes) #{showDay}
+
+                        - if((showState == 0) && (showDay == lastDayPrev))
+                            - showState = 1;
+                            - startDay = - j;
+                        
+                        - if((showState == 1) && (showDay == lastDayCurrent))
+                            - showState = 2;
+                            - startDay = - i*7 - j;
