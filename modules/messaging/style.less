@@ -1,0 +1,33 @@
+@import "../projectShare/common.less";
+
+.messaging {
+    border-radius: 0 0 @borderRatio*@roundBorder @borderRatio*@roundBorder;
+    background-color: @almostWhite;
+    text-align: center;
+    &__fullName {
+        color: @mainColor;
+        text-transform: capitalize;
+        background-color: @lightGreen;
+        font-family: "SourceRegular", Arial, sans-serif;
+        .fontSize9();
+        line-height: 82px;
+        border-radius: @borderRatio*@roundBorder @borderRatio*@roundBorder 0 0;
+    }
+    &__line {
+       height: 33px;
+       background-color: rgb(70,171,157);
+    }
+    &__icons {
+        display: flex;
+    }
+    &__avatar {
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 5px solid @lightGrey;
+        object-fit: cover;
+        &-notCentered {
+            object-fit: none;
+            object-position: 50% 40%;
+        }
+    }
+}

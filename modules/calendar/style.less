@@ -1,11 +1,10 @@
 @import "../projectShare/common.less";
 
-@borderRatio: 1.5;
 
 .calendar {
     @cellMargin: 0.5px;
     @transitionTime: 0.35s;
-    margin-right: @rowMarginRight;
+    margin-right: 2*@rowMarginRight;
     @footerHeight: 50px;
 
     &__footer {
@@ -18,6 +17,9 @@
         border-radius: 0 0 @borderRatio*@roundBorder @borderRatio*@roundBorder;
         background-color: @lightGrey;
         padding-left: 20px;
+        font-family: "LatoBlack", Arial, sans-serif;
+        .fontSize3Half();
+        color: @mediumGrey;
         &:after {
             content: attr(data-msg);
             position: absolute;
@@ -59,7 +61,43 @@
         .fontSize7Small();
         background-color: rgb(213,76,44);
         line-height: 43px;
+        position: relative;
     }
+
+
+    &__arrow {
+        @arrowMargin: 14px;
+        @arrowWidth: 10px;
+        @arrowHeight: 3px;
+
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        &:before, &:after {
+            transform-origin: 0 0;
+            background-color: @mainColor;
+            height: @arrowHeight;
+            width:  @arrowWidth;
+            content: "";
+            position: absolute;
+        }
+        &:before {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &:after {
+            transform: translateY(-50%) rotate(45deg);
+            width:  @arrowWidth + @arrowHeight*0.7071;
+        }
+
+        &-left {
+            left:  @arrowMargin;
+        }
+        &-right {
+            right: @arrowMargin;
+            transform: rotate(180deg);
+        }
+    }
+
 
     &__week {
         display: flex;

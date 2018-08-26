@@ -169,6 +169,8 @@ mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1
         .calendar__header
             .calendar__currentDay #{currentDay}
             .calendar__month #{month}
+                .calendar__arrow.calendar__arrow-left
+                .calendar__arrow.calendar__arrow-right
             .calendar__week
                 .calendar__weekDay mon
                 .calendar__weekDay tue
@@ -225,3 +227,16 @@ mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1
                             - showState = 2;
                             - startDay = - i*7 - j;
         .calendar__expand
+
+
+mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg) 
+    .messaging
+        .messaging__fullName #{fullName}
+        .messaging__line
+        .messaging__icons
+            .messaging__msgIcon
+            img.messaging__avatar.messaging__avatar-notCentered(src = avatar, alt)
+            .messaging__photoIcon
+        .messaging__incomeMsg #{incomeMsg}
+        .messaging__outcomeMsg #{outcomeMsg}
+        .messaging__replyBtn Reply

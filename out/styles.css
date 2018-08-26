@@ -58,6 +58,9 @@
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -180,6 +183,9 @@
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -410,6 +416,9 @@ input:checked + label .standardButtons__button:before {
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -560,6 +569,9 @@ input:checked + label .standardButtons__button:before {
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -724,6 +736,9 @@ input:checked + label .standardButtons__button:before {
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -900,6 +915,9 @@ input:checked + label .standardButtons__button:before {
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1064,6 +1082,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1077,7 +1098,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 10px;
+  margin-right: 9px;
   margin-bottom: 12px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1201,6 +1222,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -1491,6 +1515,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1551,7 +1578,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   cursor: pointer;
 }
 .search__background {
-  margin-right: 43px;
+  margin-right: 42px;
   margin-top: -40px;
   border-radius: 3px 0 0 3px;
 }
@@ -1664,6 +1691,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -1841,6 +1871,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1852,7 +1885,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .news {
   background-color: #e75735;
-  margin-right: 10px;
+  margin-right: 9px;
   border-radius: 4.5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1944,6 +1977,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -1954,7 +1990,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 80px;
 }
 .event {
-  margin-left: 10px;
+  margin-left: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2051,6 +2087,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
@@ -2338,6 +2377,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize8 {
   font-size: 30px;
 }
+.fontSize9 {
+  font-size: 34px;
+}
 .fontSize10 {
   font-size: 40px;
 }
@@ -2348,7 +2390,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 80px;
 }
 .calendar {
-  margin-right: 10px;
+  margin-right: 18px;
 }
 .calendar__footer {
   position: absolute;
@@ -2361,6 +2403,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   border-radius: 0 0 4.5px 4.5px;
   background-color: #e5e5e5;
   padding-left: 20px;
+  font-family: "LatoBlack", Arial, sans-serif;
+  font-size: 13px;
+  color: #888888;
 }
 .calendar__footer:after {
   content: attr(data-msg);
@@ -2398,6 +2443,43 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 24px;
   background-color: #d54c2c;
   line-height: 43px;
+  position: relative;
+}
+.calendar__arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.calendar__arrow:before,
+.calendar__arrow:after {
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  background-color: #ffffff;
+  height: 3px;
+  width: 10px;
+  content: "";
+  position: absolute;
+}
+.calendar__arrow:before {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+.calendar__arrow:after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  width: 12.1213px;
+}
+.calendar__arrow-left {
+  left: 14px;
+}
+.calendar__arrow-right {
+  right: 14px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .calendar__week {
   display: -webkit-box;
@@ -2521,6 +2603,118 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .fontSize8 {
   font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
+}
+.fontSize10 {
+  font-size: 40px;
+}
+.fontSize11 {
+  font-size: 73px;
+}
+.fontSize12 {
+  font-size: 80px;
+}
+.messaging {
+  border-radius: 0 0 4.5px 4.5px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.messaging__fullName {
+  color: #ffffff;
+  text-transform: capitalize;
+  background-color: #4eb7a8;
+  font-family: "SourceRegular", Arial, sans-serif;
+  font-size: 34px;
+  line-height: 82px;
+  border-radius: 4.5px 4.5px 0 0;
+}
+.messaging__line {
+  height: 33px;
+  background-color: #46ab9d;
+}
+.messaging__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.messaging__avatar {
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid #e5e5e5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.messaging__avatar-notCentered {
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
+}
+.lightGreen {
+  background-color: #4eb7a8;
+}
+.red {
+  background-color: #e75735;
+}
+.mainColor {
+  background-color: #ffffff;
+}
+.lightGrey {
+  background-color: #e5e5e5;
+}
+.almostWhite {
+  background-color: #f2f2f2;
+}
+.mediumGrey {
+  background-color: #888888;
+}
+.mediumLighterGrey {
+  background-color: #c0c0c0;
+}
+.darkGrey {
+  background-color: #4f4f4f;
+}
+.fontSizeSmall {
+  font-size: 9px;
+}
+.fontSize1 {
+  font-size: 10px;
+}
+.fontSize2 {
+  font-size: 11px;
+}
+.fontSize3 {
+  font-size: 12px;
+}
+.fontSize3Half {
+  font-size: 13px;
+}
+.fontSize4 {
+  font-size: 14px;
+}
+.fontSize5 {
+  font-size: 16px;
+}
+.fontSize6 {
+  font-size: 18px;
+}
+.fontSize6Big {
+  font-size: 20px;
+}
+.fontSize7Small {
+  font-size: 24px;
+}
+.fontSize7 {
+  font-size: 28px;
+}
+.fontSize8 {
+  font-size: 30px;
+}
+.fontSize9 {
+  font-size: 34px;
 }
 .fontSize10 {
   font-size: 40px;
