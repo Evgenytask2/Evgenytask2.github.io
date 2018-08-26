@@ -1,6 +1,7 @@
 @import "../projectShare/common.less";
 
 @socialMargin: 6px;
+@avatarSize: 92px;
 
 .userProfile {
     display: flex;
@@ -9,8 +10,8 @@
     margin-top: 27px;
     &__photo {
         border-radius: 50%;
-        width: 92px;
-        height: 92px;
+        width: @avatarSize;
+        height: @avatarSize;
         box-sizing: border-box;
         border: 5px solid @lightGrey;
         object-fit: cover;

@@ -4,6 +4,7 @@
     border-radius: 0 0 @borderRatio*@roundBorder @borderRatio*@roundBorder;
     background-color: @almostWhite;
     text-align: center;
+    padding-bottom: 29px;
     &__fullName {
         color: @mainColor;
         text-transform: capitalize;
@@ -19,15 +20,42 @@
     }
     &__icons {
         display: flex;
+        position: relative;
+        height: 50px;
     }
     &__avatar {
-        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__mainArea {
+        margin: 0 7.7%;
+    }
+    &__msg {
+        font-family: "LatoBlack", Arial, sans-serif;
+        .fontSize3Half();
+        color: @mediumGrey;
+        text-transform: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
         box-sizing: border-box;
-        border: 5px solid @lightGrey;
-        object-fit: cover;
-        &-notCentered {
-            object-fit: none;
-            object-position: 50% 40%;
+        &-income {
+            background-color: @mainColor;
+            padding-bottom: 25px;
+            border-radius: 3*@roundBorder;
         }
+        &-outcome {
+            border-radius: 2*@roundBorder;
+            background-color: @lightGrey;
+            border: 3px solid @mainColor;
+            padding-bottom: 40px;
+            margin-top: 17px;
+        }
+    }
+    &__replyBtn {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 29px;
     }
 }

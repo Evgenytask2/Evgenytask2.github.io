@@ -2620,6 +2620,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   border-radius: 0 0 4.5px 4.5px;
   background-color: #f2f2f2;
   text-align: center;
+  padding-bottom: 29px;
 }
 .messaging__fullName {
   color: #ffffff;
@@ -2638,20 +2639,46 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  height: 50px;
 }
 .messaging__avatar {
-  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.messaging__mainArea {
+  margin: 0 7.7%;
+}
+.messaging__msg {
+  font-family: "LatoBlack", Arial, sans-serif;
+  font-size: 13px;
+  color: #888888;
+  text-transform: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 5px solid #e5e5e5;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.messaging__avatar-notCentered {
-  -o-object-fit: none;
-     object-fit: none;
-  -o-object-position: 50% 40%;
-     object-position: 50% 40%;
+.messaging__msg-income {
+  background-color: #ffffff;
+  padding-bottom: 25px;
+  border-radius: 9px;
+}
+.messaging__msg-outcome {
+  border-radius: 6px;
+  background-color: #e5e5e5;
+  border: 3px solid #ffffff;
+  padding-bottom: 40px;
+  margin-top: 17px;
+}
+.messaging__replyBtn {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 29px;
 }
 .lightGreen {
   background-color: #4eb7a8;
