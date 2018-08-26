@@ -163,7 +163,8 @@ mixin createLocation(imgSrc, slogan, building, countryPos)
                         .location__triangle.location__triangle-icon
 
 
-mixin createCalendar(currentDay, month, lastDayCurrent, weekDayStart = 1, lastDayPrev )
+mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1, lastDayPrev )
+    - var msg = "Today is " + month + ", " + currentDay;
     .calendar
         .calendar__header
             .calendar__currentDay #{currentDay}
@@ -181,6 +182,7 @@ mixin createCalendar(currentDay, month, lastDayCurrent, weekDayStart = 1, lastDa
             - var deltaStart = weekDayStart - 1
             - var totalDays = lastDayCurrent + deltaStart;
             - var rowsToShow = totalDays/7;
+            - var groupName = "Calendar__group__" + startId;
 
             - var showState = 1; 
             - var startDay = 1;
@@ -192,13 +194,28 @@ mixin createCalendar(currentDay, month, lastDayCurrent, weekDayStart = 1, lastDa
             - for(var i = 0; i < rowsToShow; i++)
                 .calendar__weekRow
                     - for(var j = 0; j < 7; j++)
-
-                        - var classes = "calendar__dayRow";
-                        - if(showState != 1)
-                            - classes += " calendar__dayRow-notActive"
-
+                        - var currentId = "Calendar__" + startId + "__" + (i*7 + j);
                         - var showDay = startDay + j + i*7;
-                        div(class= classes) #{showDay}
+                        - var classes = "calendar__dayRow";
+
+                        - if((showState == 1) && (showDay == currentDay))
+                            - classes += " calendar__dayRow-current"
+                            input.calendar__radio(type= "radio", id= currentId, name= groupName, checked)
+                            label.calendar__label(for= currentId)
+                                div(class= classes) #{showDay}
+                            .calendar__footer(data-msg= msg) Today
+
+                        - else if(showState == 1)
+                            input.calendar__radio(type= "radio", id= currentId, name= groupName)
+                            label.calendar__label(for= currentId)
+                                div(class= classes) #{showDay}
+
+                        - else 
+                            - classes += " calendar__dayRow-notActive"
+                            input.calendar__radio(type= "radio", id= currentId)
+                            label.calendar__label.calendar__label-disabled
+                                div(class= classes) #{showDay}
+
 
                         - if((showState == 0) && (showDay == lastDayPrev))
                             - showState = 1;
@@ -207,3 +224,4 @@ mixin createCalendar(currentDay, month, lastDayCurrent, weekDayStart = 1, lastDa
                         - if((showState == 1) && (showDay == lastDayCurrent))
                             - showState = 2;
                             - startDay = - i*7 - j;
+        .calendar__expand

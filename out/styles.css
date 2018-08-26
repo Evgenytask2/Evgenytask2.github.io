@@ -2350,29 +2350,68 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .calendar {
   margin-right: 10px;
 }
+.calendar__footer {
+  position: absolute;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  bottom: -51px;
+  border-radius: 0 0 4.5px 4.5px;
+  background-color: #e5e5e5;
+  padding-left: 20px;
+}
+.calendar__footer:after {
+  content: attr(data-msg);
+  position: absolute;
+  background: inherit;
+  padding-left: inherit;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  border-radius: inherit;
+  -webkit-transition: opacity 0.525s ease-in-out;
+  transition: opacity 0.525s ease-in-out;
+}
+.calendar__expand {
+  height: 50px;
+  background-color: transparent;
+}
 .calendar__header {
+  border-radius: 4.5px 4.5px 0 0;
   background-color: #e75735;
   color: #ffffff;
   text-align: center;
 }
+.calendar__content {
+  position: relative;
+}
 .calendar__currentDay {
   font-size: 80px;
-  line-height: 100%;
+  line-height: 109px;
 }
 .calendar__month {
   text-transform: none;
   font-size: 24px;
+  background-color: #d54c2c;
+  line-height: 43px;
 }
 .calendar__week {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  height: 27px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .calendar__weekDay {
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 9px;
+  width: 14.2857%;
 }
 .calendar__weekRow {
   display: -webkit-box;
@@ -2382,19 +2421,45 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   margin-left: -0.5px;
   margin-right: -0.5px;
 }
+.calendar__label {
+  width: calc(14.2857% - 2*0.5px);
+  margin: 0 0.5px;
+  cursor: pointer;
+}
+.calendar__label-disabled {
+  cursor: default;
+}
+.calendar__radio {
+  display: none;
+}
+input.calendar__radio:checked + .calendar__label .calendar__dayRow {
+  background-color: #4eb7a8;
+  color: #ffffff;
+}
+input.calendar__radio:checked + .calendar__label .calendar__dayRow-current {
+  background-color: #e75735;
+  color: #ffffff;
+}
+input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
+  opacity: 0;
+}
 .calendar__dayRow {
   text-align: center;
-  width: calc(14.2857% - 2*0.5px);
   background-color: #f2f2f2;
   color: #888888;
+  -webkit-transition: background-color 0.35s ease-in, color 0.35s ease-in;
+  transition: background-color 0.35s ease-in, color 0.35s ease-in;
   font-family: "SourceRegular", Arial, sans-serif;
   font-size: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 11px 0;
-  margin: 0 0.5px;
 }
 .calendar__dayRow-notActive {
+  color: #ffffff;
+}
+.calendar__dayRow-selected {
+  background-color: #e75735;
   color: #ffffff;
 }
 .lightGreen {

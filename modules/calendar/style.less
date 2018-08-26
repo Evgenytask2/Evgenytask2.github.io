@@ -1,32 +1,74 @@
 @import "../projectShare/common.less";
 
+@borderRatio: 1.5;
+
 .calendar {
-
     @cellMargin: 0.5px;
-
+    @transitionTime: 0.35s;
     margin-right: @rowMarginRight;
+    @footerHeight: 50px;
+
+    &__footer {
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        height: @footerHeight;
+        line-height: @footerHeight;
+        bottom: -@footerHeight - 1px;
+        border-radius: 0 0 @borderRatio*@roundBorder @borderRatio*@roundBorder;
+        background-color: @lightGrey;
+        padding-left: 20px;
+        &:after {
+            content: attr(data-msg);
+            position: absolute;
+            background: inherit;
+            padding-left: inherit;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 1;
+            border-radius: inherit;
+            transition: opacity 1.5*@transitionTime ease-in-out;
+        } 
+    }
+
+    &__expand {
+        height:  @footerHeight;
+        background-color: transparent;
+    }
+
+
     &__header {
+        border-radius: @borderRatio*@roundBorder @borderRatio*@roundBorder 0 0;
         background-color: @red;
         color: @mainColor;
         text-align: center;
     }
+    &__content {
+        position: relative;
+    }
 
     &__currentDay {
         .fontSize12();
-        line-height: 100%;
+        line-height: 109px;
     }
 
     &__month {
         text-transform: none;
         .fontSize7Small();
+        background-color: rgb(213,76,44);
+        line-height: 43px;
     }
 
     &__week {
         display: flex;
-        justify-content: space-around;
+        height: 27px;
+        align-items: center;
         &Day {
             font-family: "LatoBlack",Arial, sans-serif;
             .fontSizeSmall();
+            width: 14.2857%;
         }
     }
     &__weekRow {
@@ -35,21 +77,46 @@
         margin-left: -@cellMargin;
         margin-right: -@cellMargin;
     }
+    &__label {
+        width: calc(14.2857% - 2*@cellMargin);
+        margin: 0 @cellMargin;
+        cursor: pointer;
+        &-disabled {
+            cursor: default;
+        }
+    }
+    &__radio {
+        display: none;
+    }
+    input&__radio:checked + &__label &__dayRow {
+        background-color: @lightGreen;
+        color: @mainColor;
+    }
+    input&__radio:checked + &__label &__dayRow-current {
+        background-color: @red;
+        color: @mainColor;
+    }
+    input&__radio:checked + &__label + &__footer:after {
+        opacity: 0;
+    }
     &__dayRow {
         text-align: center;
-        width: calc(14.2857% - 2*@cellMargin);
         background-color: @almostWhite;
-
         color: @mediumGrey;
+        transition: background-color @transitionTime ease-in,
+        color @transitionTime ease-in;
+
         font-family: "SourceRegular",Arial, sans-serif;
         .fontSize6Big();
 
         box-sizing: border-box;
         padding: 11px 0;
-        margin: 0 @cellMargin;
         &-notActive {
             color: @mainColor;
-
+        }
+        &-selected {
+            background-color: @red;
+            color: @mainColor;
         }
     }
 }
