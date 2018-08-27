@@ -1,6 +1,6 @@
 @import "../projectShare/common.less";
 @sliderHeight: 5px;
-@dragHeight: 21px;
+@dragHeight: 19px;
 @successMargin: 5px;
 
 .sliders {
@@ -8,8 +8,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin-top: 45px;
+    margin-bottom: 60px;
     &__slider {
         width: 260px;
         height: @sliderHeight;
@@ -26,11 +26,12 @@
         height: @dragHeight;
         border-radius: 50%;
         top: -(@dragHeight - @sliderHeight)/2;
-        transform: translateX(-50%);
         &-warning {
+            transform: translateX(calc(-100% + 1px));
             background-color: @red;
         }
         &-success {
+            transform: translateX(calc(-50% - 2.5px));
             background-color: @lightGreen;
         }
     }
@@ -49,15 +50,16 @@
         height: @warningValueHeight;
         background-color: @red;
         position: absolute;
-        left: -(@warningValueWidth - @dragHeight)/2;
+        left: -(@warningValueWidth - @dragHeight + 1px)/2;
         border-radius: 5px;
-        top: -32px;
+        top: -31px;
         &:before {
             position: absolute;
             left: 0;
             right: 0;
             line-height: @warningValueHeight;
             content: attr(data-percent);
+            letter-spacing: 1px;
             color: @mainColor;
             .fontSize3Half();
             text-align: center;
@@ -65,7 +67,7 @@
         &:after {
             position: absolute;
             content: "";
-            top: 24px;
+            top: 23.4px;
             left: 50%;
             transform: translateX(-50%);
             width: 0;
@@ -79,17 +81,22 @@
         display: flex;
         width: 100%;;
         &Value {
+            letter-spacing: 0.5px;
             margin-top: 14px;
             .fontSize2();
-            color: @lightGrey;
-            &:first-child {
-                transform: translateX(-2px);
-            }
+            color: @grey209;
             &:not(:first-child) {
+                transform: translateX(-3px);
                 margin-left: 20%;
             }
+            &:nth-child(2) {
+                transform: translateX(-1px);
+            }
+            &:nth-child(4) {
+                transform: translateX(-5px);
+            }
             &:last-child {
-                transform: translateX(-9px);
+                transform: translateX(-12px);
             }
         }
     }

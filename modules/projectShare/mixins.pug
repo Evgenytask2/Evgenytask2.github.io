@@ -76,10 +76,10 @@ mixin createStageChart(progress, idStart = 1, elemClass = "warning", maximum = 5
         - for(var i = 0; i < maximum; i++)
             - currentId = "SC_" + startId + "_" + i
             if(i < progress)
-                label(for= currentId)
+                label.stageChart__label(for= currentId)
                     +createElement(i+1,"stageChart__value",elemClass, possibleClass)
             else
-                label(for= currentId)
+                label.stageChart__label(for= currentId)
                     +createElement(i+1,"stageChart__value",notAchieved, possibleClass)
                     
     .stageChart__scale

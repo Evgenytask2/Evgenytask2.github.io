@@ -12,10 +12,14 @@
 .stageChart {
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
     @valueHeight: 29px;
     .notAchieved() {
         background-color: @lightGrey;
         color: @mediumGrey;
+    }
+    &__label:nth-child(2) &__value {
+        transform: translateX(-5px);
     }
     &__value {
         cursor: pointer;
@@ -37,7 +41,7 @@
     &__progress {
         height: @progressHeight;
         margin-top: -@progressHeight;
-        margin-bottom: 20px;
+        margin-bottom: 65px;
         width: 0%;
         transition: width ease-in-out @transitionTime;
         &-warning {

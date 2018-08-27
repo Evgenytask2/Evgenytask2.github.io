@@ -31,7 +31,6 @@
         justify-content: space-between;
     }
     &__button {
-        letter-spacing: 0.5px;
         cursor: pointer;
         text-align: center;
         font-family: "LatoBlack", Arial, sans-serif;
@@ -41,6 +40,7 @@
         box-sizing: border-box;
         .fontSize3();
         &-small{
+            letter-spacing: 0.5px;
             .fontSize1();
             width: 78px;
             height: @smallHeight;
@@ -59,6 +59,7 @@
             }
         }
         &-big {
+            letter-spacing: 1px;
             width: 117.5px;
             transform: translate(-1px);
             height: @smallHeight + @deltahHeight;

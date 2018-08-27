@@ -2,14 +2,17 @@
 
 @transitionTime: 0.6s;
 @toggleHeight: 24px;
-@toggleWidth: 58px;
-@indicatorRatio: 0.75;
-@indicatorMargin: 4px;
+@toggleWidth: 60px;
+@indicatorRatio: 0.77;
+@indicatorMargin: 3px;
 
 .switch {
+    margin-left: 16px;
     &__container {
         display: flex;
         justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 45px;
     }
     &__input {
         display: none;
@@ -45,7 +48,7 @@
             bottom: 0;
             position: absolute;
             font-family: "LatoBlack";
-            .fontSize3();
+            .fontSize3Half();
         }
     }
     &__indicator {

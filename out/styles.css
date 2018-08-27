@@ -7,6 +7,9 @@
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -104,6 +107,14 @@
   letter-spacing: 0.9px;
   word-spacing: 0px;
 }
+.content__title-selfMargin {
+  margin-bottom: 50px;
+}
+.content__title-notCentered {
+  -webkit-transform: translate(10px, -5px);
+      -ms-transform: translate(10px, -5px);
+          transform: translate(10px, -5px);
+}
 .content__twoSections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +153,9 @@
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -241,7 +255,6 @@
           justify-content: space-between;
 }
 .standardButtons__button {
-  letter-spacing: 0.5px;
   cursor: pointer;
   text-align: center;
   font-family: "LatoBlack", Arial, sans-serif;
@@ -252,6 +265,7 @@
   font-size: 12px;
 }
 .standardButtons__button-small {
+  letter-spacing: 0.5px;
   font-size: 10px;
   width: 78px;
   height: 22px;
@@ -272,6 +286,7 @@
   margin-top: 32.5px;
 }
 .standardButtons__button-big {
+  letter-spacing: 1px;
   width: 117.5px;
   -webkit-transform: translate(-1px);
       -ms-transform: translate(-1px);
@@ -397,6 +412,9 @@ input:checked + label .standardButtons__button:before {
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -560,6 +578,9 @@ input:checked + label .standardButtons__button:before {
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -638,6 +659,7 @@ input:checked + label .standardButtons__button:before {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   margin-top: 23px;
+  margin-bottom: 35px;
 }
 .circleDiagrams__diagram {
   -webkit-box-sizing: border-box;
@@ -747,6 +769,9 @@ input:checked + label .standardButtons__button:before {
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -828,8 +853,8 @@ input:checked + label .standardButtons__button:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 25px;
+  margin-top: 45px;
+  margin-bottom: 60px;
 }
 .sliders__slider {
   width: 260px;
@@ -843,18 +868,21 @@ input:checked + label .standardButtons__button:before {
 }
 .sliders__drag {
   position: absolute;
-  width: 21px;
-  height: 21px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
-  top: -8px;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: -7px;
 }
 .sliders__drag-warning {
+  -webkit-transform: translateX(calc(-100% + 1px));
+      -ms-transform: translateX(calc(-100% + 1px));
+          transform: translateX(calc(-100% + 1px));
   background-color: #e75735;
 }
 .sliders__drag-success {
+  -webkit-transform: translateX(calc(-50% - 2.5px));
+      -ms-transform: translateX(calc(-50% - 2.5px));
+          transform: translateX(calc(-50% - 2.5px));
   background-color: #4eb7a8;
 }
 .sliders__fillSuccess {
@@ -870,9 +898,9 @@ input:checked + label .standardButtons__button:before {
   height: 24px;
   background-color: #e75735;
   position: absolute;
-  left: -7px;
+  left: -8.5px;
   border-radius: 5px;
-  top: -32px;
+  top: -31px;
 }
 .sliders__warningValue:before {
   position: absolute;
@@ -880,6 +908,7 @@ input:checked + label .standardButtons__button:before {
   right: 0;
   line-height: 24px;
   content: attr(data-percent);
+  letter-spacing: 1px;
   color: #ffffff;
   font-size: 13px;
   text-align: center;
@@ -887,7 +916,7 @@ input:checked + label .standardButtons__button:before {
 .sliders__warningValue:after {
   position: absolute;
   content: "";
-  top: 24px;
+  top: 23.4px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -905,22 +934,31 @@ input:checked + label .standardButtons__button:before {
   width: 100%;
 }
 .sliders__axisValue {
+  letter-spacing: 0.5px;
   margin-top: 14px;
   font-size: 11px;
-  color: #e5e5e5;
-}
-.sliders__axisValue:first-child {
-  -webkit-transform: translateX(-2px);
-      -ms-transform: translateX(-2px);
-          transform: translateX(-2px);
+  color: #d1d1d1;
 }
 .sliders__axisValue:not(:first-child) {
+  -webkit-transform: translateX(-3px);
+      -ms-transform: translateX(-3px);
+          transform: translateX(-3px);
   margin-left: 20%;
 }
+.sliders__axisValue:nth-child(2) {
+  -webkit-transform: translateX(-1px);
+      -ms-transform: translateX(-1px);
+          transform: translateX(-1px);
+}
+.sliders__axisValue:nth-child(4) {
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
 .sliders__axisValue:last-child {
-  -webkit-transform: translateX(-9px);
-      -ms-transform: translateX(-9px);
-          transform: translateX(-9px);
+  -webkit-transform: translateX(-12px);
+      -ms-transform: translateX(-12px);
+          transform: translateX(-12px);
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -930,6 +968,9 @@ input:checked + label .standardButtons__button:before {
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -1007,6 +1048,12 @@ input:checked + label .standardButtons__button:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 25px;
+}
+.stageChart__label:nth-child(2) .stageChart__value {
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 .stageChart__value {
   cursor: pointer;
@@ -1031,7 +1078,7 @@ input:checked + label .standardButtons__button:before {
 .stageChart__progress {
   height: 5px;
   margin-top: -5px;
-  margin-bottom: 20px;
+  margin-bottom: 65px;
   width: 0%;
   -webkit-transition: width ease-in-out 0.7s;
   transition: width ease-in-out 0.7s;
@@ -1103,6 +1150,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -1251,6 +1301,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -1320,6 +1373,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .fontSize12 {
   font-size: 80px;
 }
+.switch {
+  margin-left: 16px;
+}
 .switch__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1327,6 +1383,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 45px;
 }
 .switch__input {
   display: none;
@@ -1339,7 +1397,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .switch__toggle {
   position: relative;
-  width: 58px;
+  width: 60px;
   height: 24px;
   border-radius: 12px;
   background-color: #e5e5e5;
@@ -1348,9 +1406,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .switch__toggle:before {
   content: "off";
-  -webkit-transform: translateX(26.1px);
-      -ms-transform: translateX(26.1px);
-          transform: translateX(26.1px);
+  -webkit-transform: translateX(27px);
+      -ms-transform: translateX(27px);
+          transform: translateX(27px);
 }
 .switch__toggle:after {
   content: "on";
@@ -1371,18 +1429,18 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   bottom: 0;
   position: absolute;
   font-family: "LatoBlack";
-  font-size: 12px;
+  font-size: 13px;
 }
 .switch__indicator {
-  width: 18px;
-  height: 18px;
+  width: 18.48px;
+  height: 18.48px;
   background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
-  top: 3px;
-  -webkit-transform: translateX(4px);
-      -ms-transform: translateX(4px);
-          transform: translateX(4px);
+  top: 2.76px;
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+          transform: translateX(3px);
   -webkit-transition: -webkit-transform ease-in-out 0.6s;
   transition: -webkit-transform ease-in-out 0.6s;
   transition: transform ease-in-out 0.6s;
@@ -1401,9 +1459,9 @@ input.switch__input:checked + .switch__label .switch__toggle:after {
   opacity: 1;
 }
 input.switch__input:checked + .switch__label .switch__toggle .switch__indicator {
-  -webkit-transform: translateX(36px);
-      -ms-transform: translateX(36px);
-          transform: translateX(36px);
+  -webkit-transform: translateX(38.52px);
+      -ms-transform: translateX(38.52px);
+          transform: translateX(38.52px);
 }
 .switch__tickBox {
   position: relative;
@@ -1452,6 +1510,12 @@ input.switch__input:checked + .switch__label .switch__tickBox:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 25px;
+}
+.stageChart__label:nth-child(2) .stageChart__value {
+  -webkit-transform: translateX(-5px);
+      -ms-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 .stageChart__value {
   cursor: pointer;
@@ -1476,7 +1540,7 @@ input.switch__input:checked + .switch__label .switch__tickBox:after {
 .stageChart__progress {
   height: 5px;
   margin-top: -5px;
-  margin-bottom: 20px;
+  margin-bottom: 65px;
   width: 0%;
   -webkit-transition: width ease-in-out 0.7s;
   transition: width ease-in-out 0.7s;
@@ -1548,6 +1612,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -1731,6 +1798,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -1917,6 +1987,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -2028,6 +2101,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -2145,6 +2221,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -2441,6 +2520,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -2673,6 +2755,9 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
@@ -2913,6 +2998,9 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .mainColor {
   background-color: #ffffff;
 }
+.grey209 {
+  background-color: #d1d1d1;
+}
 .lightGrey {
   background-color: #e5e5e5;
 }
@@ -3024,6 +3112,9 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .mainColor {
   background-color: #ffffff;
+}
+.grey209 {
+  background-color: #d1d1d1;
 }
 .lightGrey {
   background-color: #e5e5e5;
