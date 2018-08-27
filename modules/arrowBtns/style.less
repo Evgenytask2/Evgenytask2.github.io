@@ -1,10 +1,12 @@
 @import "../projectShare/common.less";
 
-@arrowCenter: 25%;
-@fixY: 6px;
+@arrowCenter: 30%;
+@arrowHeight: 3.5px;
 
 .arrowButtons {
     margin: 0 12.6%;
+    margin-top: 35px;
+    margin-bottom: 45px;
     &__box {
         display: flex;
         flex-flow: row wrap;
@@ -22,7 +24,7 @@
         height: 50px;
         border-radius: 50%;
         &-borderOnly {
-            border: 2px solid @lightGreen;
+            border: 2.5px solid @lightGreen;
             &::before, &::after {
                 background-color: @lightGreen;
             }
@@ -39,31 +41,35 @@
                 background-color: @mainColor;
             }
         }
+
+
         &-toLeft {
             &::before {
                 left: @arrowCenter;
-                transform: translateY(@fixY) rotate(45deg);
+                transform: translateY(100%) rotate(45deg);
             }
             &::after {
                 left: @arrowCenter;
-                transform: translateY(-@fixY) rotate(-45deg);
+                transform: translateY(calc(-100% - @arrowHeight + 0.2px)) rotate(-45deg);
             }
         }
         &-toRight {
             &::before {
                 right: @arrowCenter;
-                transform: translateY(-@fixY) rotate(45deg);
+                transform: translateY(calc(-100% - @arrowHeight + 0.2px)) rotate(45deg);
             }
             &::after {
                 right: @arrowCenter;
-                transform: translateY(@fixY) rotate(-45deg);
+                transform:translateY(100%) rotate(-45deg);
             }
         }
+
+
         &::before, &::after {
             position: absolute;
             content: "";
-            width: 20px;
-            height: 3.5px;
+            width: 16px;
+            height: @arrowHeight;
             top: 50%;
         }
     }

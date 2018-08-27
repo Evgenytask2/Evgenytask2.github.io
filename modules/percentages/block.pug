@@ -1,16 +1,17 @@
 include ../projectShare/mixins.pug
 
-.content__title Percentages / Pie chart
+.content__title.content__title-smaller Percentages / Pie chart
 
 .circleDiagrams
-    .circleDiagrams__diagram
+    .circleDiagrams__diagram-mod1.circleDiagrams__diagram
         +createCircleProgress(0)
-    .circleDiagrams__diagram
-        +createCircleProgress(38)
-    .circleDiagrams__diagram
-        +createCircleProgress(62)
-    .circleDiagrams__diagram
-        +createCircleProgress(89)
-    .circleDiagrams__diagram.circleDiagrams__diagram-pie
-        +createPieChart(4,9,25,35,31,"mediumGrey", 
+    .circleDiagrams__diagram-mod2.circleDiagrams__diagram
+        +createCircleProgress(38,5)
+    .circleDiagrams__diagram-mod3.circleDiagrams__diagram
+        +createCircleProgress(62, -5.5)
+    .circleDiagrams__diagram-mod4.circleDiagrams__diagram
+        +createCircleProgress(89,1.5)
+
+    .circleDiagrams__diagram-pie.circleDiagrams__diagram
+        +createPieChart(4,11,26,30,33,"grey", 
             "red", "lightGreen","lightGrey")

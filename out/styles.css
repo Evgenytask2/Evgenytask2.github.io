@@ -13,6 +13,9 @@
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -97,6 +100,10 @@
   letter-spacing: 1.2px;
   word-spacing: 3px;
 }
+.content__title-smaller {
+  letter-spacing: 0.9px;
+  word-spacing: 0px;
+}
 .content__twoSections {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +148,9 @@
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -203,7 +213,10 @@
   font-size: 80px;
 }
 .standardButtons {
-  margin: 0 11%;
+  margin-left: 11%;
+  margin-right: 10.7%;
+  margin-top: 50px;
+  margin-bottom: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,6 +241,7 @@
           justify-content: space-between;
 }
 .standardButtons__button {
+  letter-spacing: 0.5px;
   cursor: pointer;
   text-align: center;
   font-family: "LatoBlack", Arial, sans-serif;
@@ -244,31 +258,40 @@
   line-height: 22px;
 }
 .standardButtons__button-success.standardButtons__button-shadow.standardButtons__button-small {
-  -webkit-box-shadow: 0 3px 0 0 #28a290;
-          box-shadow: 0 3px 0 0 #28a290;
+  -webkit-box-shadow: 0 2px 0 0 #28a290;
+          box-shadow: 0 2px 0 0 #28a290;
 }
 .standardButtons__button-warning.standardButtons__button-shadow.standardButtons__button-small {
-  -webkit-box-shadow: 0 3px 0 0 #bf3e1f;
-          box-shadow: 0 3px 0 0 #bf3e1f;
+  -webkit-box-shadow: 0 2px 0 0 #bf3e1f;
+          box-shadow: 0 2px 0 0 #bf3e1f;
 }
 .standardButtons__button-inContainer.standardButtons__button-small {
   margin-top: 30px;
 }
+.standardButtons__button-inContainerHigher.standardButtons__button-small {
+  margin-top: 32.5px;
+}
 .standardButtons__button-big {
-  width: 116px;
+  width: 117.5px;
+  -webkit-transform: translate(-1px);
+      -ms-transform: translate(-1px);
+          transform: translate(-1px);
   height: 32px;
   line-height: 32px;
 }
 .standardButtons__button-success.standardButtons__button-shadow.standardButtons__button-big {
-  -webkit-box-shadow: 0 4px 0 0 #28a290;
-          box-shadow: 0 4px 0 0 #28a290;
+  -webkit-box-shadow: 0 3px 0 0 #28a290;
+          box-shadow: 0 3px 0 0 #28a290;
 }
 .standardButtons__button-warning.standardButtons__button-shadow.standardButtons__button-big {
-  -webkit-box-shadow: 0 4px 0 0 #bf3e1f;
-          box-shadow: 0 4px 0 0 #bf3e1f;
+  -webkit-box-shadow: 0 3px 0 0 #bf3e1f;
+          box-shadow: 0 3px 0 0 #bf3e1f;
 }
 .standardButtons__button-inContainer.standardButtons__button-big {
   margin-top: 20px;
+}
+.standardButtons__button-inContainerHigher.standardButtons__button-big {
+  margin-top: 22px;
 }
 .standardButtons__button-success {
   background-color: #4eb7a8;
@@ -286,14 +309,18 @@
   background-color: #ffffff;
 }
 .standardButtons__button-small.standardButtons__button-empty {
-  border: 1px solid;
+  border: 0.5px solid;
   -webkit-box-shadow: 0 2px 0 0;
           box-shadow: 0 2px 0 0;
 }
 .standardButtons__button-big.standardButtons__button-empty {
-  border: 1px solid;
+  border: 0.5px solid;
   -webkit-box-shadow: 0 3px 0 0;
           box-shadow: 0 3px 0 0;
+}
+.standardButtons__button-success.standardButtons__button-darkGreen {
+  -webkit-box-shadow: 0 2px 0 0 #28a290;
+          box-shadow: 0 2px 0 0 #28a290;
 }
 .standardButtons__button-grad1 {
   position: relative;
@@ -309,7 +336,7 @@
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
   border-radius: 3px;
-  background: radial-gradient(circle 24px at 38% 23%, #82cbc1 100%, #4eb7a8);
+  background: radial-gradient(circle 25px at 36% 80%, #82cbc1 100%, #4eb7a8);
 }
 .standardButtons__button-grad2 {
   position: relative;
@@ -325,7 +352,7 @@
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
   border-radius: 3px;
-  background: radial-gradient(circle 27px at 50% 50%, #82cbc1 100%, #4eb7a8);
+  background: radial-gradient(circle 24.5px at 50% 50%, #82cbc1 100%, #4eb7a8);
 }
 .standardButtons__button-grad3 {
   position: relative;
@@ -341,7 +368,7 @@
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
   border-radius: 3px;
-  background: radial-gradient(circle 27px at 74% 50%, #ed8870 100%, #e75735);
+  background: radial-gradient(circle 24.5px at 72% 50%, #ed8870 100%, #e75735);
 }
 .standardButtons__button-grad4 {
   position: relative;
@@ -357,7 +384,7 @@
   -webkit-transition: opacity ease-in-out 0.6s;
   transition: opacity ease-in-out 0.6s;
   border-radius: 3px;
-  background: radial-gradient(circle 27px at 92% 23%, #ed8870 100%, #e75735);
+  background: radial-gradient(circle 25px at 92% 83%, #ed8870 100%, #e75735);
 }
 input:checked + label .standardButtons__button:before {
   opacity: 1;
@@ -376,6 +403,9 @@ input:checked + label .standardButtons__button:before {
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -439,6 +469,8 @@ input:checked + label .standardButtons__button:before {
 }
 .arrowButtons {
   margin: 0 12.6%;
+  margin-top: 35px;
+  margin-bottom: 45px;
 }
 .arrowButtons__box {
   display: -webkit-box;
@@ -467,7 +499,7 @@ input:checked + label .standardButtons__button:before {
   border-radius: 50%;
 }
 .arrowButtons__button-borderOnly {
-  border: 2px solid #4eb7a8;
+  border: 2.5px solid #4eb7a8;
 }
 .arrowButtons__button-borderOnly::before,
 .arrowButtons__button-borderOnly::after {
@@ -488,34 +520,34 @@ input:checked + label .standardButtons__button:before {
   background-color: #ffffff;
 }
 .arrowButtons__button-toLeft::before {
-  left: 25%;
-  -webkit-transform: translateY(6px) rotate(45deg);
-      -ms-transform: translateY(6px) rotate(45deg);
-          transform: translateY(6px) rotate(45deg);
+  left: 30%;
+  -webkit-transform: translateY(100%) rotate(45deg);
+      -ms-transform: translateY(100%) rotate(45deg);
+          transform: translateY(100%) rotate(45deg);
 }
 .arrowButtons__button-toLeft::after {
-  left: 25%;
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-      -ms-transform: translateY(-6px) rotate(-45deg);
-          transform: translateY(-6px) rotate(-45deg);
+  left: 30%;
+  -webkit-transform: translateY(calc(-100% - 3.5px + 0.2px)) rotate(-45deg);
+      -ms-transform: translateY(calc(-100% - 3.5px + 0.2px)) rotate(-45deg);
+          transform: translateY(calc(-100% - 3.5px + 0.2px)) rotate(-45deg);
 }
 .arrowButtons__button-toRight::before {
-  right: 25%;
-  -webkit-transform: translateY(-6px) rotate(45deg);
-      -ms-transform: translateY(-6px) rotate(45deg);
-          transform: translateY(-6px) rotate(45deg);
+  right: 30%;
+  -webkit-transform: translateY(calc(-100% - 3.5px + 0.2px)) rotate(45deg);
+      -ms-transform: translateY(calc(-100% - 3.5px + 0.2px)) rotate(45deg);
+          transform: translateY(calc(-100% - 3.5px + 0.2px)) rotate(45deg);
 }
 .arrowButtons__button-toRight::after {
-  right: 25%;
-  -webkit-transform: translateY(6px) rotate(-45deg);
-      -ms-transform: translateY(6px) rotate(-45deg);
-          transform: translateY(6px) rotate(-45deg);
+  right: 30%;
+  -webkit-transform: translateY(100%) rotate(-45deg);
+      -ms-transform: translateY(100%) rotate(-45deg);
+          transform: translateY(100%) rotate(-45deg);
 }
 .arrowButtons__button::before,
 .arrowButtons__button::after {
   position: absolute;
   content: "";
-  width: 20px;
+  width: 16px;
   height: 3.5px;
   top: 50%;
 }
@@ -533,6 +565,9 @@ input:checked + label .standardButtons__button:before {
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -602,11 +637,11 @@ input:checked + label .standardButtons__button:before {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  margin-top: 23px;
 }
 .circleDiagrams__diagram {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,17 +649,30 @@ input:checked + label .standardButtons__button:before {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.circleDiagrams__diagram-mod1 {
+  margin-left: -10px;
+}
+.circleDiagrams__diagram-mod2 {
+  margin-left: 2.8%;
+}
+.circleDiagrams__diagram-mod3 {
+  margin-left: 6.2%;
+}
+.circleDiagrams__diagram-mod4 {
+  margin-left: 6%;
+}
 .circleDiagrams__diagram-pie {
+  margin-left: 12.9%;
   position: relative;
 }
 .circleDiagrams__diagram-pie::after {
-  width: 64.32px;
-  height: 64.32px;
+  width: 61.44px;
+  height: 61.44px;
   background-color: #ffffff;
   border-radius: 50%;
   content: "";
   position: absolute;
-  margin-top: 15.84px;
+  margin-top: 17.28px;
 }
 .radialProgress {
   width: 96px;
@@ -635,6 +683,7 @@ input:checked + label .standardButtons__button:before {
 }
 .radialProgress::after {
   content: attr(data-percent);
+  letter-spacing: -2px;
   position: absolute;
   left: 0;
   right: 0;
@@ -658,11 +707,11 @@ input:checked + label .standardButtons__button:before {
   background-color: #e75735;
 }
 .radialProgress__inset {
-  width: 85px;
-  height: 85px;
+  width: 86px;
+  height: 86px;
   position: absolute;
-  margin-left: 5.5px;
-  margin-top: 5.5px;
+  margin-left: 5px;
+  margin-top: 5px;
   background-color: #ffffff;
   border-radius: 50%;
 }
@@ -703,6 +752,9 @@ input:checked + label .standardButtons__button:before {
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -885,6 +937,9 @@ input:checked + label .standardButtons__button:before {
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -1055,6 +1110,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -1198,6 +1256,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -1494,6 +1555,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -1673,6 +1737,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -1856,6 +1923,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -1964,6 +2034,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -2078,6 +2151,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -2371,6 +2447,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -2600,6 +2679,9 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .almostWhite {
   background-color: #f2f2f2;
+}
+.grey {
+  background-color: #747474;
 }
 .mediumGrey {
   background-color: #888888;
@@ -2837,6 +2919,9 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -2946,6 +3031,9 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .almostWhite {
   background-color: #f2f2f2;
 }
+.grey {
+  background-color: #747474;
+}
 .mediumGrey {
   background-color: #888888;
 }
@@ -3007,8 +3095,13 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   font-size: 80px;
 }
 @media (max-width: 900px) {
+  .content {
+    margin-top: 30px;
+  }
   .standardButtons {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
   }
   .standardButtons__elem {
     width: 50%;
@@ -3038,10 +3131,11 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
     margin-right: 25px;
   }
   .circleDiagrams {
-    margin: 0 7%;
+    margin-top: 40px;
   }
   .circleDiagrams__diagram {
     width: 50%;
+    margin-left: 0 ;
     margin-bottom: 25px;
   }
   .circleDiagrams__diagram-pie {

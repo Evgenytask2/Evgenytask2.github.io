@@ -1,17 +1,30 @@
 @import "../projectShare/common.less";
 
 
-@centerPieRatio: 0.67;
+@centerPieRatio: 0.64;
 
 .circleDiagrams {
     display: flex;
-    flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin-top: 23px;
     &__diagram {
         box-sizing: border-box;
-		width: 20%;
 		display: flex;
 		justify-content: center;
-		&-pie { 
+		&-mod1 {
+			margin-left: -10px;
+		}
+		&-mod2 {
+			margin-left: 2.8%;
+		}
+		&-mod3 {
+			margin-left: 6.2%;
+		}
+		&-mod4 {
+			margin-left: 6%;
+		}
+		&-pie {
+			margin-left: 12.9%;
 			position: relative;
 			&::after {
 				width: @centerPieRatio*@circle-size;
@@ -27,7 +40,7 @@
 }
 
 .radialProgress {
-	@inset-size: 85px;
+	@inset-size: 86px;
 	width:  @circle-size;
 	height: @circle-size;
     border-radius: 50%;
@@ -35,6 +48,7 @@
 	position: relative;
 	&::after {
 		content: attr(data-percent);
+		letter-spacing: -2px;
 		position: absolute;
 		left: 0;
 		right: 0;

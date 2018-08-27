@@ -4,17 +4,20 @@
 @greenGradientStart: rgb(130, 203, 193);
 @redGradientStart: rgb(237, 136, 112);
 
-@shadow: 2px;
-@bigShadow: 3px;
-@border: 1px;
-@bigBorder: 1px;
+@shadow: 1px;
+@bigShadow: 2px;
+@border: 0.5px;
+@bigBorder: 0.5px;
 
 @deltahHeight: 10px;
 @marginTop: 20px;
 @smallHeight: 22px;
 
 .standardButtons {
-    margin: 0 11%;
+    margin-left: 11%;
+    margin-right: 10.7%;
+    margin-top: 50px;
+    margin-bottom: 55px;
     display: flex;
     flex-direction: column;
  
@@ -28,6 +31,7 @@
         justify-content: space-between;
     }
     &__button {
+        letter-spacing: 0.5px;
         cursor: pointer;
         text-align: center;
         font-family: "LatoBlack", Arial, sans-serif;
@@ -50,9 +54,13 @@
             @{btn}-inContainer& {
                 margin-top: @marginTop + @deltahHeight;
             }
+            @{btn}-inContainerHigher& {
+                margin-top: @marginTop + @deltahHeight + 2.5px;
+            }
         }
         &-big {
-            width: 116px;
+            width: 117.5px;
+            transform: translate(-1px);
             height: @smallHeight + @deltahHeight;
             line-height: @smallHeight + @deltahHeight;
             @{btn}-success@{btn}-shadow& {
@@ -63,6 +71,9 @@
             }
             @{btn}-inContainer& {
                 margin-top: @marginTop;
+            }
+            @{btn}-inContainerHigher& {
+                margin-top: @marginTop + 2px;
             }
         }
 
@@ -82,12 +93,15 @@
             background-color: @mainColor;
             @{btn}-small& {
                 border: @border solid;
-                box-shadow: 0 @shadow 0 0;
+                box-shadow: 0 (@shadow + 1px) 0 0;
             }
             @{btn}-big& {
                 border: @bigBorder solid;
-                box-shadow: 0 @bigShadow 0 0;
+                box-shadow: 0 (@bigShadow + 1px) 0 0;
             }
+        }
+        &-success&-darkGreen {
+            box-shadow: 0 (@shadow + 1px) 0 0 @darkGreenShadow;
         }
 
         .fullPseudo() {
@@ -107,7 +121,7 @@
                position: relative;
                &:before {
                    .fullPseudo();
-                   background: radial-gradient(circle 24px at 38% 23%, @greenGradientStart 100%, @lightGreen);
+                   background: radial-gradient(circle 25px at 36% 80%, @greenGradientStart 100%, @lightGreen);
                }
            }
 
@@ -115,7 +129,7 @@
                 position: relative;
                 &:before {
                     .fullPseudo();
-                    background: radial-gradient(circle 27px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
+                    background: radial-gradient(circle 24.5px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
                 }
             }
 
@@ -123,7 +137,7 @@
                 position: relative;
                 &:before {
                     .fullPseudo();
-                    background: radial-gradient(circle 27px at 74% 50%, @redGradientStart 100%, @red); 
+                    background: radial-gradient(circle 24.5px at 72% 50%, @redGradientStart 100%, @red); 
                 }      
             }
 
@@ -131,7 +145,7 @@
                 position: relative;
                 &:before {
                     .fullPseudo();
-                    background: radial-gradient(circle 27px at 92% 23%, @redGradientStart 100%, @red); 
+                    background: radial-gradient(circle 25px at 92% 83%, @redGradientStart 100%, @red); 
                 }
             }
         }
