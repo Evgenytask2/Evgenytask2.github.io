@@ -12,13 +12,20 @@
         display: flex;
         justify-content: center;
         margin-top: 25px;
-        margin-bottom: 45px;
+        margin-bottom: 44px;
+        &-notCentered {
+            margin-bottom: 0;
+            margin-left: -10px;
+        }
     }
     &__input {
         display: none;
     }
     &__space {
         margin-right: 14px;
+        &-large {
+            margin-right: 16px;
+        }
     }
     &__label {
         cursor: pointer;
@@ -76,29 +83,29 @@
     }
 
     &__tickBox {
-        @yShift: @toggleHeight*0.7;
-        @xShift: @toggleHeight*0.3;
+        @yShift: @toggleHeight*0.59;
+        @xShift: @toggleHeight*0.32;
 
         position: relative;
-        height: @toggleHeight;
-        width: @toggleHeight;
+        height: @toggleHeight*0.95;
+        width: @toggleHeight*0.95;
         border-radius: 50%;
         background-color: @lightGrey;
         transition: background-color ease-in-out @transitionTime;
         &:before, &:after {
             position: absolute;
             content: "";
-            height: 2.5px;
+            height: 1.5px;
             background-color: @mediumLighterGrey;
             transition: background-color ease-in-out @transitionTime;
             transform-origin: 0 0;
         }
         &:before {
-            width: 6px;
+            width: 4px;
             transform: translateY(@yShift) translateX(@xShift) rotate(225deg);
         }
         &:after {
-            width: 16px;
+            width: 12px;
             transform: translateY(@yShift) translateX(@xShift)  rotate(-45deg);
         }
     }

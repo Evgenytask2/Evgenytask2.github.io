@@ -5,6 +5,7 @@
     @iconWidth: 33px;
     @thickness: 2px;
     @iconHeight: 28px;
+    margin-top: 18px;
 
 
     .createIcon() {
@@ -16,6 +17,10 @@
     }
     &__row {
         position: relative;
+        &-help {
+            margin-top: 16px;
+            margin-bottom: 18px;
+        }
     }
     &__input {
         height: @iconHeight;
@@ -30,8 +35,8 @@
         }
         &:before {
             box-sizing: border-box;
-            width: @iconWidth/3;
-            height: @iconWidth/3;
+            width: 0.33*@iconWidth;
+            height: 0.33*@iconWidth;
             border-radius: 50%;
             border: @thickness solid @mainColor;
             top: 25%;
@@ -63,21 +68,21 @@
         .createIcon();
         background-color: @lightGreen;
         z-index: -1;
-        @lineWidth: 11px;
+        @lineWidth: 10px;
         &:before, &:after {
             content: "";
             position: absolute;
-            height: @thickness + 0.5px;
+            height: @thickness;
             background-color: @mainColor;
             width: @lineWidth;
         }
         &:before {
             transform-origin: 100% 0;
-            transform: translateX((@iconWidth - 2*@lineWidth)/2 + 1px) translateY(0.6*@iconHeight) rotate(45deg);
+            transform: translateX((@iconWidth - 2*@lineWidth)/2 + 1px) translateY(0.65*@iconHeight) rotate(45deg);
         }
         &:after {
             transform-origin: 0 100%;
-            transform: translateX((@iconWidth - 2*@lineWidth)/2 + @lineWidth ) translateY(0.6*@iconHeight - 1px) rotate(-45deg);
+            transform: translateX((@iconWidth - 2*@lineWidth)/2 + @lineWidth ) translateY(0.65*@iconHeight - 1px) rotate(-45deg);
         }
     }
 

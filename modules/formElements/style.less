@@ -27,8 +27,12 @@
     }
     &__message {
         resize: none;
+        padding-top: 10px;
+        padding-bottom: 5px;
     }
     &__button {
+        border-radius: 1.5*@roundBorder;
+        cursor: help;
         @buttonHeight: 28px;
         margin-left: 7px;
         width: 72px;
@@ -56,8 +60,11 @@
                 border-right-color: @red;
             }
         }
-        &-noPointer {
-            cursor: default;
+        &-submit {
+            width: 117px;
+            height: 32px;
+            line-height: 32px;
+            cursor: pointer;
         }
     }
 }

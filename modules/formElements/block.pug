@@ -3,11 +3,11 @@ include ../projectShare/mixins
 .form
     .form__row
         input.form__name.form__input(placeholder= "Your name")
-        +createElement("Error","form__button","warning", "noPointer","triangle","!standardButtons__button", "button","warning","small")
+        +createElement("Error","form__button","warning","triangle","!standardButtons__button", "button","warning","small")
     .form__row
         input.form__email.form__input(placeholder= "Your Email")
-        +createElement("Thanks!","form__button","success", "noPointer","triangle","!standardButtons__button", "button","success","small")
+        +createElement("Thanks!","form__button","success","triangle","!standardButtons__button", "button","success","small")
     .form__row
         textarea.form__message.form__input(name="", rows="4", placeholder= "Your message")
     .form__row.form__row-submission
-        +createElement("Submit","form__button","success","!standardButtons__button", "button","success","shadow","big")
+        +createElement("Submit","form__button","success", "submit","!standardButtons__button", "button","success","shadow","big")

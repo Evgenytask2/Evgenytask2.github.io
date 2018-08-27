@@ -110,7 +110,7 @@ mixin createCheckGroup(quantity, startId, spaced, ...activeNumbers )
             input.switch__input(type= "checkbox", id= currentId)
         label.switch__label(for= currentId)
             - if(spaced && (i!=(quantity - 1)))
-                .switch__tickBox.switch__space
+                .switch__tickBox.switch__space-large
             - else 
                 .switch__tickBox
 
