@@ -8,36 +8,40 @@
     margin-left: 28px;
     align-items: center;
     margin-top: 28px;
+    &-lastProfile {
+        margin-bottom: 92px;
+    }
     &__photo {
         border-radius: 50%;
         width: @avatarSize;
         height: @avatarSize;
         box-sizing: border-box;
-        border: 5px solid @lightGrey;
-        object-fit: cover;
+        border: 4px solid @lightGrey;
+        object-fit: none;
+        object-position: 48% 0%;
         &-notCentered {
-            object-fit: none;
-            object-position: 50% 40%;
+            object-position: 51% 42%;
         }
     }
     &__info {
-        border-radius: 2*@roundBorder;
+        border-radius: 2.5*@roundBorder;
+        margin-right: 2px;
         flex-grow: 1;
-        padding-top: 13px;
-        padding-bottom: 16px;
+        padding-top: 10px;
+        padding-bottom: 14px;
         margin-left: 12px;
         color: @mainColor;
         text-align: center;
         background-color: @lightGreen;
         position: relative;
         &:after {
-            @borderSize: 7px;
+            @borderSize: 10px;
             content: "";
             position: absolute;
             border: @borderSize transparent solid;
             border-left: none;
             border-right-color: @lightGreen;
-            left: -5px;
+            left: -6px;
             bottom: 50%;
             transform: translateY(@borderSize);
         }
@@ -50,8 +54,8 @@
     }
     &__fullName {
         text-transform: capitalize;
-        margin-bottom: 3px;
         .fontSize6();
+        font-family: "LatoRegular", Arial, sans-serif;
         &-alternative {
             color: @red;
         }
@@ -59,6 +63,8 @@
     &__title {
         font-family: "LatoBlack",Arial, sans-serif;
         .fontSize2();
+        letter-spacing: 0.5px;
+        word-spacing: 2px;
         &-alternative {
             color: @darkGrey;
         }
@@ -77,21 +83,21 @@
         margin-right: @socialMargin;
         @p: ~".userProfile__socialBtn-";
         &-fb {
-            background: url(userProfile/img/iconSet.png) -119px -4px ;
+            background: url(userProfile/img/iconSet.png) -121px -3.5px ;
             @{p}alernative& {
-                background: url(userProfile/img/iconSet.png) -4px -4px;
+                background: url(userProfile/img/iconSet.png) -5.5px -4px;
             }
         }
         &-tw {
             background: url(userProfile/img/iconSet.png) -162px -3px ;
             @{p}alernative& {
-                background: url(userProfile/img/iconSet.png) -40px -4px;
+                background: url(userProfile/img/iconSet.png) -41px -3px;
             }
         }
         &-dribbble {
-            background: url(userProfile/img/iconSet.png) -208px -3px ;
+            background: url(userProfile/img/iconSet.png) -205px -3px ;
             @{p}alernative& {
-                background: url(userProfile/img/iconSet.png) -81px -5px ;
+                background: url(userProfile/img/iconSet.png) -78px -4px ;
             }
         }
     }

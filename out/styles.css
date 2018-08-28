@@ -41,10 +41,10 @@
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -110,6 +110,9 @@
 .content__title-selfMargin {
   margin-bottom: 50px;
 }
+.content__title-selfMarginSmaller {
+  margin-bottom: 35px;
+}
 .content__title-notCentered {
   -webkit-transform: translate(10px, -5px);
       -ms-transform: translate(10px, -5px);
@@ -150,6 +153,12 @@
   font-family: 'LatoBlack';
   src: url('fonts/LatoBlack.ttf') format('truetype');
   font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('fonts/LatoRegular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
@@ -201,10 +210,10 @@
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -460,10 +469,10 @@ input:checked + label .standardButtons__button:before {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -625,10 +634,10 @@ input:checked + label .standardButtons__button:before {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -697,7 +706,7 @@ input:checked + label .standardButtons__button:before {
   margin-left: 6%;
 }
 .circleDiagrams__diagram-pie {
-  margin-left: 12.9%;
+  margin-left: 13.1%;
   position: relative;
 }
 .circleDiagrams__diagram-pie::after {
@@ -816,10 +825,10 @@ input:checked + label .standardButtons__button:before {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -923,7 +932,7 @@ input:checked + label .standardButtons__button:before {
   content: attr(data-percent);
   letter-spacing: 1px;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12.5px;
   text-align: center;
 }
 .sliders__warningValue:after {
@@ -1016,10 +1025,10 @@ input:checked + label .standardButtons__button:before {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -1074,7 +1083,7 @@ input:checked + label .standardButtons__button:before {
   height: 29px;
   border-radius: 50%;
   line-height: 29px;
-  font-size: 14px;
+  font-size: 14.5px;
   font-family: "LatoBlack";
   text-align: center;
   -webkit-transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
@@ -1198,10 +1207,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -1262,7 +1271,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   padding-left: 13px;
   font-family: "SourceRegular", Arial, sans-serif;
   color: #888888;
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .form__input::-webkit-input-placeholder {
   color: #888888;
@@ -1355,10 +1364,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -1456,7 +1465,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   bottom: 0;
   position: absolute;
   font-family: "LatoBlack";
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .switch__indicator {
   width: 18.48px;
@@ -1550,7 +1559,7 @@ input.switch__input:checked + .switch__label .switch__tickBox:after {
   height: 29px;
   border-radius: 50%;
   line-height: 29px;
-  font-size: 14px;
+  font-size: 14.5px;
   font-family: "LatoBlack";
   text-align: center;
   -webkit-transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
@@ -1674,10 +1683,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -1746,21 +1755,21 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   height: 10.89px;
   border-radius: 50%;
   border: 2px solid #ffffff;
-  top: 25%;
+  top: 30%;
   left: 11px;
 }
 .search__lensIcon::after {
   height: 2.5px;
-  width: 7px;
+  width: 6px;
   background-color: #ffffff;
-  -webkit-transform-origin: 70% 0;
-      -ms-transform-origin: 70% 0;
-          transform-origin: 70% 0;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  bottom: 25%;
-  right: 20%;
+  bottom: 32%;
+  right: 17%;
 }
 .search__select {
   -webkit-appearance: none;
@@ -1867,10 +1876,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -1915,29 +1924,33 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           align-items: center;
   margin-top: 28px;
 }
+.userProfile-lastProfile {
+  margin-bottom: 92px;
+}
 .userProfile__photo {
   border-radius: 50%;
   width: 92px;
   height: 92px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 5px solid #e5e5e5;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.userProfile__photo-notCentered {
+  border: 4px solid #e5e5e5;
   -o-object-fit: none;
      object-fit: none;
-  -o-object-position: 50% 40%;
-     object-position: 50% 40%;
+  -o-object-position: 48% 0%;
+     object-position: 48% 0%;
+}
+.userProfile__photo-notCentered {
+  -o-object-position: 51% 42%;
+     object-position: 51% 42%;
 }
 .userProfile__info {
-  border-radius: 6px;
+  border-radius: 7.5px;
+  margin-right: 2px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-top: 13px;
-  padding-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 14px;
   margin-left: 12px;
   color: #ffffff;
   text-align: center;
@@ -1947,14 +1960,14 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .userProfile__info:after {
   content: "";
   position: absolute;
-  border: 7px transparent solid;
+  border: 10px transparent solid;
   border-left: none;
   border-right-color: #4eb7a8;
-  left: -5px;
+  left: -6px;
   bottom: 50%;
-  -webkit-transform: translateY(7px);
-      -ms-transform: translateY(7px);
-          transform: translateY(7px);
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
 }
 .userProfile__info-alternative {
   background-color: #e5e5e5;
@@ -1964,8 +1977,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .userProfile__fullName {
   text-transform: capitalize;
-  margin-bottom: 3px;
   font-size: 18px;
+  font-family: "LatoRegular", Arial, sans-serif;
 }
 .userProfile__fullName-alternative {
   color: #e75735;
@@ -1973,6 +1986,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .userProfile__title {
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 11px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
 }
 .userProfile__title-alternative {
   color: #4f4f4f;
@@ -1995,22 +2010,22 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   margin-right: 6px;
 }
 .userProfile__socialBtn-fb {
-  background: url(userProfile/img/iconSet.png) -119px -4px;
+  background: url(userProfile/img/iconSet.png) -121px -3.5px;
 }
 .userProfile__socialBtn-alernative.userProfile__socialBtn-fb {
-  background: url(userProfile/img/iconSet.png) -4px -4px;
+  background: url(userProfile/img/iconSet.png) -5.5px -4px;
 }
 .userProfile__socialBtn-tw {
   background: url(userProfile/img/iconSet.png) -162px -3px;
 }
 .userProfile__socialBtn-alernative.userProfile__socialBtn-tw {
-  background: url(userProfile/img/iconSet.png) -40px -4px;
+  background: url(userProfile/img/iconSet.png) -41px -3px;
 }
 .userProfile__socialBtn-dribbble {
-  background: url(userProfile/img/iconSet.png) -208px -3px;
+  background: url(userProfile/img/iconSet.png) -205px -3px;
 }
 .userProfile__socialBtn-alernative.userProfile__socialBtn-dribbble {
-  background: url(userProfile/img/iconSet.png) -81px -5px;
+  background: url(userProfile/img/iconSet.png) -78px -4px;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -2055,10 +2070,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -2170,10 +2185,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -2238,7 +2253,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .event__title {
   text-transform: uppercase;
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
   margin-top: 5px;
   margin-bottom: 8px;
 }
@@ -2290,10 +2305,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -2472,7 +2487,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .location__address {
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .location__building {
   margin-bottom: 3px;
@@ -2588,10 +2603,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -2641,7 +2656,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #e5e5e5;
   padding-left: 20px;
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
   color: #888888;
 }
 .calendar__footer:after {
@@ -2824,10 +2839,10 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -2970,7 +2985,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 .messaging__msg {
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
   color: #888888;
   text-transform: none;
   padding-left: 20px;
@@ -3066,10 +3081,10 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
@@ -3131,7 +3146,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .video__info-author {
   top: 70px;
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .video__info-url {
   top: 105px;
@@ -3181,10 +3196,10 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   font-size: 12px;
 }
 .fontSize3Half {
-  font-size: 13px;
+  font-size: 12.5px;
 }
 .fontSize4 {
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .fontSize5 {
   font-size: 16px;
