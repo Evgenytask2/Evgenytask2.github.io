@@ -9,8 +9,10 @@
                 margin-top: 30px;
             }
         }
-        &__title-notCentered {
-            transform: none;
+        &__title {
+            &-notCentered,&-left,&-right {
+                transform: none;
+            }
         }
     }
     .standardButtons {
@@ -64,21 +66,13 @@
         }
     }
 
-    .userProfile {
+    .userProfile,.messaging,.event,.switch {
         margin-left: 0;
     }
-    .news {
+    .news,.calendar {
         margin-right: 0;
     }
-    .event {
-        margin-left: 0;
-    }
-    .calendar {
-        margin-right: 0px;
-    }
-    .switch {
-        margin-left: 0;
-    }
+
     .stageChart {
         margin-top: 40px;
     }

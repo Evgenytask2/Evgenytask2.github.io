@@ -1,35 +1,39 @@
 @import "../projectShare/common.less";
 
+@markerTop: 46%;
 .location {
+    margin-top: 29px;
+    margin-bottom: 50px;
     @markerWidth: 40px;
     @iconMarkerWidth: 16px;
 
     &__map {
+        @markerRatio: 0.4;
         position: relative;
         &:after {
             cursor: pointer;
-            width: @markerWidth*0.45;
-            height: @markerWidth*0.45;
+            width: @markerWidth*@markerRatio;
+            height: @markerWidth*@markerRatio;
             background-color: @mainColor;
             content: "";
             position: absolute;
             border-radius: 50%;
             transform: translate(-50%);
-            top: 50%;
+            top: @markerTop;
             left: 50%;
         }
         &-icon:after {
             background-color: @red;
-            width: @iconMarkerWidth*0.45;
-            height: @iconMarkerWidth*0.45;
+            width: @iconMarkerWidth*@markerRatio;
+            height: @iconMarkerWidth*@markerRatio;
         }
     }
     &__img {
-        border-radius: 1.5*@roundBorder 1.5*@roundBorder 0 0;
+        border-radius: @roundBorder @roundBorder 0 0;
         max-height: 205px;
         width: 100%;
         object-fit: none;
-        object-position: 50% 15%;
+        object-position: 87% 16%;
     }
     &__marker {
         cursor: pointer;
@@ -38,7 +42,7 @@
         height: @markerWidth/2;
         background-color: @red;
         transform: translate(-50%, -60%);
-        top: 50%;
+        top: @markerTop;
         left: 50%;
         border-radius: @markerWidth/2 @markerWidth/2 0 0;
         &-icon {
@@ -51,47 +55,50 @@
 
 
     &__shadow {
-        @shadowWidth: @markerWidth*0.45;
-        @shadowHeight: @markerWidth;
+        @shadowWidth: @markerWidth*0.40;
+        @shadowHeight: @markerWidth*1.05;
         width:  @shadowWidth;
         height: @shadowHeight;
-        background: linear-gradient(rgba(40,40,40,0.25), rgba(160,160,160,0.35));
+        background: linear-gradient(rgba(20,20,20,0.21), rgba(60,60,60,0.18));
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: @markerTop;
 
         border-radius: 50%;
         border-top-left-radius: @shadowWidth 0.65*@shadowHeight;
         border-top-right-radius:  @shadowWidth 0.65*@shadowHeight;
 
         transform-origin: 100% 0;
-        transform: translate(100%, 62%) rotate(60deg); 
+        transform: translate(123%, 58%) rotate(62deg); 
     }
     
+    @triangleRatio: 0.80;
+
     &__triangle,
     &__triangle:before,
     &__triangle:after {
-        width: @markerWidth*0.675;
-        height: @markerWidth*0.675;
-        border-top-right-radius: 70%;
+        width: @markerWidth*@triangleRatio;
+        height: @markerWidth*@triangleRatio;
+        border-top-right-radius: 100%;
         cursor: pointer;
     }
     &__triangle-icon, &__triangle-icon:before, &__triangle-icon:after {
-        width: @iconMarkerWidth*0.675;
-        height: @iconMarkerWidth*0.675;
+        width: @iconMarkerWidth*@triangleRatio;
+        height: @iconMarkerWidth*@triangleRatio;
     }
 
     &__triangle {
         &Box {
             position: absolute;
-            transform: translate(-50%, 40%) rotate(180deg);
-            top: 50%;
+            transform: scaleY(0.87) translate(-50%, 15%) rotate(180deg);
+            top: @markerTop;
             left: 50%;
         }   
         position: relative;
         background-color: @red;
-        border-top-right-radius: 30%;
-        transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+        border-top-right-radius: 15%;
+
+        transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
         &:before,&:after {
             content: '';
             position: absolute;
@@ -114,29 +121,37 @@
         flex-flow: row wrap;
         align-items: center;
         margin-top: -4px;
-        border-radius: 0 0 1.5*@roundBorder 1.5*@roundBorder;
-        padding-top: 21px;
-        padding-bottom: 21px;
+        border-radius: 0 0 @roundBorder @roundBorder;
+        padding-top: 13px;
+        padding-bottom: 20px;
         padding-left: 28px;
         padding-right: 28px + @iconMarkerWidth/2;
     }
     &__slogan {
         text-transform: none;
         .fontSize8();
-        margin-right: 28px;
+        margin-right: 23px;
     }
     &__address {
         font-family: "LatoBlack", Arial, sans-serif;
-        .fontSize3Half();
+        .fontSize3();
+        margin-top: 4px;
+        letter-spacing: 1px;
+    }
+    &__localPos {
+        margin-bottom: 3px;
     }
     &__building {
-        margin-bottom: 3px;
+        margin-right: 6px;
+    }
+    &__countryPos {
+        margin-top: -4px;
     }
 
 
     &__space {
         flex-grow: 1;
-        max-width: 33%;
+        max-width: 40%;
     }
     
     &__icons {
@@ -144,13 +159,14 @@
         flex-shrink: 0;
         max-width: 54px;
         display: flex;
+        margin-top: 5px;
         justify-content: space-between;
         align-items: flex-start;
     }
 
-    @aimWidth: 10px;
+    @aimWidth: 9px;
     @targetSize: 19px;
-    @thickness: 2px;
+    @thickness: 1.5px;
 
     .targetLine (@aimHeight) {
         background-color: @mainColor;
@@ -169,8 +185,7 @@
         border-radius: 50%;
         position: relative;
         &:before, &:after {
-            @verticalHeight: 2.5px;
-            .targetLine(@verticalHeight);
+            .targetLine(2px);
             transform: rotate(90deg);
             right: calc(50% - @aimWidth/2);
         }
@@ -193,6 +208,6 @@
         }
     }
     &__markerIcon {
-        margin-top: @thickness;
+        margin-top: 4px;
     }
 }

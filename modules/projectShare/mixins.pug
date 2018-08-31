@@ -139,7 +139,7 @@ mixin createEvent(imgSrc, day, month, title, details, isLastInBlock = true)
             "!event__button")
 
 
-mixin createLocation(imgSrc, slogan, building, countryPos)
+mixin createLocation(imgSrc, slogan, building, street, countryPos)
     .location
         .location__map
             img.location__img(src= imgSrc)
@@ -151,7 +151,9 @@ mixin createLocation(imgSrc, slogan, building, countryPos)
         .location__content
             .location__slogan #{slogan}
             .location__address
-                .location__building #{building}
+                .location__localPos
+                    span.location__building #{building}
+                    span #{street}
                 .location__countryPos #{countryPos}
 
             .location__space
