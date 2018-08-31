@@ -131,7 +131,7 @@ mixin createEvent(imgSrc, day, month, title, details)
                 .event__day #{day}
                 .event__month #{month}
             .event__title #{title}
-            .event__details #{details}
+            .news__details.event__details #{details}
             +createElement("Add to calendar","standardButtons__button", "small", "empty", "success",
             "!event__button")
 

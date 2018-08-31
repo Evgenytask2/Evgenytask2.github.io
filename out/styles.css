@@ -111,7 +111,7 @@
   margin-bottom: 50px;
 }
 .content__title-selfMarginSmaller {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 .content__title-notCentered {
   -webkit-transform: translate(10px, -5px);
@@ -1949,7 +1949,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-top: 10px;
+  padding-top: 9px;
   padding-bottom: 14px;
   margin-left: 12px;
   color: #ffffff;
@@ -1963,13 +1963,14 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   border: 10px transparent solid;
   border-left: none;
   border-right-color: #4eb7a8;
-  left: -6px;
+  left: -6.5px;
   bottom: 50%;
   -webkit-transform: translateY(10px);
       -ms-transform: translateY(10px);
           transform: translateY(10px);
 }
 .userProfile__info-alternative {
+  padding-bottom: 15px;
   background-color: #e5e5e5;
 }
 .userProfile__info-alternative:after {
@@ -1993,7 +1994,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   color: #4f4f4f;
 }
 .userProfile__social {
-  margin-top: 12px;
+  margin-top: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2010,7 +2011,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   margin-right: 6px;
 }
 .userProfile__socialBtn-fb {
-  background: url(userProfile/img/iconSet.png) -121px -3.5px;
+  background: url(userProfile/img/iconSet.png) -121px -4.2px;
 }
 .userProfile__socialBtn-alernative.userProfile__socialBtn-fb {
   background: url(userProfile/img/iconSet.png) -5.5px -4px;
@@ -2117,7 +2118,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   display: flex;
 }
 .news__content {
-  padding-top: 25px;
+  padding-top: 21px;
   padding-left: 22px;
   padding-bottom: 35px;
   padding-right: 22px;
@@ -2135,12 +2136,16 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .news__header {
   font-size: 28px;
+  line-height: 95%;
 }
 .news__date {
   font-family: "LatoBlack", Arial, sans-serif;
   text-transform: uppercase;
   margin-top: 15px;
   margin-bottom: 18px;
+}
+.news__details {
+  font-family: "LatoRegular", Arial, sans-serif;
 }
 .lightGreen {
   background-color: #4eb7a8;
