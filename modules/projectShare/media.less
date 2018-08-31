@@ -1,8 +1,17 @@
 @import "./common.less";
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .content {
         margin-top: 30px;
+        &__halfSection {
+            width: 100%;
+            &-right {
+                margin-top: 30px;
+            }
+        }
+        &__title-notCentered {
+            transform: none;
+        }
     }
     .standardButtons {
         margin-left: 0;
@@ -45,18 +54,16 @@
         }
     }
     .sliders {
+        margin-top: 20px;
         &__slider {
             margin: 0 auto;
         }
         &__sliderBox {
         width: 100%;
-        margin-bottom: 30px;
+        margin-top: 40px;
         }
     }
 
-    .content__halfSection {
-        width: 100%;
-    }
     .userProfile {
         margin-left: 0;
     }
@@ -68,6 +75,12 @@
     }
     .calendar {
         margin-right: 0px;
+    }
+    .switch {
+        margin-left: 0;
+    }
+    .stageChart {
+        margin-top: 40px;
     }
 }
 

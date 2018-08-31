@@ -359,6 +359,10 @@
   -webkit-box-shadow: 0 2px 0 0 #28a290;
           box-shadow: 0 2px 0 0 #28a290;
 }
+.standardButtons__button-success.standardButtons__button-darkestGreen {
+  -webkit-box-shadow: 0 2.5px 0 0 #379285;
+          box-shadow: 0 2.5px 0 0 #379285;
+}
 .standardButtons__button-grad1 {
   position: relative;
 }
@@ -2112,27 +2116,28 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .news {
   background-color: #e75735;
   margin-right: 9px;
-  border-radius: 4.5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  border-radius: 3px;
+  position: relative;
 }
 .news__content {
+  margin-left: 95px;
   padding-top: 21px;
   padding-left: 22px;
-  padding-bottom: 35px;
   padding-right: 22px;
+  padding-bottom: 32px;
   color: #ffffff;
   text-transform: none;
   font-size: 11px;
 }
 .news__img {
+  position: absolute;
+  height: 100%;
   width: 95px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  border-radius: 4.5px;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  border-radius: 3px 0 0 3px;
 }
 .news__header {
   font-size: 28px;
@@ -2141,11 +2146,15 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .news__date {
   font-family: "LatoBlack", Arial, sans-serif;
   text-transform: uppercase;
-  margin-top: 15px;
-  margin-bottom: 18px;
+  margin-top: 11px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  word-spacing: 1.5px;
 }
 .news__details {
   font-family: "LatoRegular", Arial, sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 130%;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -2230,42 +2239,49 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .event {
   margin-left: 9px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #4eb7a8;
-  border-radius: 4.5px;
+  border-radius: 3px;
+  position: relative;
 }
 .event__date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-top: -10px;
 }
 .event__day {
   font-size: 73px;
   line-height: 100%;
+  letter-spacing: -3px;
+  margin-left: -3px;
+  margin-right: 15px;
 }
 .event__month {
   font-size: 30px;
-  text-transform: capitalize;
 }
 .event__title {
   text-transform: uppercase;
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 12.5px;
-  margin-top: 5px;
-  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+  margin-bottom: 2px;
 }
 .event__button {
-  width: 80%;
-  margin: 15px auto;
+  width: 87%;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17px;
+  margin-bottom: -5px;
   text-transform: uppercase;
+  border-radius: 4.5px;
+  height: 23px;
+}
+.event__img {
+  -o-object-position: 80% 15%;
+     object-position: 80% 15%;
+}
+.event__lastInBlock {
+  margin-bottom: 48px;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -3239,9 +3255,20 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .fontSize12 {
   font-size: 80px;
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .content {
     margin-top: 30px;
+  }
+  .content__halfSection {
+    width: 100%;
+  }
+  .content__halfSection-right {
+    margin-top: 30px;
+  }
+  .content__title-notCentered {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
   .standardButtons {
     margin-left: 0;
@@ -3287,15 +3314,15 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
     width: 100%;
     height: 96px;
   }
+  .sliders {
+    margin-top: 20px;
+  }
   .sliders__slider {
     margin: 0 auto;
   }
   .sliders__sliderBox {
     width: 100%;
-    margin-bottom: 30px;
-  }
-  .content__halfSection {
-    width: 100%;
+    margin-top: 40px;
   }
   .userProfile {
     margin-left: 0;
@@ -3308,6 +3335,12 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   }
   .calendar {
     margin-right: 0px;
+  }
+  .switch {
+    margin-left: 0;
+  }
+  .stageChart {
+    margin-top: 40px;
   }
 }
 @media (max-width: 500px) {

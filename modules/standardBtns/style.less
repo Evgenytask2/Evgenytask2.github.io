@@ -1,5 +1,6 @@
 @import "../projectShare/common.less";
 @darkGreenShadow: rgb(40,162,144);
+@darkestGreenShadow: rgb(55,146,133);
 @darkRedShadow: rgb(191,62,31);
 @greenGradientStart: rgb(130, 203, 193);
 @redGradientStart: rgb(237, 136, 112);
@@ -103,6 +104,9 @@
         }
         &-success&-darkGreen {
             box-shadow: 0 (@shadow + 1px) 0 0 @darkGreenShadow;
+        }
+        &-success&-darkestGreen {
+            box-shadow: 0 (@bigShadow + 0.5px) 0 0 @darkestGreenShadow;
         }
 
         .fullPseudo() {

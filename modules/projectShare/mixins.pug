@@ -123,16 +123,19 @@ mixin createNews(imgSrc, header, date, details)
             .news__details #{details}
 
 
-mixin createEvent(imgSrc, day, month, title, details)
-    .event
+mixin createEvent(imgSrc, day, month, title, details, isLastInBlock = true)
+    - var classes = "event"
+    - if(isLastInBlock)
+        - classes += " event__lastInBlock";
+    div(class= classes)
         img.news__img.event__img(src= imgSrc)
         .news__content.event__content
             .event__date
-                .event__day #{day}
-                .event__month #{month}
+                span.event__day #{day}
+                span.event__month #{month}
             .event__title #{title}
             .news__details.event__details #{details}
-            +createElement("Add to calendar","standardButtons__button", "small", "empty", "success",
+            +createElement("Add to calendar","standardButtons__button", "small", "empty", "success", "darkestGreen",
             "!event__button")
 
 

@@ -1,23 +1,28 @@
 @import "../projectShare/common.less";
+
+@imgWidth: 95px;
 .news {
     background-color: @red;
     margin-right: @rowMarginRight;
-    border-radius: 1.5*@roundBorder;
-    display: flex;
+    border-radius: @roundBorder;
+    position: relative;
     &__content {
+        margin-left: @imgWidth;
         padding-top: 21px;
         padding-left: 22px;
-        padding-bottom: 35px;
         padding-right: 22px;
+        padding-bottom: 32px;
         color: @mainColor;
         text-transform: none;
         .fontSize2();
     }
     &__img {
-        width: 95px;
-        object-fit: cover;
-        flex-shrink: 0;
-        border-radius: 1.5*@roundBorder;
+        position: absolute;
+        height: 100%;
+        width: @imgWidth;
+        object-fit: none;
+        object-position: 50% 0%;
+        border-radius: @roundBorder 0 0 @roundBorder;
     }
     &__header {
         .fontSize7();
@@ -26,10 +31,14 @@
     &__date {
         font-family: "LatoBlack", Arial, sans-serif;
         text-transform: uppercase;
-        margin-top: 15px;
-        margin-bottom: 18px;
+        margin-top: 11px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+        word-spacing: 1.5px;
     }
     &__details {
         font-family: "LatoRegular", Arial, sans-serif;
+        letter-spacing: 0.5px;
+        line-height: 130%;
     }
 }
