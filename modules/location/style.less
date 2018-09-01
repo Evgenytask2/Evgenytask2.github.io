@@ -157,7 +157,7 @@
     &__icons {
         flex-grow: 1;
         flex-shrink: 0;
-        max-width: 54px;
+        max-width: 52px;
         display: flex;
         margin-top: 5px;
         justify-content: space-between;
@@ -199,15 +199,16 @@
     &__horTargetLine {
         @horHeight: 2px;
         .targetLine(@horHeight);
-        top: calc(50% - @horHeight/2);
+        top: 50%;
         &-left {
-            left: calc(-@aimWidth/2 - @thickness);
+            left: calc(-@aimWidth/2 - @thickness/2);
         }
         &-right {
-            right: calc(-@aimWidth/2 - @thickness);
+            right: calc(-@aimWidth/2 - @thickness/2);
         }
     }
     &__markerIcon {
         margin-top: 4px;
+        transform: translate(2px);
     }
 }

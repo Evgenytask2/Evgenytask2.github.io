@@ -14,18 +14,20 @@
         box-sizing: border-box;
         height: @footerHeight;
         line-height: @footerHeight;
-        bottom: -@footerHeight - 1px;
-        border-radius: 0 0 @borderRatio*@roundBorder @borderRatio*@roundBorder;
+        bottom: -@footerHeight - 2px;
+        border-radius: 0 0 @roundBorder @roundBorder;
         background-color: @lightGrey;
         padding-left: 20px;
+        padding-top: 2px;
         font-family: "LatoBlack", Arial, sans-serif;
         .fontSize3Half();
         color: @mediumGrey;
+        letter-spacing: 1.5px;
         &:after {
             content: attr(data-msg);
             position: absolute;
             background: inherit;
-            padding-left: inherit;
+            padding: inherit;
             left: 0;
             right: 0;
             top: 0;
@@ -43,7 +45,7 @@
 
 
     &__header {
-        border-radius: @borderRatio*@roundBorder @borderRatio*@roundBorder 0 0;
+        border-radius: @roundBorder @roundBorder 0 0;
         background-color: @red;
         color: @mainColor;
         text-align: center;
@@ -54,22 +56,28 @@
 
     &__currentDay {
         .fontSize12();
-        line-height: 109px;
+        height: 101px;
+        letter-spacing: -3px;
+        padding-top: 7px;
+        padding-right: 9px;
     }
 
     &__month {
         text-transform: none;
         .fontSize7Small();
         background-color: rgb(213,76,44);
-        line-height: 43px;
+        box-sizing: border-box;
+        height: 43px;
+        padding-top: 4px;
+        letter-spacing: -0.7px;
         position: relative;
     }
 
 
     &__arrow {
-        @arrowMargin: 14px;
-        @arrowWidth: 10px;
-        @arrowHeight: 3px;
+        @arrowMargin: 16px;
+        @arrowWidth: 9px;
+        @arrowHeight: 2px;
 
         cursor: pointer;
         position: absolute;
@@ -92,10 +100,11 @@
 
         &-left {
             left:  @arrowMargin;
+            transform: translateY(1px);
         }
         &-right {
-            right: @arrowMargin;
-            transform: rotate(180deg);
+            right: calc(@arrowMargin + 2px);
+            transform: translateY(1px) rotate(180deg);
         }
     }
 
@@ -103,11 +112,19 @@
     &__week {
         display: flex;
         height: 27px;
-        align-items: center;
+        margin-left: -@cellMargin;
+        margin-right: -@cellMargin;
         &Day {
+            box-sizing: border-box;
             font-family: "LatoBlack",Arial, sans-serif;
             .fontSizeSmall();
-            width: 14.2857%;
+            letter-spacing: 0.7px;
+            width: calc(14.2857% - 2*@cellMargin);
+            margin: 0 @cellMargin;
+            padding-top: 10px;
+            &-toLeft {
+                padding-left: 3px;
+            }
         }
     }
     &__weekRow {
@@ -124,10 +141,18 @@
             cursor: default;
         }
     }
+    input&__radio:checked + &__label {
+        margin: 0;
+        width: 14.2857%;
+        margin-left: 2px;
+        transform: translateY(1px);
+    }
     &__radio {
         display: none;
     }
     input&__radio:checked + &__label &__dayRow {
+        padding-top: 6px;
+        padding-bottom: 8px;
         background-color: @lightGreen;
         color: @mainColor;
     }
@@ -149,12 +174,9 @@
         .fontSize6Big();
 
         box-sizing: border-box;
-        padding: 11px 0;
+        padding-top: 7px;
+        padding-bottom: 7px;
         &-notActive {
-            color: @mainColor;
-        }
-        &-selected {
-            background-color: @red;
             color: @mainColor;
         }
     }

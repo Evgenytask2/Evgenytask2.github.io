@@ -29,7 +29,7 @@
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -167,6 +167,12 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SourceLight';
+  src: url('fonts/SourceLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .lightGreen {
   background-color: #4eb7a8;
 }
@@ -198,7 +204,7 @@
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -461,7 +467,7 @@ input:checked + label .standardButtons__button:before {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -626,7 +632,7 @@ input:checked + label .standardButtons__button:before {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -817,7 +823,7 @@ input:checked + label .standardButtons__button:before {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -1017,7 +1023,7 @@ input:checked + label .standardButtons__button:before {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -1199,7 +1205,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -1356,7 +1362,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -1675,7 +1681,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -1868,7 +1874,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -2063,7 +2069,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -2187,7 +2193,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -2314,7 +2320,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -2537,7 +2543,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           flex-grow: 1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  max-width: 54px;
+  max-width: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2583,16 +2589,19 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   height: 2px;
   position: absolute;
   content: "";
-  top: calc(50% - 2px/2);
+  top: 50%;
 }
 .location__horTargetLine-left {
-  left: calc(-9px/2 - 1.5px);
+  left: calc(-9px/2 - 1.5px/2);
 }
 .location__horTargetLine-right {
-  right: calc(-9px/2 - 1.5px);
+  right: calc(-9px/2 - 1.5px/2);
 }
 .location__markerIcon {
   margin-top: 4px;
+  -webkit-transform: translate(2px);
+      -ms-transform: translate(2px);
+          transform: translate(2px);
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -2625,7 +2634,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -2686,19 +2695,21 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           box-sizing: border-box;
   height: 50px;
   line-height: 50px;
-  bottom: -51px;
-  border-radius: 0 0 4.5px 4.5px;
+  bottom: -52px;
+  border-radius: 0 0 3px 3px;
   background-color: #e5e5e5;
   padding-left: 20px;
+  padding-top: 2px;
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 12.5px;
   color: #888888;
+  letter-spacing: 1.5px;
 }
 .calendar__footer:after {
   content: attr(data-msg);
   position: absolute;
   background: inherit;
-  padding-left: inherit;
+  padding: inherit;
   left: 0;
   right: 0;
   top: 0;
@@ -2713,7 +2724,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: transparent;
 }
 .calendar__header {
-  border-radius: 4.5px 4.5px 0 0;
+  border-radius: 3px 3px 0 0;
   background-color: #e75735;
   color: #ffffff;
   text-align: center;
@@ -2723,13 +2734,20 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .calendar__currentDay {
   font-size: 80px;
-  line-height: 109px;
+  height: 101px;
+  letter-spacing: -3px;
+  padding-top: 7px;
+  padding-right: 9px;
 }
 .calendar__month {
   text-transform: none;
   font-size: 24px;
   background-color: #d54c2c;
-  line-height: 43px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 43px;
+  padding-top: 4px;
+  letter-spacing: -0.7px;
   position: relative;
 }
 .calendar__arrow {
@@ -2743,8 +2761,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
       -ms-transform-origin: 0 0;
           transform-origin: 0 0;
   background-color: #ffffff;
-  height: 3px;
-  width: 10px;
+  height: 2px;
+  width: 9px;
   content: "";
   position: absolute;
 }
@@ -2757,30 +2775,40 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-transform: translateY(-50%) rotate(45deg);
       -ms-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
-  width: 12.1213px;
+  width: 10.4142px;
 }
 .calendar__arrow-left {
-  left: 14px;
+  left: 16px;
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
 }
 .calendar__arrow-right {
-  right: 14px;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  right: calc(16px + 2px);
+  -webkit-transform: translateY(1px) rotate(180deg);
+      -ms-transform: translateY(1px) rotate(180deg);
+          transform: translateY(1px) rotate(180deg);
 }
 .calendar__week {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 27px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
 }
 .calendar__weekDay {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "LatoBlack", Arial, sans-serif;
-  font-size: 9px;
-  width: 14.2857%;
+  font-size: 8.5px;
+  letter-spacing: 0.7px;
+  width: calc(14.2857% - 2*0.5px);
+  margin: 0 0.5px;
+  padding-top: 10px;
+}
+.calendar__weekDay-toLeft {
+  padding-left: 3px;
 }
 .calendar__weekRow {
   display: -webkit-box;
@@ -2798,10 +2826,20 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .calendar__label-disabled {
   cursor: default;
 }
+input.calendar__radio:checked + .calendar__label {
+  margin: 0;
+  width: 14.2857%;
+  margin-left: 2px;
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+}
 .calendar__radio {
   display: none;
 }
 input.calendar__radio:checked + .calendar__label .calendar__dayRow {
+  padding-top: 6px;
+  padding-bottom: 8px;
   background-color: #4eb7a8;
   color: #ffffff;
 }
@@ -2822,13 +2860,10 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   font-size: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 11px 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .calendar__dayRow-notActive {
-  color: #ffffff;
-}
-.calendar__dayRow-selected {
-  background-color: #e75735;
   color: #ffffff;
 }
 .lightGreen {
@@ -2862,7 +2897,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -2924,9 +2959,13 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   color: #ffffff;
   text-transform: capitalize;
   background-color: #4eb7a8;
-  font-family: "SourceRegular", Arial, sans-serif;
+  font-family: "SourceLight", Arial, sans-serif;
   font-size: 34px;
-  line-height: 82px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 82px;
+  padding-top: 16px;
+  letter-spacing: -1px;
   border-radius: 4.5px 4.5px 0 0;
 }
 .messaging__line {
@@ -3106,7 +3145,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
@@ -3221,7 +3260,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   background-color: #4f4f4f;
 }
 .fontSizeSmall {
-  font-size: 9px;
+  font-size: 8.5px;
 }
 .fontSize1 {
   font-size: 10px;
