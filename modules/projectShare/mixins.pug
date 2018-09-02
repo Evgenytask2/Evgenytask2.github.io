@@ -6,7 +6,8 @@ mixin createElement(elementText, elementName, ...modifiers)
             - classes += (" " + elementName)
         - else 
             - classes += (" " + elementName + "-" + mod)
-    div(class= classes) #{elementText}
+    div(class= classes)
+        span.element__inner #{elementText}
 
 mixin createCircleProgress(percent, percentDelta = 0)
     - var rotatePercent = percent - percentDelta;

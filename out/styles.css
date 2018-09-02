@@ -311,7 +311,6 @@
   letter-spacing: 0.5px;
   font-size: 10px;
   width: 78px;
-  height: 22px;
   line-height: 22px;
 }
 .standardButtons__button-success.standardButtons__button-shadow.standardButtons__button-small {
@@ -329,12 +328,11 @@
   margin-top: 32.5px;
 }
 .standardButtons__button-big {
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   width: 117.5px;
   -webkit-transform: translate(-1px);
       -ms-transform: translate(-1px);
           transform: translate(-1px);
-  height: 32px;
   line-height: 32px;
 }
 .standardButtons__button-success.standardButtons__button-shadow.standardButtons__button-big {
@@ -350,6 +348,12 @@
 }
 .standardButtons__button-inContainerHigher.standardButtons__button-big {
   margin-top: 22px;
+}
+.standardButtons__button-big:not(.standardButtons__button-grad) .element__inner {
+  display: inline-block;
+  -webkit-transform: translateY(1px) scaleY(1.1);
+      -ms-transform: translateY(1px) scaleY(1.1);
+          transform: translateY(1px) scaleY(1.1);
 }
 .standardButtons__button-success {
   background-color: #4eb7a8;
@@ -384,7 +388,7 @@
   -webkit-box-shadow: 0 2.5px 0 0 #379285;
           box-shadow: 0 2.5px 0 0 #379285;
 }
-.standardButtons__button-grad1 {
+.standardButtons__button-grad {
   position: relative;
 }
 .standardButtons__button-grad1:before {
@@ -400,9 +404,6 @@
   border-radius: 3px;
   background: radial-gradient(circle 25px at 36% 80%, #82cbc1 100%, #4eb7a8);
 }
-.standardButtons__button-grad2 {
-  position: relative;
-}
 .standardButtons__button-grad2:before {
   content: "Button";
   position: absolute;
@@ -416,9 +417,6 @@
   border-radius: 3px;
   background: radial-gradient(circle 24.5px at 50% 50%, #82cbc1 100%, #4eb7a8);
 }
-.standardButtons__button-grad3 {
-  position: relative;
-}
 .standardButtons__button-grad3:before {
   content: "Button";
   position: absolute;
@@ -431,9 +429,6 @@
   transition: opacity ease-in-out 0.6s;
   border-radius: 3px;
   background: radial-gradient(circle 24.5px at 72% 50%, #ed8870 100%, #e75735);
-}
-.standardButtons__button-grad4 {
-  position: relative;
 }
 .standardButtons__button-grad4:before {
   content: "Button";
@@ -727,14 +722,34 @@ input:checked + label .standardButtons__button:before {
 .circleDiagrams__diagram-mod1 {
   margin-left: -10px;
 }
+.circleDiagrams__diagram-mod1 .radialProgress:after {
+  -webkit-transform: translate(1.3px, -2.7px);
+      -ms-transform: translate(1.3px, -2.7px);
+          transform: translate(1.3px, -2.7px);
+}
 .circleDiagrams__diagram-mod2 {
   margin-left: 2.8%;
+}
+.circleDiagrams__diagram-mod2 .radialProgress:after {
+  -webkit-transform: translate(-1px, -2px);
+      -ms-transform: translate(-1px, -2px);
+          transform: translate(-1px, -2px);
 }
 .circleDiagrams__diagram-mod3 {
   margin-left: 6.2%;
 }
+.circleDiagrams__diagram-mod3 .radialProgress:after {
+  -webkit-transform: translate(-2px, -1px);
+      -ms-transform: translate(-2px, -1px);
+          transform: translate(-2px, -1px);
+}
 .circleDiagrams__diagram-mod4 {
   margin-left: 6%;
+}
+.circleDiagrams__diagram-mod4 .radialProgress:after {
+  -webkit-transform: translateX(-1px);
+      -ms-transform: translateX(-1px);
+          transform: translateX(-1px);
 }
 .circleDiagrams__diagram-pie {
   margin-left: 13.1%;
@@ -795,8 +810,8 @@ input:checked + label .standardButtons__button:before {
 }
 .pieChart__part {
   position: absolute;
-  width: 48px;
-  height: 96px;
+  width: 47.5px;
+  height: 95px;
   overflow: hidden;
   left: 0;
   -webkit-transform-origin: left center;
@@ -805,10 +820,10 @@ input:checked + label .standardButtons__button:before {
 }
 .pieChart__part-before {
   position: absolute;
-  width: 48px;
-  height: 96px;
-  left: -48px;
-  border-radius: 48px 0 0 48px;
+  width: 47.5px;
+  height: 95px;
+  left: -47.5px;
+  border-radius: 47.5px 0 0 47.5px;
   -webkit-transform-origin: right center;
       -ms-transform-origin: right center;
           transform-origin: right center;
@@ -1508,7 +1523,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   bottom: 0;
   position: absolute;
   font-family: "LatoBlack";
-  font-size: 12.5px;
+  font-size: 12px;
 }
 .switch__indicator {
   width: 18.48px;
@@ -2201,7 +2216,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   text-transform: uppercase;
   margin-top: 11px;
   margin-bottom: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   word-spacing: 1.5px;
 }
 .news__details {
@@ -2746,12 +2761,14 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .calendar__footer {
   position: absolute;
+  left: 0;
+  right: 0;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 50px;
-  line-height: 50px;
-  bottom: -52px;
+  height: 49px;
+  line-height: 49px;
+  bottom: -51px;
   border-radius: 0 0 3px 3px;
   background-color: #e5e5e5;
   padding-left: 20px;
@@ -2776,7 +2793,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   transition: opacity 0.525s ease-in-out;
 }
 .calendar__expand {
-  height: 50px;
+  height: 49px;
   background-color: transparent;
 }
 .calendar__header {
@@ -2849,6 +2866,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   height: 27px;
   margin-left: -0.5px;
   margin-right: -0.5px;
@@ -2859,7 +2879,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 8.5px;
   letter-spacing: 0.7px;
-  width: calc(14.2857% - 2*0.5px);
+  width: calc(100%/7 - 2*0.5px);
   margin: 0 0.5px;
   padding-top: 10px;
 }
@@ -2870,12 +2890,15 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   margin-bottom: 1px;
   margin-left: -0.5px;
-  margin-right: -0.5px;
+  margin-right: -0.625px;
 }
 .calendar__label {
-  width: calc(14.2857% - 2*0.5px);
+  width: calc(100%/7 - 2*0.5px);
   margin: 0 0.5px;
   cursor: pointer;
 }
@@ -3121,7 +3144,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 .messaging__msg {
   font-family: "LatoBold", Arial, sans-serif;
   font-size: 12px;
-  color: #888888;
+  color: #747474;
   text-transform: none;
   padding-left: 20px;
   padding-right: 20px;

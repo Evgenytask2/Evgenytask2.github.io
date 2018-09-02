@@ -14,6 +14,7 @@
 @marginTop: 20px;
 @smallHeight: 22px;
 
+
 .standardButtons {
     margin-left: 11%;
     margin-right: 10.7%;
@@ -44,7 +45,6 @@
             letter-spacing: 0.5px;
             .fontSize1();
             width: 78px;
-            height: @smallHeight;
             line-height: @smallHeight;
             @{btn}-success@{btn}-shadow& {
                 box-shadow: 0 (@shadow+1) 0 0 @darkGreenShadow;
@@ -60,10 +60,9 @@
             }
         }
         &-big {
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             width: 117.5px;
             transform: translate(-1px);
-            height: @smallHeight + @deltahHeight;
             line-height: @smallHeight + @deltahHeight;
             @{btn}-success@{btn}-shadow& {
                 box-shadow: 0 (@bigShadow+1) 0 0 @darkGreenShadow;
@@ -76,6 +75,10 @@
             }
             @{btn}-inContainerHigher& {
                 margin-top: @marginTop + 2px;
+            }
+            &:not(@{btn}-grad) .element__inner {
+                display: inline-block;
+                transform: translateY(1px) scaleY(1.1);
             }
         }
 
@@ -122,16 +125,15 @@
         }
 
         &-grad {
+        position: relative;
            &1 {
-               position: relative;
                &:before {
                    .fullPseudo();
                    background: radial-gradient(circle 25px at 36% 80%, @greenGradientStart 100%, @lightGreen);
                }
            }
 
-           &2  {
-                position: relative;
+           &2 {
                 &:before {
                     .fullPseudo();
                     background: radial-gradient(circle 24.5px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
@@ -139,7 +141,6 @@
             }
 
             &3 {
-                position: relative;
                 &:before {
                     .fullPseudo();
                     background: radial-gradient(circle 24.5px at 72% 50%, @redGradientStart 100%, @red); 
@@ -147,7 +148,6 @@
             }
 
             &4 {
-                position: relative;
                 &:before {
                     .fullPseudo();
                     background: radial-gradient(circle 25px at 92% 83%, @redGradientStart 100%, @red); 
