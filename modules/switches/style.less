@@ -8,6 +8,9 @@
 
 .switch {
     margin-left: 16px;
+    &__tickBoxesTitle {
+        transform: translate(8px, -6px);
+    }
     &__container {
         display: flex;
         justify-content: center;
@@ -64,7 +67,7 @@
         background-color: @mainColor;
         border-radius: 50%;
         position: absolute;
-        top: (1-@indicatorRatio)*@toggleHeight/2;
+        top: 0.15*@toggleHeight;
         transform: translateX(@indicatorMargin);
         transition: transform ease-in-out @transitionTime;
     }

@@ -4,6 +4,7 @@
 .form {
     &__row {
        display: flex;
+       margin-left: 1px;
        margin-right: @rowMarginRight;
        margin-bottom: @rowMarginBottom;
        justify-content: space-between;
@@ -12,6 +13,7 @@
        }
     }
     &__input {
+        padding-bottom: 3px;
         text-transform: capitalize;
         background-color: @lightGrey;
         border-radius: @roundBorder;
@@ -27,8 +29,8 @@
     }
     &__message {
         resize: none;
-        padding-top: 10px;
-        padding-bottom: 5px;
+        padding-top: 8px;
+        padding-bottom: 7px;
     }
     &__button {
         border-radius: 1.5*@roundBorder;
@@ -50,6 +52,12 @@
                 left: -4px;
             }
         }
+        &-success {
+            padding-left: 3px;
+        }
+        &-warning {
+            letter-spacing: 0.7px;
+        }
         &-triangle&-success {
             &:after {
                 border-right-color: @lightGreen;
@@ -61,10 +69,14 @@
             }
         }
         &-submit {
-            width: 117px;
+            border-radius: @roundBorder;
+            width: 118px;
             height: 32px;
             line-height: 32px;
+            transform: translateY(-2px);
             cursor: pointer;
+            letter-spacing: 0.6px;
+            padding-right: 3px;
         }
     }
 }

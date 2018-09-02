@@ -125,7 +125,7 @@
           transform: translate(10px, -5px);
 }
 .content__title-for2Sections {
-  margin-top: 55px;
+  margin-top: 53px;
 }
 .content__title-left {
   -webkit-transform: translateX(-9px);
@@ -969,12 +969,13 @@ input:checked + label .standardButtons__button:before {
   height: 24px;
   background-color: #e75735;
   position: absolute;
-  left: -8.5px;
+  left: -9px;
   border-radius: 5px;
   top: -31px;
 }
 .sliders__warningValue:before {
   position: absolute;
+  top: 1px;
   left: 0;
   right: 0;
   line-height: 24px;
@@ -1138,6 +1139,8 @@ input:checked + label .standardButtons__button:before {
   font-size: 14.5px;
   font-family: "LatoBlack";
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
   transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
 }
@@ -1148,6 +1151,12 @@ input:checked + label .standardButtons__button:before {
 .stageChart__value-notAchieved {
   background-color: #e5e5e5;
   color: #888888;
+}
+.stageChart__value-pos1 {
+  padding-right: 2px;
+}
+.stageChart__value-pos4 {
+  padding-right: 3px;
 }
 .stageChart__progress {
   height: 5px;
@@ -1304,6 +1313,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 1px;
   margin-right: 9px;
   margin-bottom: 12px;
   -webkit-box-pack: justify;
@@ -1316,6 +1326,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           justify-content: flex-end;
 }
 .form__input {
+  padding-bottom: 3px;
   text-transform: capitalize;
   background-color: #e5e5e5;
   border-radius: 3px;
@@ -1342,8 +1353,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .form__message {
   resize: none;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 8px;
+  padding-bottom: 7px;
 }
 .form__button {
   border-radius: 4.5px;
@@ -1364,6 +1375,12 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   top: 9px;
   left: -4px;
 }
+.form__button-success {
+  padding-left: 3px;
+}
+.form__button-warning {
+  letter-spacing: 0.7px;
+}
 .form__button-triangle.form__button-success:after {
   border-right-color: #4eb7a8;
 }
@@ -1371,10 +1388,16 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   border-right-color: #e75735;
 }
 .form__button-submit {
-  width: 117px;
+  border-radius: 3px;
+  width: 118px;
   height: 32px;
   line-height: 32px;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
   cursor: pointer;
+  letter-spacing: 0.6px;
+  padding-right: 3px;
 }
 .lightGreen {
   background-color: #4eb7a8;
@@ -1463,6 +1486,11 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .switch {
   margin-left: 16px;
 }
+.switch__tickBoxesTitle {
+  -webkit-transform: translate(8px, -6px);
+      -ms-transform: translate(8px, -6px);
+          transform: translate(8px, -6px);
+}
 .switch__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1531,7 +1559,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
-  top: 2.76px;
+  top: 3.6px;
   -webkit-transform: translateX(3px);
       -ms-transform: translateX(3px);
           transform: translateX(3px);
@@ -1620,6 +1648,8 @@ input.switch__input:checked + .switch__label .switch__tickBox:after {
   font-size: 14.5px;
   font-family: "LatoBlack";
   text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
   transition: background-color ease-in-out 0.7s, color ease-in-out 0.7s;
 }
@@ -1630,6 +1660,12 @@ input.switch__input:checked + .switch__label .switch__tickBox:after {
 .stageChart__value-notAchieved {
   background-color: #e5e5e5;
   color: #888888;
+}
+.stageChart__value-pos1 {
+  padding-right: 2px;
+}
+.stageChart__value-pos4 {
+  padding-right: 3px;
 }
 .stageChart__progress {
   height: 5px;
@@ -1783,7 +1819,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 80px;
 }
 .search {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 .search__row {
   position: relative;
@@ -1794,6 +1830,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .search__input {
   height: 28px;
+  padding-bottom: 0.5px;
 }
 .search__lensIcon {
   position: absolute;
@@ -1812,16 +1849,17 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .search__lensIcon:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 10.89px;
-  height: 10.89px;
+  width: 10.23px;
+  height: 10.23px;
   border-radius: 50%;
   border: 2px solid #ffffff;
-  top: 30%;
+  top: 28%;
+  left: 40%;
   left: 11px;
 }
 .search__lensIcon::after {
   height: 2.5px;
-  width: 6px;
+  width: 6.5px;
   background-color: #ffffff;
   -webkit-transform-origin: 0 0;
       -ms-transform-origin: 0 0;
@@ -1829,8 +1867,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  bottom: 32%;
-  right: 17%;
+  bottom: 36%;
+  right: 18.5%;
 }
 .search__select {
   -webkit-appearance: none;
@@ -1881,6 +1919,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   text-transform: none;
   color: #ffffff;
   background-color: #e75735;
+  height: 27px;
 }
 .search__help::-webkit-input-placeholder {
   color: #ffffff;
@@ -1986,7 +2025,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 28px;
+  margin-top: 31px;
+  margin-bottom: -4px;
 }
 .userProfile-lastProfile {
   margin-bottom: 92px;
@@ -2012,14 +2052,19 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -o-object-position: 51.5% 40%;
      object-position: 51.5% 40%;
 }
+.userProfile__photo-topped {
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
 .userProfile__info {
   border-radius: 7.5px;
   margin-right: 2px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-top: 9px;
-  padding-bottom: 14px;
+  padding-top: 8px;
+  padding-bottom: 15px;
   margin-left: 12px;
   color: #ffffff;
   text-align: center;
@@ -2039,7 +2084,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           transform: translateY(10px);
 }
 .userProfile__info-alternative {
-  padding-bottom: 15px;
+  padding-top: 7px;
   background-color: #e5e5e5;
 }
 .userProfile__info-alternative:after {
@@ -2056,6 +2101,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .userProfile__title {
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 11px;
+  margin-top: 1px;
   letter-spacing: 0.5px;
   word-spacing: 2px;
 }
@@ -2063,7 +2109,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   color: #4f4f4f;
 }
 .userProfile__social {
-  margin-top: 13px;
+  margin-top: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2086,13 +2132,13 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   background: url(userProfile/img/iconSet.png) -5.5px -4px;
 }
 .userProfile__socialBtn-tw {
-  background: url(userProfile/img/iconSet.png) -162px -3px;
+  background: url(userProfile/img/iconSet.png) -162px -2px;
 }
 .userProfile__socialBtn-alernative.userProfile__socialBtn-tw {
   background: url(userProfile/img/iconSet.png) -41px -3px;
 }
 .userProfile__socialBtn-dribbble {
-  background: url(userProfile/img/iconSet.png) -205px -3px;
+  background: url(userProfile/img/iconSet.png) -205px -2px;
 }
 .userProfile__socialBtn-alernative.userProfile__socialBtn-dribbble {
   background: url(userProfile/img/iconSet.png) -78px -4px;

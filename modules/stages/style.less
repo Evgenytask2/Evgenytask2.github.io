@@ -30,12 +30,19 @@
         .fontSize4();
         font-family: "LatoBlack";
         text-align: center;
+        box-sizing: border-box;
         transition: background-color ease-in-out @transitionTime, color ease-in-out @transitionTime;
         &-warning {
            .achievedWarning();
         }
         &-notAchieved {
             .notAchieved();
+        }
+        &-pos1 {
+            padding-right: 2px;
+        }
+        &-pos4 {
+            padding-right: 3px;
         }
     }
     &__progress {

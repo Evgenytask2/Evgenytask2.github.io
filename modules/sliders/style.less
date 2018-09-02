@@ -50,11 +50,12 @@
         height: @warningValueHeight;
         background-color: @red;
         position: absolute;
-        left: -(@warningValueWidth - @dragHeight + 1px)/2;
+        left: -(@warningValueWidth - @dragHeight + 2px)/2;
         border-radius: 5px;
         top: -31px;
         &:before {
             position: absolute;
+            top: 1px;
             left: 0;
             right: 0;
             line-height: @warningValueHeight;

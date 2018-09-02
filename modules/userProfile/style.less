@@ -7,7 +7,8 @@
     display: flex;
     margin-left: 28px;
     align-items: center;
-    margin-top: 28px;
+    margin-top: 31px;
+    margin-bottom: -4px;
     &-lastProfile {
         margin-bottom: 92px;
     }
@@ -26,13 +27,16 @@
         &-altCentered {
             object-position: 51.5% 40%;
         }
+        &-topped {
+            transform: translateY(-2px);
+        }
     }
     &__info {
         border-radius: 2.5*@roundBorder;
         margin-right: 2px;
         flex-grow: 1;
-        padding-top: 9px;
-        padding-bottom: 14px;
+        padding-top: 8px;
+        padding-bottom: 15px;
         margin-left: 12px;
         color: @mainColor;
         text-align: center;
@@ -50,7 +54,7 @@
             transform: translateY(@borderSize);
         }
         &-alternative {
-            padding-bottom: 15px;
+            padding-top: 7px;
             background-color: @lightGrey;
            &:after {
             border-right-color: @lightGrey;
@@ -68,6 +72,7 @@
     &__title {
         font-family: "LatoBlack",Arial, sans-serif;
         .fontSize2();
+        margin-top: 1px;
         letter-spacing: 0.5px;
         word-spacing: 2px;
         &-alternative {
@@ -75,7 +80,7 @@
         }
     }
     &__social {
-        margin-top: 13px;
+        margin-top: 12px;
         display: flex;
         justify-content: center;
         margin-left: -@socialMargin;
@@ -94,13 +99,13 @@
             }
         }
         &-tw {
-            background: url(userProfile/img/iconSet.png) -162px -3px ;
+            background: url(userProfile/img/iconSet.png) -162px -2px ;
             @{p}alernative& {
                 background: url(userProfile/img/iconSet.png) -41px -3px;
             }
         }
         &-dribbble {
-            background: url(userProfile/img/iconSet.png) -205px -3px ;
+            background: url(userProfile/img/iconSet.png) -205px -2px ;
             @{p}alernative& {
                 background: url(userProfile/img/iconSet.png) -78px -4px ;
             }
