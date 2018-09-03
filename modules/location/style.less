@@ -4,6 +4,7 @@
 .location {
     margin-top: 29px;
     margin-bottom: 50px;
+    margin-right: 1px;
     @markerWidth: 40px;
     @iconMarkerWidth: 16px;
 
@@ -33,7 +34,7 @@
         max-height: 205px;
         width: 100%;
         object-fit: none;
-        object-position: 87% 16%;
+        object-position: 90% 17%;
     }
     &__marker {
         cursor: pointer;
@@ -119,33 +120,37 @@
         color: @mainColor;
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
-        margin-top: -4px;
+        margin-top: -3px;
+        transform: translateY(-2px);
         border-radius: 0 0 @roundBorder @roundBorder;
-        padding-top: 13px;
+        padding-top: 12px;
         padding-bottom: 20px;
-        padding-left: 28px;
+        padding-left: 27px;
         padding-right: 28px + @iconMarkerWidth/2;
     }
     &__slogan {
         text-transform: none;
         .fontSize8();
         margin-right: 23px;
+        transform: scaleY(1.05);
     }
     &__address {
         font-family: "LatoBlack", Arial, sans-serif;
         .fontSize3();
-        margin-top: 4px;
+        margin-top: 7px;
         letter-spacing: 1px;
     }
     &__localPos {
-        margin-bottom: 3px;
+        margin-bottom: 4px;
     }
     &__building {
         margin-right: 6px;
     }
     &__countryPos {
         margin-top: -4px;
+    }
+    &__localPos,&__countryPos {
+        transform: scaleY(1.1);
     }
 
 
@@ -159,7 +164,7 @@
         flex-shrink: 0;
         max-width: 52px;
         display: flex;
-        margin-top: 5px;
+        margin-top: 12px;
         justify-content: space-between;
         align-items: flex-start;
     }
