@@ -1,12 +1,9 @@
 @import "../projectShare/common.less";
 
-
-@centerPieRatio: 0.64;
-
 .circleDiagrams {
     display: flex;
 	flex-flow: row wrap;
-	margin-top: 23px;
+	margin-top: 25px;
 	margin-bottom: 35px;
     &__diagram {
         box-sizing: border-box;
@@ -19,9 +16,9 @@
 			}
 		}
 		&-mod2 {
-			margin-left: 2.8%;
+			margin-left: 3.4%;
 			.radialProgress:after {
-				transform: translate(-1px, -2px);
+				transform: translate(-2px, -2.5px);
 			}
 		}
 		&-mod3 {
@@ -39,6 +36,7 @@
 		&-pie {
 			margin-left: 13.1%;
 			position: relative;
+			@centerPieRatio: 0.66;
 			&::after {
 				width: @centerPieRatio*@circle-size;
 				height: @centerPieRatio*@circle-size;
@@ -53,7 +51,7 @@
 }
 
 .radialProgress {
-	@inset-size: 86px;
+	@inset-size: 85px;
 	width:  @circle-size;
 	height: @circle-size;
     border-radius: 50%;
@@ -97,7 +95,7 @@
 	}
 }
 
-@pieSize: @circle-size/2 - 0.5px;
+@pieSize: (@circle-size + 1px)/2 - 0.5px;
 
 .pieChart {
 	position: relative;

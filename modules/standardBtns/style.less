@@ -22,7 +22,10 @@
     margin-bottom: 55px;
     display: flex;
     flex-direction: column;
- 
+
+    &__elem:nth-child(3) &__button {
+        transform: translateX(-2px);
+    } 
     &__clickBox {
         display: none;
     }
@@ -61,7 +64,7 @@
         }
         &-big {
             letter-spacing: 0.8px;
-            width: 117.5px;
+            width: 118px;
             transform: translate(-1px);
             line-height: @smallHeight + @deltahHeight;
             @{btn}-success@{btn}-shadow& {
@@ -98,9 +101,11 @@
             background-color: @mainColor;
             @{btn}-small& {
                 border: @border solid;
+                height: @smallHeight;
                 box-shadow: 0 (@shadow + 1px) 0 0;
             }
             @{btn}-big& {
+                height: @smallHeight + @deltahHeight;
                 border: @bigBorder solid;
                 box-shadow: 0 (@bigShadow + 1px) 0 0;
             }
@@ -136,7 +141,7 @@
            &2 {
                 &:before {
                     .fullPseudo();
-                    background: radial-gradient(circle 24.5px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
+                    background: radial-gradient(circle 25px at 50% 50%, @greenGradientStart 100%, @lightGreen); 
                 }
             }
 
