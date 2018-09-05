@@ -176,7 +176,8 @@ mixin createCalendar(startId,currentDay, month, lastDayCurrent, weekDayStart = 1
     .calendar
         .calendar__header
             .calendar__currentDay #{currentDay}
-            .calendar__month #{month}
+            .calendar__month 
+                .calendar__monthLabel #{month}
                 .calendar__arrow.calendar__arrow-left
                 .calendar__arrow.calendar__arrow-right
             .calendar__week

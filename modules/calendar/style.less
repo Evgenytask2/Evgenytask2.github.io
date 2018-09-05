@@ -2,12 +2,16 @@
 
 
 .calendar {
-    margin-top: 25px;
+    margin-top: 24px;
     @cellMargin: 0.5px;
     @transitionTime: 0.35s;
     margin-right: 2*@rowMarginRight;
     @footerHeight: 49px;
 
+    &__title {
+        position: relative;
+        left: -10px;
+    }
     &__footer {
         position: absolute;
         left: 0;
@@ -16,11 +20,11 @@
         box-sizing: border-box;
         height: @footerHeight;
         line-height: @footerHeight;
-        bottom: -@footerHeight - 2px;
+        bottom: -@footerHeight - 1px;
         border-radius: 0 0 @roundBorder @roundBorder;
         background-color: @lightGrey;
         padding-left: 20px;
-        padding-top: 2px;
+        padding-top: 1px;
         font-family: "LatoBlack", Arial, sans-serif;
         .fontSize3Half();
         color: @mediumGrey;
@@ -58,7 +62,7 @@
 
     &__currentDay {
         .fontSize12();
-        height: 101px;
+        height: 102px;
         letter-spacing: -3px;
         padding-top: 7px;
         padding-right: 9px;
@@ -73,6 +77,10 @@
         padding-top: 4px;
         letter-spacing: -0.7px;
         position: relative;
+        &Label {
+            position: relative;
+            left: -1.5px;
+        }
     }
 
 
@@ -136,6 +144,10 @@
         margin-bottom: 2*@cellMargin;
         margin-left: -@cellMargin;
         margin-right: -1.25*@cellMargin;
+        &:first-child .calendar__dayRow {
+            padding-top: 8px;
+            padding-bottom: 7px;
+        }
     }
     &__label {
         width: calc(100%/7 - 2*@cellMargin);
@@ -148,8 +160,7 @@
     input&__radio:checked + &__label {
         margin: 0;
         width: 14.2857%;
-        margin-left: 2px;
-        transform: translateY(1px);
+        margin-left: 4*@cellMargin;
     }
     &__radio {
         display: none;
@@ -178,8 +189,8 @@
         .fontSize6Big();
 
         box-sizing: border-box;
-        padding-top: 7px;
-        padding-bottom: 7px;
+        padding-top: 6px;
+        padding-bottom: 8px;
         &-notActive {
             color: @mainColor;
         }
