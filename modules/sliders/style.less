@@ -16,6 +16,7 @@
         background-color: @lightGrey;
         border-radius: @sliderHeight;
         position: relative;
+        margin-left: 1px;
         &-success {
             margin-right: @successMargin;
         }
@@ -27,7 +28,7 @@
         border-radius: 50%;
         top: -(@dragHeight - @sliderHeight)/2;
         &-warning {
-            transform: translateX(calc(-100% + 1px));
+            transform: translateX(-100%);
             background-color: @red;
         }
         &-success {

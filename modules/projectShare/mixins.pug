@@ -41,7 +41,7 @@ mixin createPieChart(partsNumber, ...details)
 
 mixin createWarningSlider(percent)
     - var style = "left: " + percent + "%";
-    .sliders__slider
+    .sliders__slider.sliders__slider-warning
         .sliders__drag.sliders__drag-warning(style= style)
             .sliders__warningValue(data-percent= percent)
 

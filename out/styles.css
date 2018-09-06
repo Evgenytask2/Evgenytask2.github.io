@@ -114,9 +114,10 @@
   word-spacing: 0px;
 }
 .content__title-smallerSpacing {
-  word-spacing: 3px;
+  word-spacing: 5px;
   position: relative;
-  left: 3px;
+  left: 1.5px;
+  letter-spacing: 0.8px;
 }
 .content__title-selfMargin {
   margin-bottom: 49px;
@@ -565,7 +566,7 @@ input:checked + label .standardButtons__button:before {
 .arrowButtons {
   margin: 0 12.6%;
   margin-top: 35px;
-  margin-bottom: 45px;
+  margin-bottom: 46px;
 }
 .arrowButtons__box {
   display: -webkit-box;
@@ -575,6 +576,13 @@ input:checked + label .standardButtons__button:before {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+}
+.arrowButtons__title {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  letter-spacing: 0.9px;
+  word-spacing: 5px;
 }
 .arrowButtons__container {
   display: -webkit-box;
@@ -738,7 +746,7 @@ input:checked + label .standardButtons__button:before {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  margin-top: 25px;
+  margin-top: 24px;
   margin-bottom: 35px;
 }
 .circleDiagrams__diagram {
@@ -755,9 +763,9 @@ input:checked + label .standardButtons__button:before {
   margin-left: -10px;
 }
 .circleDiagrams__diagram-mod1 .radialProgress:after {
-  -webkit-transform: translate(1.3px, -2.7px);
-      -ms-transform: translate(1.3px, -2.7px);
-          transform: translate(1.3px, -2.7px);
+  -webkit-transform: translate(2.5px, -2.5px);
+      -ms-transform: translate(2.5px, -2.5px);
+          transform: translate(2.5px, -2.5px);
 }
 .circleDiagrams__diagram-mod2 {
   margin-left: 3.4%;
@@ -965,6 +973,7 @@ input:checked + label .standardButtons__button:before {
   background-color: #e5e5e5;
   border-radius: 5px;
   position: relative;
+  margin-left: 1px;
 }
 .sliders__slider-success {
   margin-right: 5px;
@@ -977,9 +986,9 @@ input:checked + label .standardButtons__button:before {
   top: -7px;
 }
 .sliders__drag-warning {
-  -webkit-transform: translateX(calc(-100% + 1px));
-      -ms-transform: translateX(calc(-100% + 1px));
-          transform: translateX(calc(-100% + 1px));
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   background-color: #e75735;
 }
 .sliders__drag-success {
@@ -1199,7 +1208,7 @@ input:checked + label .standardButtons__button:before {
 .stageChart__progress {
   height: 5px;
   margin-top: -5px;
-  margin-bottom: 65px;
+  margin-bottom: 66px;
   width: 0%;
   -webkit-transition: width ease-in-out 0.7s;
   transition: width ease-in-out 0.7s;
@@ -1346,6 +1355,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .fontSize12 {
   font-size: 80px;
+}
+.form {
+  margin-top: -1px;
 }
 .form__row {
   display: -webkit-box;
@@ -1540,11 +1552,12 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 26px;
+  margin-top: 25px;
   margin-bottom: 43px;
   margin-left: -2px;
 }
 .switch__container-notCentered {
+  margin-top: 26px;
   margin-bottom: 0;
   margin-left: -10px;
 }
@@ -1720,7 +1733,7 @@ input.switch__input:checked + .switch__label .switch__tickBox:after {
 .stageChart__progress {
   height: 5px;
   margin-top: -5px;
-  margin-bottom: 65px;
+  margin-bottom: 66px;
   width: 0%;
   -webkit-transition: width ease-in-out 0.7s;
   transition: width ease-in-out 0.7s;
@@ -1923,6 +1936,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   right: 18.5%;
 }
 .search__select {
+  letter-spacing: -0.15px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2416,7 +2430,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   position: relative;
 }
 .event__date {
-  margin-top: -8px;
+  margin-top: -10px;
 }
 .event__day {
   font-size: 73px;
@@ -2432,18 +2446,22 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   text-transform: uppercase;
   font-family: "LatoBlack", Arial, sans-serif;
   font-size: 12.5px;
-  letter-spacing: 0.5px;
-  margin-top: 15px;
-  margin-bottom: 2px;
+  letter-spacing: 0.7px;
+  margin-top: 14px;
+  margin-bottom: 3px;
+  margin-left: -2px;
+  -webkit-transform: scaleY(0.9);
+      -ms-transform: scaleY(0.9);
+          transform: scaleY(0.9);
 }
-.event__button {
+.event__content .event__button {
   width: 87%;
   letter-spacing: 0.6px;
   word-spacing: 2px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
-  margin-bottom: -7px;
+  margin-top: 19px;
+  margin-bottom: -10px;
   padding-top: 1px;
   text-transform: uppercase;
   border-radius: 4.5px;
@@ -2542,7 +2560,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .location {
   margin-top: 29px;
-  margin-bottom: 49px;
+  margin-bottom: 48px;
+  margin-left: 1px;
   margin-right: 1px;
 }
 .location__map {
@@ -2573,8 +2592,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   width: 100%;
   -o-object-fit: none;
      object-fit: none;
-  -o-object-position: 90% 17%;
-     object-position: 90% 17%;
+  -o-object-position: 87% 17%;
+     object-position: 87% 17%;
 }
 .location__marker {
   cursor: pointer;
