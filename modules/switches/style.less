@@ -9,13 +9,14 @@
 .switch {
     margin-left: 16px;
     &__tickBoxesTitle {
-        transform: translate(8px, -6px);
+        transform: translate(8px, -6px) scaleY(0.95);
     }
     &__container {
         display: flex;
         justify-content: center;
-        margin-top: 25px;
-        margin-bottom: 44px;
+        margin-top: 26px;
+        margin-bottom: 43px;
+        margin-left: -2px;
         &-notCentered {
             margin-bottom: 0;
             margin-left: -10px;
@@ -27,13 +28,14 @@
     &__space {
         margin-right: 14px;
         &-large {
-            margin-right: 16px;
+            margin-right: 16.5px;
         }
     }
     &__label {
         cursor: pointer;
     }
     &__toggle {
+        @letterStretch: 1.15;
         position: relative;
         width: @toggleWidth;
         height: @toggleHeight;
@@ -59,17 +61,8 @@
             position: absolute;
             font-family: "LatoBlack";
             .fontSize3();
+            letter-spacing: 0.5px;
         }
-    }
-    &__indicator {
-        width:  @toggleHeight*@indicatorRatio;
-        height:  @toggleHeight*@indicatorRatio;
-        background-color: @mainColor;
-        border-radius: 50%;
-        position: absolute;
-        top: 0.15*@toggleHeight;
-        transform: translateX(@indicatorMargin);
-        transition: transform ease-in-out @transitionTime;
     }
     input&__input:checked + &__label &__toggle {
         background-color: @lightGreen;
@@ -80,6 +73,16 @@
         &:after {
             opacity: 1;
         }
+    }
+    &__indicator {
+        width:  @toggleHeight*@indicatorRatio;
+        height:  @toggleHeight*@indicatorRatio;
+        background-color: @mainColor;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.13*@toggleHeight;
+        transform: translateX(@indicatorMargin);
+        transition: transform ease-in-out @transitionTime;
     }
     input&__input:checked + &__label &__toggle  &__indicator{
         transform: translateX(@toggleWidth - @toggleHeight*@indicatorRatio - @indicatorMargin);

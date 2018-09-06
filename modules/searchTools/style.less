@@ -5,7 +5,7 @@
     @iconWidth: 33px;
     @thickness: 2px;
     @iconHeight: 28px;
-    margin-top: 20px;
+    margin-top: 19px;
 
 
     .createIcon() {
@@ -24,7 +24,8 @@
     }
     &__input {
         height: @iconHeight;
-        padding-bottom: 0.5px;
+        padding-bottom: 1.5px;
+        box-sizing: border-box;
     }
     &__lensIcon {
         .createIcon();
@@ -61,6 +62,7 @@
     }
 
     &__background {
+        margin-left: 1px;
         margin-right: @rowMarginRight + @iconWidth;
         margin-top: -(@rowMarginBottom + @iconHeight);
         border-radius: @roundBorder 0 0 @roundBorder;
@@ -91,7 +93,8 @@
     &__help {
         text-transform: none;
         .achievedWarning();
-        height: 27px;
+        padding-top: 1px;
+        padding-bottom: 3px;
         &::placeholder {
             color: @mainColor;
         }

@@ -132,23 +132,29 @@
       -ms-transform: scaleY(0.92) translateX(3px);
           transform: scaleY(0.92) translateX(3px);
 }
+.content__title-intendedLefter {
+  -webkit-transform: scaleY(0.92) translateX(2px);
+      -ms-transform: scaleY(0.92) translateX(2px);
+          transform: scaleY(0.92) translateX(2px);
+}
 .content__title-notCentered {
   -webkit-transform: scaleY(0.92) translate(10px, -5px);
       -ms-transform: scaleY(0.92) translate(10px, -5px);
           transform: scaleY(0.92) translate(10px, -5px);
 }
 .content__title-for2Sections {
-  margin-top: 53px;
+  margin-top: 54px;
 }
 .content__title-left {
-  -webkit-transform: scaleY(0.92) translateX(-9px);
-      -ms-transform: scaleY(0.92) translateX(-9px);
-          transform: scaleY(0.92) translateX(-9px);
+  -webkit-transform: scaleY(0.92) translateX(-6px);
+      -ms-transform: scaleY(0.92) translateX(-6px);
+          transform: scaleY(0.92) translateX(-6px);
 }
 .content__title-right {
-  -webkit-transform: scaleY(0.92) translateX(7px);
-      -ms-transform: scaleY(0.92) translateX(7px);
-          transform: scaleY(0.92) translateX(7px);
+  -webkit-transform: scaleY(0.92) translateX(4px);
+      -ms-transform: scaleY(0.92) translateX(4px);
+          transform: scaleY(0.92) translateX(4px);
+  word-spacing: 4px;
 }
 .content__title-lessSpacing {
   letter-spacing: 0.9px;
@@ -1385,8 +1391,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .form__message {
   resize: none;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 9px;
+  padding-bottom: 7px;
 }
 .form__button {
   border-radius: 4.5px;
@@ -1405,13 +1411,17 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   content: "";
   position: absolute;
   top: 9px;
-  left: -4px;
+  left: -3.5px;
 }
 .form__button-success {
   padding-left: 3px;
 }
 .form__button-warning {
   letter-spacing: 0.7px;
+  padding-left: 2px;
+}
+.form__button-triangle {
+  margin-right: 1px;
 }
 .form__button-triangle.form__button-success:after {
   border-right-color: #4eb7a8;
@@ -1519,9 +1529,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   margin-left: 16px;
 }
 .switch__tickBoxesTitle {
-  -webkit-transform: translate(8px, -6px);
-      -ms-transform: translate(8px, -6px);
-          transform: translate(8px, -6px);
+  -webkit-transform: translate(8px, -6px) scaleY(0.95);
+      -ms-transform: translate(8px, -6px) scaleY(0.95);
+          transform: translate(8px, -6px) scaleY(0.95);
 }
 .switch__container {
   display: -webkit-box;
@@ -1530,8 +1540,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 44px;
+  margin-top: 26px;
+  margin-bottom: 43px;
+  margin-left: -2px;
 }
 .switch__container-notCentered {
   margin-bottom: 0;
@@ -1544,7 +1555,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   margin-right: 14px;
 }
 .switch__space-large {
-  margin-right: 16px;
+  margin-right: 16.5px;
 }
 .switch__label {
   cursor: pointer;
@@ -1584,21 +1595,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   position: absolute;
   font-family: "LatoBlack";
   font-size: 12px;
-}
-.switch__indicator {
-  width: 18.48px;
-  height: 18.48px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  top: 3.6px;
-  -webkit-transform: translateX(3px);
-      -ms-transform: translateX(3px);
-          transform: translateX(3px);
-  -webkit-transition: -webkit-transform ease-in-out 0.6s;
-  transition: -webkit-transform ease-in-out 0.6s;
-  transition: transform ease-in-out 0.6s;
-  transition: transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
+  letter-spacing: 0.5px;
 }
 input.switch__input:checked + .switch__label .switch__toggle {
   background-color: #4eb7a8;
@@ -1611,6 +1608,21 @@ input.switch__input:checked + .switch__label .switch__toggle:before {
 }
 input.switch__input:checked + .switch__label .switch__toggle:after {
   opacity: 1;
+}
+.switch__indicator {
+  width: 18.48px;
+  height: 18.48px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.12px;
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+          transform: translateX(3px);
+  -webkit-transition: -webkit-transform ease-in-out 0.6s;
+  transition: -webkit-transform ease-in-out 0.6s;
+  transition: transform ease-in-out 0.6s;
+  transition: transform ease-in-out 0.6s, -webkit-transform ease-in-out 0.6s;
 }
 input.switch__input:checked + .switch__label .switch__toggle .switch__indicator {
   -webkit-transform: translateX(38.52px);
@@ -1857,7 +1869,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-size: 80px;
 }
 .search {
-  margin-top: 20px;
+  margin-top: 19px;
 }
 .search__row {
   position: relative;
@@ -1868,7 +1880,9 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .search__input {
   height: 28px;
-  padding-bottom: 0.5px;
+  padding-bottom: 1.5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .search__lensIcon {
   position: absolute;
@@ -1916,6 +1930,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   cursor: pointer;
 }
 .search__background {
+  margin-left: 1px;
   margin-right: 42px;
   margin-top: -40px;
   border-radius: 3px 0 0 3px;
@@ -1957,7 +1972,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   text-transform: none;
   color: #ffffff;
   background-color: #e75735;
-  height: 27px;
+  padding-top: 1px;
+  padding-bottom: 3px;
 }
 .search__help::-webkit-input-placeholder {
   color: #ffffff;
@@ -2063,8 +2079,8 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 31px;
-  margin-bottom: -4px;
+  margin-top: 29px;
+  margin-bottom: -2px;
 }
 .userProfile-lastProfile {
   margin-bottom: 93px;
@@ -2091,11 +2107,6 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
      object-position: 51.5% 41%;
 }
 .userProfile__photo-topped {
-  -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-          transform: translateY(-2px);
-}
-.userProfile__photo-toppedAlt {
   -webkit-transform: translateY(-1px);
       -ms-transform: translateY(-1px);
           transform: translateY(-1px);
@@ -2127,7 +2138,7 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
           transform: translateY(10px);
 }
 .userProfile__info-alternative {
-  padding-top: 7px;
+  padding-top: 8px;
   background-color: #e5e5e5;
 }
 .userProfile__info-alternative:after {
@@ -2279,10 +2290,10 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 }
 .news__content {
   margin-left: 95px;
-  padding-top: 21px;
+  padding-top: 22px;
   padding-left: 22px;
   padding-right: 22px;
-  padding-bottom: 33px;
+  padding-bottom: 36px;
   color: #ffffff;
   text-transform: none;
   font-size: 11px;
@@ -2305,14 +2316,14 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
   font-family: "LatoBlack", Arial, sans-serif;
   text-transform: uppercase;
   margin-top: 11px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   letter-spacing: 0.8px;
   word-spacing: 1.5px;
 }
 .news__details {
   font-family: "LatoRegular", Arial, sans-serif;
   letter-spacing: 0.5px;
-  line-height: 130%;
+  line-height: 120%;
 }
 .lightGreen {
   background-color: #4eb7a8;

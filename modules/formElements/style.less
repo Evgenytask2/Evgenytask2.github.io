@@ -29,8 +29,8 @@
     }
     &__message {
         resize: none;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 9px;
+        padding-bottom: 7px;
     }
     &__button {
         border-radius: 1.5*@roundBorder;
@@ -49,7 +49,7 @@
                 content: "";
                 position: absolute;
                 top: (@buttonHeight - 2*@borderSize)/2;
-                left: -4px;
+                left: -3.5px;
             }
         }
         &-success {
@@ -57,6 +57,10 @@
         }
         &-warning {
             letter-spacing: 0.7px;
+            padding-left: 2px;
+        }
+        &-triangle {
+            margin-right: 1px;
         }
         &-triangle&-success {
             &:after {
