@@ -2,7 +2,7 @@
 
 @media (max-width: 700px) {
     .content {
-        margin-top: 30px;
+        margin-top: 50px;
         &__halfSection {
             width: 100%;
             &-right {
@@ -12,6 +12,9 @@
         &__title {
             &-notCentered,&-left,&-right {
                 transform: none;
+            }
+            &-left, &-right {
+                margin-bottom: 40px;
             }
         }
     }
@@ -76,12 +79,33 @@
     .stageChart {
         margin-top: 40px;
     }
+    .news__details {
+        .fontSize3();
+    }
+    .video__info{
+        &-name {
+            .fontSize6Big();
+            top: 10px;
+        }
+        &-author {
+            bottom: -20px;
+        }
+        &-url {
+            bottom: -45px;
+            .fontSize4();
+        }
+    }
 }
 
 
 @media (max-width: 500px) {
     .location {
+        &__content {
+            padding-left: 15px;
+            padding-right: 20px;
+        }
         &__slogan {
+            margin-top: 10px;
             margin-right: 0;
             order: 9999;
             width: 100%;

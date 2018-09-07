@@ -3056,11 +3056,6 @@ input.stageChart__clickBox-5of5:checked ~ .stageChart label .stageChart__value-c
 .calendar__label-disabled {
   cursor: default;
 }
-input.calendar__radio:checked + .calendar__label {
-  margin: 0;
-  width: 14.2857%;
-  margin-left: 2px;
-}
 .calendar__radio {
   display: none;
 }
@@ -3606,7 +3601,7 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
 }
 @media (max-width: 700px) {
   .content {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .content__halfSection {
     width: 100%;
@@ -3620,6 +3615,10 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+  }
+  .content__title-left,
+  .content__title-right {
+    margin-bottom: 40px;
   }
   .standardButtons {
     margin-left: 0;
@@ -3688,9 +3687,28 @@ input.calendar__radio:checked + .calendar__label + .calendar__footer:after {
   .stageChart {
     margin-top: 40px;
   }
+  .news__details {
+    font-size: 12px;
+  }
+  .video__info-name {
+    font-size: 20px;
+    top: 10px;
+  }
+  .video__info-author {
+    bottom: -20px;
+  }
+  .video__info-url {
+    bottom: -45px;
+    font-size: 14.5px;
+  }
 }
 @media (max-width: 500px) {
+  .location__content {
+    padding-left: 15px;
+    padding-right: 20px;
+  }
   .location__slogan {
+    margin-top: 10px;
     margin-right: 0;
     -webkit-box-ordinal-group: 10000;
         -ms-flex-order: 9999;
