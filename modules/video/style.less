@@ -2,7 +2,7 @@
 
 .video { 
     position: relative; 
-    margin-top: 24px; 
+    margin-top: 23px; 
     &__container { 
         padding-top: 56.25%; 
         position: relative; 
@@ -17,28 +17,33 @@
     &__info { 
         color: @mainColor; 
         position: absolute; 
-        left: 6.6%; 
     &-name { 
         text-indent: -2px; 
-        top: 26px; 
+        top: 24px; 
         text-transform: capitalize; 
         .fontSize9Big(); 
         letter-spacing: -1.05px; 
         word-spacing: 0.5px; 
+        left: 6.6%; 
+        word-spacing: -0.3px;
     } 
     &-author { 
-        top: 70px; 
+        bottom: -15px; 
+        left: 2px;
         letter-spacing: 0.9px; 
+        word-spacing: -0.5px;
         font-family: "LatoBlack", Arial, sans-serif; 
         .fontSize3Half(); 
-        transform: scaleY(0.9); 
+        text-transform: uppercase;
+        transform: scaleY(0.9);
     } 
     &-url { 
-        letter-spacing: -0.4px; 
-        top: 105px; 
+        letter-spacing: -0.5px; 
+        bottom: -46px; 
         text-transform: none; 
         .fontSize6(); 
         font-family: "LatoRegular", Arial, sans-serif; 
+        transform: scaleY(1.1);
     } 
     } 
 }

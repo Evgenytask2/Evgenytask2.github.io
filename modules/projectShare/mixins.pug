@@ -244,9 +244,11 @@ mixin createMessaging(fullName, avatar, incomeMsg, outcomeMsg)
         .messaging__line
         .messaging__icons
             .messaging__icon.messaging__icon-msg
-            img.messaging__avatar.userProfile__photo.userProfile__photo-altCentered(src = avatar, alt)
+            img.messaging__avatar.userProfile__photo.messaging__avatar-altCentered(src = avatar, alt)
             .messaging__icon.messaging__icon-photo
         .messaging__mainArea
-            .messaging__msg.messaging__msg-income #{incomeMsg}
-            .messaging__msg.messaging__msg-outcome #{outcomeMsg}
+            .messaging__msg.messaging__msg-income
+                span.messaging__textContent #{incomeMsg}
+            .messaging__msg.messaging__msg-outcome
+                span.messaging__textContent #{outcomeMsg}
             +createElement("Reply","standardButtons__button", "big", "shadow", "success", "!messaging__replyBtn")
